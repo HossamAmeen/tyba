@@ -25,7 +25,7 @@
     <!-- TODO: Add a favicon -->
     <link rel="shortcut icon" href="{{asset('admin/images/ico/fab.ico')}}">
 
-    <title>Fickle - Login</title>
+    <title>{{$title}}</title>
 
     <!--Page loading plugin Start -->
     <link rel="stylesheet" href="{{asset('admin/css/rtl-css/plugins/pace-rtl.css')}}">
@@ -74,6 +74,11 @@
                     <div class="login-form">
                         <form id="form-login" action="{{url('admin/login')}}" method="POST" class="form-horizontal ls_form">
                             {{ csrf_field() }}
+                            @if (session()->get('status') )
+                                <div class="alert alert-danger">
+                                    <strong>{{session()->get('status')}}</strong>
+                                </div>
+                             @endif
                             <div class="input-group ls-group-input">
                                 <input class="form-control" type="text" placeholder="username" name="name">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>

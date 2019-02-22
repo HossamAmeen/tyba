@@ -12,12 +12,34 @@ use Faker\Generator as Faker;
 | model instances for testing / seeding your application's database.
 |
 */
-
 $factory->define(App\User::class, function (Faker $faker) {
+     	 	 	 	 
     return [
-        'name' => $faker->name,
+        'name' => 'admin',
         'email' => $faker->unique()->safeEmail,
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+        'password' => '$2y$10$mXwEFI/nQub9PmCejn59zuozRujElm4bu5D01y.wXpciRnKjHRWNm', // secret
         'remember_token' => str_random(10),
+        'role' => 1 ,
+    ];
+});
+
+$factory->define(App\Pref::class , function (Faker $faker){
+   
+
+    return[
+        'arAddress'     =>'arAddress',
+        'enAddress'     =>'enAddress',
+        'enDescription' =>'enDescription',
+        'arDescription' =>'arDescription',
+        'phone'         =>'01079979798',
+        'arMainAddress' =>'arMainAddress',
+        'enMainAddress' =>'enMainAddress',
+        'enMainAddress' =>'enMainAddress',
+        'mainEmail'     =>'contact@alkayantrading.com',
+        'facebook'      =>'https://www.facebook.com/alkayantrading/',
+        'twitter'       =>'https://www.twitter.com/',
+        'instgram'      =>'https://www.instgram.com/',
+        'linkedin'      =>'https://www.linkedin.com/',
+
     ];
 });
