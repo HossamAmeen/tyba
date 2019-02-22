@@ -11,7 +11,7 @@ class PrefController extends Controller
 {
     public function login(Request $request){
        
-        if(session('login')){
+        if(session('id')){
             return redirect()->route('pref.index');
         }  //return redirect()->route('prsef.index');
        // return "test";

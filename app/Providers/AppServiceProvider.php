@@ -3,7 +3,9 @@
 namespace App\Providers;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Support\Facades\View;
+use DB;
+use App\Pref;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -20,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
              if(!empty($pref))
                  View::share('pref',$pref );
         } catch (\Exception $e) {
-            die("Could not connect to the database.  Please check your configuration. error:" . $e );
+         //   die("Could not connect to the database.  Please check your configuration. error:" . $e );
         }
         
          Schema::defaultStringLength(191);

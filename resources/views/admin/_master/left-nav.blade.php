@@ -10,16 +10,16 @@
     <ul class="mainNav">
         <li>
             <a href="{{url('admin/pref')}}">
-                <i class="fa fa-dashboard"></i> <span>pref</span>
+                <i class="fa fa-dashboard"></i> <span>بيانات الموقع</span>
             </a>
         </li>
         <li>
             <a href="#">
-                <i class="fa fa-table"></i> <span>users</span>
+                <i class="fa fa-table"></i> <span>المستخدمين</span>
             </a>
             <ul>
-                    <li><a href="{{url('admin/user/create')}}">add user</a></li>
-                    <li><a href="{{url('admin/user')}}">show users</a></li>
+                    <li><a href="{{url('admin/user/create')}}">إضافه مستخدم</a></li>
+                    <li><a href="{{url('admin/user')}}">عرض المستخدمين</a></li>
             </ul>
             
         </li>
