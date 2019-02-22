@@ -18,36 +18,36 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <!-- iOS webapp icons -->
-    <link rel="apple-touch-icon-precomposed" href="{{asset('images/ios/fickle-logo-72.png')}}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('images/ios/fickle-logo-72.png')}}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/ios/fickle-logo-114.png')}}" />
+    <link rel="apple-touch-icon-precomposed" href="{{asset('admin/images/ios/fickle-logo-72.png')}}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('admin/images/ios/fickle-logo-72.png')}}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('admin/images/ios/fickle-logo-114.png')}}" />
 
     <!-- TODO: Add a favicon -->
-    <link rel="shortcut icon" href="{{asset('images/ico/fab.ico')}}">
+    <link rel="shortcut icon" href="{{asset('admin/images/ico/fab.ico')}}">
 
     <title>Fickle - Login</title>
 
     <!--Page loading plugin Start -->
-    <link rel="stylesheet" href="{{asset('css/rtl-css/plugins/pace-rtl.css')}}">
-    <script src="{{asset('js/pace.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('admin/css/rtl-css/plugins/pace-rtl.css')}}">
+    <script src="{{asset('admin/js/pace.min.js')}}"></script>
     <!--Page loading plugin End   -->
 
     <!-- Plugin Css Put Here -->
-    <link href="{{asset('css/bootstrap-rtl.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/plugins/bootstrap-switch.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/plugins/ladda-themeless.min.css')}}">
+    <link href="{{asset('admin/css/bootstrap-rtl.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('admin/css/plugins/bootstrap-switch.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/css/plugins/ladda-themeless.min.css')}}">
 
-    <link href="{{asset('css/plugins/humane_themes/bigbox.css')}}" rel="stylesheet">
-    <link href="{{asset('css/plugins/humane_themes/libnotify.css')}}" rel="stylesheet">
-    <link href="{{asset('css/plugins/humane_themes/jackedup.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/css/plugins/humane_themes/bigbox.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/css/plugins/humane_themes/libnotify.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/css/plugins/humane_themes/jackedup.css')}}" rel="stylesheet">
 
     <!-- Plugin Css End -->
     <!-- Custom styles Style -->
-    <link href="{{asset('css/rtl-css/style-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/css/rtl-css/style-rtl.css')}}" rel="stylesheet">
     <!-- Custom styles Style End-->
 
     <!-- Responsive Style For-->
-    <link href="{{asset('css/rtl-css/responsive-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/css/rtl-css/responsive-rtl.css')}}" rel="stylesheet">
     <!-- Responsive Style For-->
 
     <!-- Custom styles for this template -->
@@ -122,14 +122,14 @@
 </section>
 
 </body>
-<script src="{{asset('js/lib/jquery-2.1.1.min.js')}}"></script>
-<script src="{{asset('js/lib/jquery.easing.js')}}"></script>
-<script src="{{asset('js/bootstrap-switch.min.js')}}"></script>
+<script src="{{asset('admin/js/lib/jquery-2.1.1.min.js')}}"></script>
+<script src="{{asset('admin/js/lib/jquery.easing.js')}}"></script>
+<script src="{{asset('admin/js/bootstrap-switch.min.js')}}"></script>
 <!--Script for notification start-->
-<script src="{{asset('js/loader/spin.js')}}"></script>
-<script src="{{asset('js/loader/ladda.js')}}"></script>
-<script src="{{asset('js/humane.min.js')}}"></script>
+<script src="{{asset('admin/js/loader/spin.js')}}"></script>
+<script src="{{asset('admin/js/loader/ladda.js')}}"></script>
+<script src="{{asset('admin/js/humane.min.js')}}"></script>
 <!--Script for notification end-->
 
-{{-- <script src="{{asset('js/pages/login.js')}}"></script> --}}
+{{-- <script src="{{asset('admin/js/pages/login.js')}}"></script> --}}
 </html>
