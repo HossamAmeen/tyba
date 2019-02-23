@@ -11,11 +11,10 @@ class PrefController extends Controller
 {
     public function login(Request $request){
        
-        if(session('id')){
-            return redirect()->route('pref.index');
-        }  //return redirect()->route('prsef.index');
-       // return "test";
-        if($request->isMethod('post')){ 
+        if(session('login')){
+            return redirect()->route('prefs.index');
+        }
+        if($request->isMethod('post')){
           $user = User::where('name', $request->name)->first();
           if(!empty($user))
           {
@@ -25,7 +24,7 @@ class PrefController extends Controller
               {
                   session( ['id' => $user->id] );
                   session( ['role' => $user->role] );
-                  return redirect()->route('pref.index');
+                  return redirect()->route('prefs.index');
               }
               else
                   $request->session()->flash('status', 'password is wrong!! try again please!');
@@ -49,9 +48,9 @@ class PrefController extends Controller
     
         if(empty($mPref))
 
-            return view('admin.pref.pref')->with(compact('title'));
+            return view('admin.control_panel.prefs.add_pref')->with(compact('title'));
             else
-        return redirect()->route('pref.edit',['id' => 1]);
+        return redirect()->route('prefs.edit',['id' => 1]);
     }
     public function store(Request $request)
     {
@@ -63,23 +62,23 @@ class PrefController extends Controller
         $pref->user_id = session('id');
         $pref->save();
         $request->session()->flash('status', 'add was successful!');
-        return redirect()->route('pref.index');
+        return redirect()->route('prefs.index');
     }
     public function edit(Request $request,$id)
     {
         $pref = Pref::find($id);
-        $title = 'edit pref';
+        $title = 'تعديل بيانات الموقع' ;
         if(!empty($pref)){
 
-            return view('admin.pref.pref',$pref)->with(compact('title'));
+            return view('admin.control_panel.prefs.edit_pref',$pref)->with(compact('title'));
 
         }
         else
-        return redirect()->route('pref.index');
+        return redirect()->route('prefs.index');
     }
     public function update(Request $request, $id)
     {
-        
+       // return $request;
         $rules = $this->formValidation();
         $message = $this->messageValidation();
         $this->validate($request, $rules,$message);
@@ -91,36 +90,34 @@ class PrefController extends Controller
         }
 
         $request->session()->flash('status', 'تم التعديل بنجاح');
-        return redirect()->route('pref.index');
+        return redirect()->route('prefs.index');
     }
     function formValidation()
     {
 
        return array(
         'arAddress'     => 'required|regex:/^[\pL\s\d\-]+$/u',
-        'enAddress'     => 'required|regex:/^[\pL\s\d\-]+$/u',
-        'enDescription' => 'required|regex:/^[\pL\s\d\-]+$/u',
-        'arDescription' => 'required|regex:/^[\pL\s\d\-]+$/u',
+
+
+        'arDescription' => 'required',
         'phone'         => 'required|numeric',
         'mainEmail'     => 'required|email',
-        'arMainAddress'   => 'required|regex:/^[\pL\s\d\-]+$/u',
-        'enMainAddress'   => 'required|regex:/^[\pL\s\d\-]+$/u'
+        'descriptionPoint'   => 'required',
+           'video'   => 'required',
+
        );
     }
     function messageValidation(){
         return array(
 
+
             'arAddress.required'     => 'هذا الحقل (العنوان بالعربيه) مطلوب ',
             'arAddress.*'     => 'هذا الحقل (العنوان بالعربيه) يجيب ان يكون حروف او ارقام  ',
 
-            'enAddress.required'     => 'هذا الحقل (العنوان بالانجليزي) مطلوب ',
-            'enAddress.*'     => 'هذا الحقل (العنوان بالعربيه) يجيب ان يكون حروف او ارقام  ',
 
             'arDescription.required'     => 'هذا الحقل (الوصف بالعربيه) مطلوب ',
             'arDescription.*'     => 'هذا الحقل (الوصف بالعربيه) يجيب ان يكون حروف او ارقام  ',
 
-            'enDescription.required'     => 'هذا الحقل (الوصف بالانجليزي) مطلوب ',
-            'enDescription.*'     => 'هذا الحقل (الوصف بالعربيه) يجيب ان يكون حروف او ارقام  ',
 
             'phone.required'     => 'هذا الحقل (تلفون ) مطلوب ',
             'phone.*'     => 'هذا الحقل (تلفون) يجيب ان يكون  ارقام  ',
@@ -128,12 +125,13 @@ class PrefController extends Controller
             'mainEmail.required'     => 'هذا الحقل (البريد) مطلوب ',
             'mainEmail.*'     => 'هذا الحقل (بريد) يجيب ان يكون بريد صحيح  ',
 
-            'arMainAddress.required'     => 'هذا الحقل (العنوان الرئيسي بالعربيه) مطلوب ',
-            'arMainAddress.*'     => 'هذا الحقل (العنوان الرئيسي بالعربيه) يجيب ان يكون حروف او ارقام  ',
+            'descriptionPoint.required'     => 'هذا الحقل (العنوان الرئيسي بالعربيه) مطلوب ',
+            'descriptionPoint.*'     => 'هذا الحقل (العنوان الرئيسي بالعربيه) يجيب ان يكون حروف او ارقام  ',
+
+            'video.required'     => 'هذا الحقل ( youtube link) مطلوب ',
 
 
-            'enMainAddress.required'     => 'هذا الحقل (العنوان الرئيسي بالانجليزي) مطلوب ',
-            'enMainAddress.*'     => 'هذا الحقل (العنوان الرئيسي بالانجليزي) يجيب ان يكون حروف او ارقام  ',
+
 
 
         );

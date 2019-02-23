@@ -2,16 +2,7 @@
 
 use Faker\Generator as Faker;
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| This directory should contain each of the model factory definitions for
-| your application. Factories provide a convenient way to generate new
-| model instances for testing / seeding your application's database.
-|
-*/
+
 $factory->define(App\User::class, function (Faker $faker) {
      	 	 	 	 
     return [
@@ -23,23 +14,62 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
+
 $factory->define(App\Pref::class , function (Faker $faker){
-   
 
     return[
         'arAddress'     =>'arAddress',
-        'enAddress'     =>'enAddress',
-        'enDescription' =>'enDescription',
         'arDescription' =>'arDescription',
         'phone'         =>'01079979798',
-        'arMainAddress' =>'arMainAddress',
-        'enMainAddress' =>'enMainAddress',
-        'enMainAddress' =>'enMainAddress',
+        'descriptionPoint' =>'descriptionPoint',
         'mainEmail'     =>'contact@alkayantrading.com',
-        'facebook'      =>'https://www.facebook.com/alkayantrading/',
+        'facebook'      =>'https://www.facebook.com/',
         'twitter'       =>'https://www.twitter.com/',
-        'instgram'      =>'https://www.instgram.com/',
-        'linkedin'      =>'https://www.linkedin.com/',
+        'video' =>'https://www.youtube.com/watch?v=dMuZf4mcjSU',
+
+    ];
+});
+
+
+$factory->define(App\Clinic::class , function (Faker $faker){
+
+    return[
+        'name'  =>'arAddress',
+        'description'  =>'description' ,
+        'descriptionPoint'  =>'descriptionPoint',
+        'appointments'  =>'appointments',
+        'user_id' => 1 ,
+
+    ];
+});
+
+
+
+$factory->define(App\Service::class , function (Faker $faker){
+
+    return[
+        'ar_title' => "title2",
+        'icon'  => "fas fa-user-md fa-5x",
+        'user_id' => 1 ,
+
+    ];
+});
+$factory->define(App\Event::class , function (Faker $faker){
+
+    return[
+        'name' => "events",
+        'description'  => "description",
+        'date' => 'يوم الخميس 02/03/2018',
+        'user_id' => 1 ,
+     
+    ];
+});
+$factory->define(App\Doctor::class , function (Faker $faker){
+
+    return[
+        'name' => $faker->name,
+        'job'  => "رئيس مجلس الاداره",
+        'user_id' => 1 ,
 
     ];
 });

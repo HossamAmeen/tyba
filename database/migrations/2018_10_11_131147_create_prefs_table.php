@@ -17,17 +17,13 @@ class CreatePrefsTable extends Migration
         Schema::create('prefs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('arAddress');
-            $table->string('enAddress');
-            $table->string('enDescription');
             $table->string('arDescription');
+            $table->text('descriptionPoint');
             $table->string('phone');
-            $table->string('arMainAddress');
-            $table->string('enMainAddress');
             $table->string('mainEmail');
             $table->string('facebook');
             $table->string('twitter');
-            $table->string('instgram');
-            $table->string('linkedin');
+            $table->string('video');
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')
             ->onDelete('cascade');

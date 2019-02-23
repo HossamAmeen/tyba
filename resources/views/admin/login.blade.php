@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
+    
     <meta name="author" content="">
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13,41 +14,40 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <!-- iOS webapp metatags -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-    <!-- iOS webapp icons -->
-    <link rel="apple-touch-icon-precomposed" href="{{asset('admin/images/ios/fickle-logo-72.png')}}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('admin/images/ios/fickle-logo-72.png')}}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('admin/images/ios/fickle-logo-114.png')}}" />
-
     <!-- TODO: Add a favicon -->
-    <link rel="shortcut icon" href="{{asset('admin/images/ico/fab.ico')}}">
+    <link rel="shortcut icon" href="{{asset('resources/assets/admin/images/ico/fab.ico')}}">
 
-    <title>{{$title}}</title>
+<title>{{$title}}</title>
 
     <!--Page loading plugin Start -->
-    <link rel="stylesheet" href="{{asset('admin/css/rtl-css/plugins/pace-rtl.css')}}">
-    <script src="{{asset('admin/js/pace.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('resources/assets/admin/css/rtl-css/plugins/pace-rtl.css')}}">
+    <script src="{{asset('resources/assets/admin/js/pace.min.js')}}"></script>
     <!--Page loading plugin End   -->
 
     <!-- Plugin Css Put Here -->
-    <link href="{{asset('admin/css/bootstrap-rtl.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('admin/css/plugins/bootstrap-switch.min.css')}}">
-    <link rel="stylesheet" href="{{asset('admin/css/plugins/ladda-themeless.min.css')}}">
+    <link href="{{asset('resources/assets/admin/css/bootstrap-rtl.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('resources/assets/admin/css/rtl-css/plugins/bootstrap-progressbar-3.1.1-rtl.css')}}">
+    <link rel="stylesheet" href="{{asset('resources/assets/admin/css/rtl-css/plugins/jquery-jvectormap-rtl.css')}}">
 
-    <link href="{{asset('admin/css/plugins/humane_themes/bigbox.css')}}" rel="stylesheet">
-    <link href="{{asset('admin/css/plugins/humane_themes/libnotify.css')}}" rel="stylesheet">
-    <link href="{{asset('admin/css/plugins/humane_themes/jackedup.css')}}" rel="stylesheet">
+    <!--AmaranJS Css Start-->
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/jquery.amaran-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/all-themes-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/awesome-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/default-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/blur-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/user-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/rounded-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/readmore-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/plugins/amaranjs/theme/metro-rtl.css')}}" rel="stylesheet">
+    <!--AmaranJS Css End -->
 
     <!-- Plugin Css End -->
     <!-- Custom styles Style -->
-    <link href="{{asset('admin/css/rtl-css/style-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/style-rtl.css')}}" rel="stylesheet">
     <!-- Custom styles Style End-->
 
     <!-- Responsive Style For-->
-    <link href="{{asset('admin/css/rtl-css/responsive-rtl.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/assets/admin/css/rtl-css/responsive-rtl.css')}}" rel="stylesheet">
     <!-- Responsive Style For-->
 
     <!-- Custom styles for this template -->
@@ -59,6 +59,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body class="login-screen">
 <section>
     <div class="container-fluid">
@@ -66,19 +67,38 @@
             <div class="col-md-12">
                 <div class="login-box">
                     <div class="login-content">
-                        
-                        <h3>login</h3>
-                        
+                        <div class="login-user-icon">
+                            <i class="glyphicon glyphicon-user"></i>
+
+                        </div>
+                        <h3>log In</h3>
+                        <div class="social-btn-login">
+                            <ul>
+                                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-bitbucket"></i></a></li>
+                            </ul>
+                            <!--<button class="btn ls-dark-btn rounded"><i class="fa fa-facebook"></i></button>
+                            <button class="btn ls-dark-btn rounded"><i class="fa fa-twitter"></i></button>
+                            <button class="btn ls-dark-btn rounded"><i class="fa fa-linkedin"></i></button>
+                            <button class="btn ls-dark-btn rounded"><i class="fa fa-google-plus"></i></button>
+                            <button class="btn ls-dark-btn rounded"><i class="fa fa-github"></i></button>
+                            <button class="btn ls-dark-btn rounded"><i class="fa fa-bitbucket"></i></button>-->
+                        </div>
                     </div>
 
                     <div class="login-form">
-                        <form id="form-login" action="{{url('admin/login')}}" method="POST" class="form-horizontal ls_form">
-                            {{ csrf_field() }}
+
+                        <form action="{{url('admin/login')}}"  method="post">
+                            {{csrf_field()}}
                             @if (session()->get('status') )
                                 <div class="alert alert-danger">
                                     <strong>{{session()->get('status')}}</strong>
                                 </div>
-                             @endif
+                            @endif
                             <div class="input-group ls-group-input">
                                 <input class="form-control" type="text" placeholder="username" name="name">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -86,55 +106,78 @@
 
 
                             <div class="input-group ls-group-input">
-
                                 <input type="password" placeholder="Password" name="password"
                                        class="form-control" value="">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                             </div>
-
-                           
-                            <div class="input-group ls-group-input login-btn-box">
-                                <button class="btn ls-dark-btn ladda-button col-md-12 col-sm-12 col-xs-12" data-style="slide-down">
-                                    <span class="ladda-label"><i class="fa fa-key"></i></span>
-                            </button>
-
-                                <a class="forgot-password" href="javascript:void(0)">Forgot password</a>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="forgot-pass-box">
-                        <form action="#" class="form-horizontal ls_form">
                             <div class="input-group ls-group-input">
-                                <input class="form-control" type="text" placeholder="someone@mail.com">
-                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input type="submit"  class="form-control" value="login">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                             </div>
-                            <div class="input-group ls-group-input login-btn-box">
-                                <button class="btn ls-dark-btn col-md-12 col-sm-12 col-xs-12">
-                                    <i class="fa fa-rocket"></i> Send
-                                </button>
 
-                                <a class="login-view" href="javascript:void(0)">Login</a> & <a class="" href="registration.html">Registration</a>
-
-                            </div>
                         </form>
                     </div>
-
+                    
                 </div>
             </div>
         </div>
     </div>
     
 </section>
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/color.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/lib/jquery-1.11.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/multipleAccordion.js')}}"></script>
 
+<!--easing Library Script Start -->
+<script src="{{asset('resources/assets/js/lib/jquery.easing.js')}}"></script>
+<!--easing Library Script End -->
+
+<!--Nano Scroll Script Start -->
+<script src="{{asset('resources/assets/admin/js/jquery.nanoscroller.min.js')}}"></script>
+<!--Nano Scroll Script End -->
+
+<!--switchery Script Start -->
+<script src="{{asset('resources/assets/admin/js/switchery.min.js')}}"></script>
+<!--switchery Script End -->
+
+<!--bootstrap switch Button Script Start-->
+<script src="assets/js/bootstrap-switch.js"></script>
+<!--bootstrap switch Button Script End-->
+
+<!--easypie Library Script Start -->
+<script src="assets/admin/js/jquery.easypiechart.min.js"></script>
+<!--easypie Library Script Start -->
+
+<!--bootstrap-progressbar Library script Start-->
+<script src="assets/js/bootstrap-progressbar.min.js"></script>
+<!--bootstrap-progressbar Library script End-->
+
+<!--FLoat library Script Start -->
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/chart/flot/jquery.flot.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/chart/flot/jquery.flot.pie.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/chart/flot/jquery.flot.resize.js')}}"></script>
+<!--FLoat library Script End -->
+
+<script type="text/javascript" src="{{asset('resources/assets/admin/js/pages/layout.js')}}"></script>
+<!--Layout Script End -->
+
+
+
+<script src="{{asset('resources/assets/admin/js/countUp.min.js')}}"></script>
+
+<!-- skycons script start -->
+<script src="{{asset('resources/assets/admin/js/skycons.js')}}"></script>
+<!-- skycons script end   -->
+
+<!--Vector map library start-->
+<script src="{{asset('resources/assets/admin/js/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+<script src="{{asset('resources/assets/admin/js/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
+<!--Vector map library end-->
+
+<!--AmaranJS library script Start -->
+<script src="{{asset('resources/assets/admin/js/jquery.amaran.js')}}"></script>
+<!--AmaranJS library script End   -->
+<script src="{{asset('resources/assets/admin/js/pages/dashboard.js')}}"></script>
 </body>
-<script src="{{asset('admin/js/lib/jquery-2.1.1.min.js')}}"></script>
-<script src="{{asset('admin/js/lib/jquery.easing.js')}}"></script>
-<script src="{{asset('admin/js/bootstrap-switch.min.js')}}"></script>
-<!--Script for notification start-->
-<script src="{{asset('admin/js/loader/spin.js')}}"></script>
-<script src="{{asset('admin/js/loader/ladda.js')}}"></script>
-<script src="{{asset('admin/js/humane.min.js')}}"></script>
-<!--Script for notification end-->
-
-{{-- <script src="{{asset('admin/js/pages/login.js')}}"></script> --}}
 </html>

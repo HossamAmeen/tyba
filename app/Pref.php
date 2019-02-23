@@ -8,9 +8,11 @@ class Pref extends Model
 {
    
     protected $fillable = [
-        'arAddress', 'enAddress', 'enDescription' , 'arDescription' , 'phone'
-        , 'arMainAddress' ,'enMainAddress' ,
-        'mainEmail' , 'facebook' , 'twitter' , 'instgram' ,'linkedin'
+        'arAddress' , 'arDescription' , 'phone'
+        , 'mainEmail' ,'descriptionPoint', 'facebook' , 'twitter', 'video'
     ];
     protected $dates = ['deleted_at'];
+    protected $casts = [
+        'descriptionPoint' => 'array',
+    ];
 }

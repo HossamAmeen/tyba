@@ -1,0 +1,14 @@
+git clone https://github.com/HossamAmeen/tyba.git
+
+
+
+
+git remote add origin https://github.com/HossamAmeen/tyba.git
+
+git remote set-url origin https://github.com/user/repo2.git
+git remote -v
+
+
+composer dump-autoload
+composer install --no-scripts
+composer update --no-scripts
