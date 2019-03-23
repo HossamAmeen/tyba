@@ -14,11 +14,11 @@
 		<section class="header-page ">
 			<img src="{{asset('resources/assets/web/images/services-head.jpg')}}" alt="about-hospital" class="img-responsive">
 			<div class="details container">
-				<h1>اتصل بنا </h1>
+				<h1>احجز هنا </h1>
 				<ul class="list-unstyled list-inline">
 					<li><a href="{{url('/')}}">الرئيسية</a></li>
 					<li><i class="fas fa-arrow-left"></i></li>
-					<li>اتصل بنا </li>
+					<li>احجز هنا </li>
 				</ul>
 				<p></p>
 			</div>
@@ -68,27 +68,28 @@
 		<section class="contact-form padding">
 			<div class="container">
 				<div class="section-head text-center">
-					<h1> ارسال رساله  </h1>
+					<h1> احجز هنا  </h1>
 					<span class="icon"><i class="fas fa-envelope-open fa-3x"></i></span>
 				</div>
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
-							<form action="{{ url('contacts') }}" method="post" class="form-horizontal">
-									{{ csrf_field() }}
-									@if (session()->get('status') )
-												<div class="alert alert-success">
-														<strong>{{session()->get('status')}}</strong>
-												</div>
-										@endif
-									@if ($errors->any())
-																								<div class="alert alert-danger">
-																										<ul>
-																												@foreach ($errors->all() as $error)
-																														<li>{{ $error }}</li>
-																												@endforeach
-																										</ul>
-																								</div>
-																						@endif  
+						<form action="{{ url('book') }}" method="post" class="form-horizontal">
+							{{ csrf_field() }}
+							@if (session()->get('status') )
+                    <div class="alert alert-success">
+                        <strong>{{session()->get('status')}}</strong>
+                    </div>
+                @endif
+							@if ($errors->any())
+                                            <div class="alert alert-danger">
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif  
+                                        
 							<div class="form-group">
 								<div class="col-md-4">
 									<input type="text" class="form-control" name="name" placeholder="الاسم بالكامل" value="{{ old('name') }}">
@@ -97,14 +98,15 @@
 									<input type="text" class="form-control" name="email" placeholder="البريد الالكترونى" value="{{ old('email') }}">
 								</div>
 								<div class="col-md-4">
-									<input type="text" class="form-control" name="subject" placeholder="الموضوع" value="{{ old('subject') }}">
-								</div>
+									<input type="text" class="form-control" name="phone" placeholder="تلفون" value="{{ old('phone') }}">
+								</div>								
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" rows="10" name="text">لرساله </textarea>
-							</div>
+								<div class="col-md-12">
+									<input type="text" class="form-control" name="special" placeholder="النخصص" value="{{ old('special') }}">
+								</div><br><br><br>							
 							<div class="form-submit text-center">
-								<input type="submit" id="submit" class="btn btn-default" value="ارسال" >
+								<input type="submit" id="submit" class="btn btn-default" value="ارسال">
 							</div>
 						</form>
 					</div>

@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon-precomposed" href="{{asset('resources/assets/admin/images/ios/fickle-logo-72.png')}}" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('resources/assets/admin/images/ios/fickle-logo-72.png')}}" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('resources/assets/admin/images/ios/fickle-logo-114.png')}}" />
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <!-- TODO: Add a favicon -->
 <link rel="shortcut icon" href="{{asset('resources/assets/admin/images/ico/fab.ico')}}">
 
@@ -51,15 +51,18 @@
 <link href="{{asset('resources/assets/admin/css/rtl-css/style-rtl.css')}}" rel="stylesheet">
 <!-- Custom styles Style End-->
 
-<!-- Responsive Style For-->
-<link href="{{asset('resources/assets/admin/css/rtl-css/responsive-rtl.css')}}" rel="stylesheet">
-<!-- Responsive Style For-->
-
-<!-- Custom styles for this template -->
 
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="https:/oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https:/oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+  <!-- Responsive Style For-->
+  <link href="{{asset('resources/assets/admin/css/rtl-css/responsive-rtl.css')}}" rel="stylesheet">
+  <!-- Responsive Style For-->
+  <link rel="stylesheet" href="{{asset('resources/assets/admin/css/rtl-css/plugins/summernote-rtl.css')}}">
+  <!-- Custom styles for this template -->
+
+
+    <!-- Plugin Css Put Here -->
+  
+    <link rel="stylesheet" href="{{asset('resources/assets/admin/css/rtl-css/plugins/fileinput-rtl.css')}}">
+
+    <link rel="stylesheet" href="{{asset('resources/assets/admin/css/rtl-css/plugins/dndTable-rtl.css')}}">
+    <link rel="stylesheet" href="{{asset('resources/assets/admin/css/rtl-css/plugins/tsort-rtl.css')}}">

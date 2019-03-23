@@ -58,8 +58,8 @@ class HomeController extends Controller
 
 
         $title = "مستشفى طيبه رويال - الزيارات";
-        $data['clinics'] = Clinic::all();
-        return view('web.clinics' , $data)->with(compact( 'title'));
+        $data['events'] = Event::all();
+        return view('web.events' , $data)->with(compact( 'title'));
 
     }
     
@@ -72,72 +72,71 @@ class HomeController extends Controller
 
     }
 
-
+    
 
     public function contact(Request $request)
     {
 
-        $title = "مستشفى طيبه رويال - تواصل معانا";
+        $title = "مركز طيبة رويال";
 
         if ($request->isMethod('post')) {
+            // return $request->all();
             $rules = $this->contactFormValidation();
             $message = $this->contactMessageValidation();
             $this->validate($request, $rules, $message);
-             $data=[
-                 'email' =>  $request->email,
-                 'name' => $request->name,
-                 'phone'=>$request->phone,
-                 'text'=>$request->text,
-             ];
-             Mail::send('web.contact_mail',$data,function($message) use ($data){
-                 $pref = Pref::find(1);
+            $data=[
+                'email' =>  $request->email,
+                'name' => $request->name,
 
-                 $message->from( $data['email'] , 'kayan');
-                 $message->to($pref['mainEmail']);
-                 $message->subject('contact');
-             });
-            $request->session()->flash('status', 'send mail  was successful!');
+                'subject'=>$request->subject,
+                'text'=>$request->text,
+            ];
+            Mail::send('web.contact_mail',$data,function($message) use ($data){
+
+                $message->from( $data['email'] , $data['name']);
+                $message->to("info@tibaroyal.com");
+                $message->subject($data['subject']);
+            });
+            $request->session()->flash('status', 'تم الارسال بنجاح!');
             return redirect()->back();
         }
 
         return view('web.contacts')->with(compact('title'));
     }
 
-    function jobFormValidation()
+    
+    public function book(Request $request)
     {
 
-        return array(
-            'name' => 'required|regex:/^[\pL\s\d\-]+$/u||max:99',
-            'address' => 'required|regex:/^[\pL\s\-]+$/u||max:99',
-            'email' => 'required|email',
-            'phone' => 'required|numeric|min:1000000000',
-            'job' => 'required|regex:/^[\pL\s\-]+$/u||max:99',
+        $title = "مركز طيبة رويال";
 
-        );
+        if ($request->isMethod('post')) {
+            // return $request->all();
+            $rules = $this->bookFormValidation();
+            $message = $this->bookMessageValidation();
+            $this->validate($request, $rules, $message);
+            $data=[
+                'email' =>  $request->email,
+                'name' => $request->name,
+                'phone' => $request->phone,
+                'subject'=>$request->subject,
+                'special'=>$request->special,
+            ];
+            Mail::send('web.book_mail',$data,function($message) use ($data){
+
+                $message->from( $data['email'] , $data['name']);
+                $message->to("book@tibaroyal.com");
+                $message->subject(  " حجز نخصص " . $data['special']  );
+            });
+            $request->session()->flash('status', 'تم الحجز بنجاح!');
+            return redirect()->back();
+        }
+
+        return view('web.book')->with(compact('title'));
     }
 
-    function jobMessageValidation()
-    {
-        return array(
-            'name.required' => 'هذا الحقل (الاسم) مطلوب ',
-            'name.*' => 'هذا الحقل (الاسم) يجب يحتوي ع حروف وارقام فقط',
-
-            'address.required' => 'هذا الحقل (العنوان) مطلوب ',
-            'address.*' => 'هذا الحقل (العنوان) يجب يحتوي ع حروف وارقام فقط',
-
-            'email.required' => 'هذا الحقل (البريد) مطلوب ',
-            'email.*' => 'هذا الحقل (البريد)يجب ان يكون بريد صحيح',
-
-            'phone.required' => 'هذا الحقل (التلفون) مطلوب ',
-            'phone.min' => 'هذا الحقل (التلفون) يجب الا يقل عن 11 رقم ',
-            'phone.*' => 'هذا الحقل (التلفون) يجب يحتوي ع ارقام فقط',
-
-            'job.required' => 'هذا الحقل (العمل) مطلوب ',
-            'job.*' => 'هذا الحقل (العمل) يجب يحتوي ع حروف وارقام فقط',
 
 
-        );
-    }
 
     function contactFormValidation()
     {
@@ -147,7 +146,7 @@ class HomeController extends Controller
             'name' => 'regex:/^[\pL\s\d\-]+$/u||required|max:99',
 
             'email' => 'required|email',
-            'phone' => 'required|numeric|min:1000000000',
+
             'text' => 'regex:/^[\pL\s\-]+$/u||required|max:99',
 
         );
@@ -167,6 +166,36 @@ class HomeController extends Controller
 
             'phone.required' => 'هذا الحقل (التلفون) مطلوب ',
             'phone.min' => 'هذا الحقل (التلفون) يجب الا يقل عن 11 رقم ',
+            'phone.*' => 'هذا الحقل (التلفون) يجب يحتوي ع ارقام فقط',
+
+
+        );
+    }
+    function bookFormValidation()
+    {
+
+
+        return array(
+            'name' => 'regex:/^[\pL\s\d\-]+$/u|required|max:99',
+            'email' => 'required|email',
+            'phone' => 'regex:/^[\d]+$/u|required|digits:11',
+            'special' => 'regex:/^[\pL\s\-]+$/u||required|max:99',
+
+        );
+    }
+
+    function bookMessageValidation()
+    {
+        return array(
+            'name.required' => 'هذا الحقل (الاسم) مطلوب ',
+            'name.*' => 'هذا الحقل (الاسم) يجب يحتوي ع حروف وارقام فقط',
+
+            
+            'email.required' => 'هذا الحقل (البريد) مطلوب ',
+            'email.*' => 'هذا الحقل (البريد)يجب ان يكون بريد صحيح',
+
+            'phone.required' => 'هذا الحقل (التلفون) مطلوب ',
+            'phone.digits' => 'هذا الحقل (التلفون) يجب الا يقل عن 11 رقم ',
             'phone.*' => 'هذا الحقل (التلفون) يجب يحتوي ع ارقام فقط',
 
 

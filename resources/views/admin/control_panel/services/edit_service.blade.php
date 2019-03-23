@@ -33,7 +33,7 @@
                                 @endif  
                                  	 	 	
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">خدمه بالعربيه</label>
+                                    <label class="col-lg-3 control-label">الخدمة بالعربية</label>
                                     <div class="col-lg-6">
                                         <input type="text" class="form-control" name="ar_title"
                                             data-bv-message="The service is not valid"
@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                        <label class="col-lg-3 control-label">صورة الايكونه</label>
+                                        <label class="col-lg-3 control-label">صورة الايقونه</label>
                                         <div class="col-lg-6">
                                             <input type="text" class="form-control" name="icon"
                                                 data-bv-message="The username is not valid"
@@ -55,7 +55,10 @@
                                 </div>
                                
 
-                                
+                                <p style="margin-right: 15%">ملحوظه : 
+                                        للمزيد زور هذا الموقع 
+                                        <a href="https://fontawesome.com/icons?d=gallery">المزيد من الايقونات </a>
+                                    </p>
                                 
                                 <div class="form-group">
                                     <div class="col-lg-9 col-lg-offset-3">

@@ -7,42 +7,47 @@
 		<header class="header">
 		     <div class="container">
 			    <!-- navbar -->
-					@include('web._master.nav')
+			    @include('web._master.nav')
 		     </div>
         </header>
 		
 		<section class="header-page ">
 			<img src="{{asset('resources/assets/web/images/about-header.jpg')}}" alt="about-hospital" class="img-responsive">
 			<div class="details container">
-				<h1>العيادات الخارجيه</h1>
+				<h1>الزيارات</h1>
 				<ul class="list-unstyled list-inline">
 					<li><a href="{{url('/')}}">الرئيسية</a></li>
 					<li><i class="fas fa-arrow-left"></i></li>
-					<li>العيادات الخارجيه</li>
+					<li>الزيارات </li>
 				</ul>
 				<p></p>
 			</div>
 		</section>
 		
-		<section class="clinics-page padding">
+<!--		visits section-->
+		<section class="visits-page padding">
 			<div class="container">
 				<div class="row">
-					@foreach ($clinics as $clinic)
-					<div class="col-md-4 col-sm-6">
-							<div class="item">
-								<img src="{{asset($clinic->img)}}" class="img-responsive">
-									<div class="content text-center">
-										<p class="clinic-name">{{$clinic->name}}</p>
-								
-								<p class="app">{{$clinic->appointments}}</p>
-								<p class="button">
-									 <a href="clinic.html" class="btn"> تفاصيل العيادة </a>   
-								 </p>
+					@foreach ($events as $event)
+						<div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">
+							<div class="row visit">
+								<div class="col-md-4" style="padding: 0;">
+									<img class="img-responsive" src="{{$event->img}}">
+								</div>
+								<div class="col-md-8">
+									<div class="content">
+										<h2 class="doc-name">{{$event->name}}</h2>
+										<p class="spec">
+										{{$event->description}}			
+										</p>
 									</div>
+								</div>
+								<div class="col-md-12">
+									<p class="app">{{$event->date}}</p>
+								</div>
 							</div>
 						</div>
 					@endforeach
-					
 					
 				</div>
 			</div>

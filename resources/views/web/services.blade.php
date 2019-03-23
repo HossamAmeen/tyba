@@ -16,43 +16,33 @@
 			<div class="details container">
 				<h1>خدماتنا</h1>
 				<ul class="list-unstyled list-inline">
-					<li><a href="index.html">الرئيسية</a></li>
+					<li><a href="{{url('/')}}">الرئيسية</a></li>
 					<li><i class="fas fa-arrow-left"></i></li>
 					<li>خدماتنا</li>
 				</ul>
 				<p></p>
 			</div>
 		</section>
-		
-		
+
+
 		<section class="about padding">
-				<div class="container">
-					<div class="section-head">
-						<h1 class="text-center">مستشفى طيبه رويال  </h1>
-						<span class="icon"><i class="fas fa-hospital fa-3x"></i></span>
+			<div class="container">
+				<div class="section-head">
+					<h1 class="text-center">مستشفى طيبه رويال  </h1>
+					<span class="icon"><i class="fas fa-hospital fa-3x"></i></span>
+				</div>
+				<div class="row">
+					<div class="col-md-6 content">
+						<p>{{$pref->arDescription}}</p>
+						{!!html_entity_decode($pref->descriptionPoint)!!}
+
 					</div>
-					<div class="row">
-						<div class="col-md-6 content">
-							<p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج </p>
-							<ul class="list">
-								<li><span> وحدة اقامه فندقيه </span></li>
-								<li><span> وحدات اشعه مجهزة </span></li>
-								<li><span>معامل تحاليل على اعلى مستوى </span></li>
-								<li><span> وحدة العنايه المركزه </span></li>
-								<li><span> مركز رعاية الاطفال و حضانات الاطفال </span></li>
-								<li><span> عيادات خارجيه فى جميع التخصصات </span></li>
-								<li><span> العمليات والمناظير الجراحيه </span></li>
-								<li><span> وحدة جراحات التجميل </span> </li>
-								<li><span> وحدة علاج السمنه </span> </li>
-							</u>
-							
-						</div>
-						<div class="col-md-6 img text-center">
-							<img src="{{asset('resources/assets/web/images/about.png')}}" class="img-responsive" alt="about-hospital">
-						</div>
+					<div class="col-md-6 img text-center">
+						<img src="{{asset('resources/assets/web/images/about.png')}}" class="img-responsive" alt="about-hospital">
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 			
 		
 		
@@ -69,7 +59,7 @@
 					<div class="service text-center">
 						<img src="{{asset($service->img)}}" class="img-responsive">
 						<div class="content">
-							<span><i class="{{$service->icon}}"></i></span>
+							<span><i class="fas {{$service->icon}} fa-5x"></i></span>
 							<p> {{$service->ar_title}} </p>
 						</div>
 						<a href="service-detail.html" class="title" title="">

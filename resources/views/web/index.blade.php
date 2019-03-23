@@ -64,7 +64,7 @@
 						<div class="service text-center">
 							<img src="{{asset($service->img)}}" class="img-responsive">
 							<div class="content">
-								<span><i class="{{$service->icon}}"></i></span>
+								<span><i class="fas {{$service->icon}} fa-5x" ></i></span>
 								<p> {{$service->ar_title}} </p>
 							</div>
 							<a href="service-detail.html" class="title" title="">
@@ -120,7 +120,7 @@
 							{{$event->description}} 
 							</p>
 							<p class="button">
-								<a href="visits.html" class="btn">معرفة الزيارات</a> 
+								<a href="{{url('events')}}" class="btn">معرفة الزيارات</a>
 							</p>
 						</div>
 					</div>

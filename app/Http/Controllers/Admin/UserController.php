@@ -23,6 +23,7 @@ class UserController extends Controller
     }
     public function store(Request $request)
     {
+       // return $request->file('img');
         $rules = $this->formValidation();
         $message = $this->messageValidation();
         $this->validate($request, $rules,$message);
@@ -31,11 +32,13 @@ class UserController extends Controller
         if($request->hasFile('img'))
         {
             $photo = $request->file('img');
+            
             $imagename = time().'.'.$photo->getClientOriginalExtension();
             $destinationPath = 'resources/assets/admin/images/';
             $thumb_img = Image::make($photo->getRealPath())->resize(400, 400);
             $thumb_img->save($destinationPath.$imagename,60);
             $user->img = $destinationPath . $imagename;
+           // return $user->img;
         }
         $request->session()->flash('status', 'تم الاضافه بنجاح');
         $user->save();

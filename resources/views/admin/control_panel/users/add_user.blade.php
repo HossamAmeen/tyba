@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <!--Page main section start-->
     <section id="min-wrapper">
         <div id="main-content">
@@ -66,7 +65,7 @@
                                 </div>
             
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">إاعده كلمه السر</label>
+                                    <label class="col-lg-3 control-label">إعاده كلمه السر</label>
                                     <div class="col-lg-6">
                                         <input type="password" class="form-control" name="password_confirmation"
                                             required data-bv-notempty-message="The confirm password is required and cannot be empty"
@@ -95,12 +94,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                        <label class="col-lg-3 control-label">صورة</label>
-                                        <div class="col-lg-6">
-                                            <input type="file" name="img" >
+                                <div class="row ls_divider last">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" >إضافة صورة</label>
+
+                                        <div class="col-md-10 ls-group-input">
+                                            <input id="file-3" type="file"  name="img">
+                                           
                                         </div>
+                                        
                                     </div>
+                                </div>
+                                
                                 <div class="form-group">
                                     <div class="col-lg-9 col-lg-offset-3">
                                         <button type="submit" class="btn btn-primary">إضافه</button>
@@ -136,4 +141,5 @@
         </div>
     </div>
 </section>
+ 
 @endsection	

@@ -12,11 +12,11 @@
         </header>
 		
 		<section class="header-page ">
-			<img src="{{asset('resources/assets/web/images/about-headerjpg')}}" alt="about-hospital" class="img-responsive">
+			<img src="{{asset('resources/assets/web/images/about-header.jpg')}}" alt="about-hospital" class="img-responsive">
 			<div class="details container">
 				<h1>الاطباء</h1>
 				<ul class="list-unstyled list-inline">
-					<li><a href="index.html">الرئيسية</a></li>
+					<li><a href="{{url('/')}}">الرئيسية</a></li>
 					<li><i class="fas fa-arrow-left"></i></li>
 					<li>الاطباء</li>
 				</ul>

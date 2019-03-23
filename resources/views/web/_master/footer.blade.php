@@ -24,12 +24,16 @@
           <img src="{{asset('resources/assets/web/images/logo.png')}}" class="img-responsive logo" alt="logo">
         </div>
         <div class="col-md-4">
+          @if($pref->arAddress != null)
           <h2>العنوان </h2>
           <div class="contacts">
             <p class="address">
-              يُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن 
+            {{$pref->arAddress}}
             </p>
-            <p class="phone"><strong>تليفون: </strong>01005416546121</p>
+            @endif
+            @if($pref->phone != null)
+            <p class="phone"><strong>تليفون: </strong>{{$pref->phone}}</p>
+              @endif
           </div>
         </div>
       </div>

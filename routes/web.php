@@ -10,6 +10,7 @@
     Route::get('/doctors', 'HomeController@doctors');
     Route::get('/about', 'HomeController@about');
     Route::any('/contacts', 'HomeController@contact');
+    Route::any('/book', 'HomeController@book');
 
 
 

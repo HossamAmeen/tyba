@@ -40,35 +40,35 @@
             </ul>
         </li>
         <li >
-            <a  href="#" @if($title == 'اضافه عياده' || $title == 'عرض العيادات') class="active"  @endif >
-                <i class="fa fa-bar-chart-o"></i> <span>العيدات</span>
-            </a>
-            <ul>
-                <li>
-                    <a  @if($title == 'اضافه عياده') class="active"  @endif href="{{url('admin/clinic/create')}}">اضافه عياده</a>
-                </li>
-                <li>
-                    <a @if($title == 'عرض العيادات') class="active"  @endif  href="{{url('admin/clinic')}}">عرض العيدات</a>
-                </li>
-
-            </ul>
-        </li>
-        <li >
-            <a  href="#" @if($title == 'اضافه طبيب' || $title == 'عرض الاطباء') class="active"  @endif >
-                <i class="fa fa-bar-chart-o"></i> <span>الاطباء</span>
+            <a  href="#" @if($title == 'اضافه طبيب' || $title == 'عرض الأطباء') class="active"  @endif >
+                <i class="fa fa-bar-chart-o"></i> <span>الأطباء</span>
             </a>
             <ul>
                 <li>
                     <a  @if($title == 'اضافه طبيب') class="active"  @endif href="{{url('admin/doctor/create')}}">اضافه طبيب</a>
                 </li>
                 <li>
-                    <a @if($title == 'عرض الاطباء') class="active"  @endif  href="{{url('admin/doctor')}}">عرض الاطباء</a>
+                    <a @if($title == 'عرض الأطباء') class="active"  @endif  href="{{url('admin/doctor')}}">عرض الأطباء</a>
                 </li>
 
             </ul>
         </li>
         <li >
-            <a  href="#" @if($title == 'اضافه زياره' || $title == 'عرض زيارات') class="active"  @endif >
+            <a  href="#" @if($title == 'اضافه عياده' || $title == 'عرض العيادات') class="active"  @endif >
+                <i class="fa fa-bar-chart-o"></i> <span>العيادات</span>
+            </a>
+            <ul>
+                <li>
+                    <a  @if($title == 'اضافه عياده') class="active"  @endif href="{{url('admin/clinic/create')}}">اضافه عياده</a>
+                </li>
+                <li>
+                    <a @if($title == 'عرض العيادات') class="active"  @endif  href="{{url('admin/clinic')}}">عرض العيادات</a>
+                </li>
+
+            </ul>
+        </li>
+        <li >
+            <a  href="#" @if($title == 'اضافه زياره' || $title == 'عرض الزيارات') class="active"  @endif >
                 <i class="fa fa-bar-chart-o"></i> <span>الزيارات</span>
             </a>
             <ul>
@@ -76,13 +76,11 @@
                     <a  @if($title == 'اضافه زياره') class="active"  @endif href="{{url('admin/event/create')}}">اضافه زياره</a>
                 </li>
                 <li>
-                    <a @if($title == 'عرض زيارات') class="active"  @endif  href="{{url('admin/event')}}">عرض زياؤات</a>
+                    <a @if($title == 'عرض الزيارات') class="active"  @endif  href="{{url('admin/event')}}">عرض الزيراتا</a>
                 </li>
 
             </ul>
         </li>
-
-
         <li >
             <a  href="{{url('admin/logout')}}">
                 <i class="fa fa-power-off"></i> <span>تسجيل خروج</span>

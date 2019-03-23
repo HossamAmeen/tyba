@@ -36,6 +36,7 @@
                                     <div class="col-lg-6">
                                         <input type="text" class="form-control" name="ar_title"
                                             data-bv-message="The service is not valid"
+                                            placeholder="العيادات الخارجية"
                                             required data-bv-notempty-message="The service is required and cannot be empty"
                                             value="{{ old('ar_title')}}"
                                             
@@ -47,6 +48,7 @@
                                         <div class="col-lg-6">
                                             <input type="text" class="form-control" name="icon"
                                                 data-bv-message="The username is not valid"
+                                                placeholder="ex fa-heartbeat"
                                                 required data-bv-notempty-message="The username is required and cannot be empty"
                                                 value="{{ old('icon')}}"
                                                     />
@@ -54,7 +56,10 @@
                                 </div>
 
                                 
-
+                                <p style="margin-right: 15%">ملحوظه : 
+                                    للمزيد زور هذا الموقع 
+                                    <a href="https://fontawesome.com/icons?d=gallery">المزيد من الايقونات </a>
+                                </p>
                                 <div class="form-group">
                                     <div class="col-lg-9 col-lg-offset-3">
                                         <button type="submit" class="btn btn-primary">إضافه</button>

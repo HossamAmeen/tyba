@@ -52,7 +52,7 @@ class ClinicController extends Controller
     {
 
         $clinic = Clinic::find($id);
-        $title = 'عرض العياده';
+        $title = 'تعديل ' . $clinic->name;
 
         if(!empty($clinic))
             return view('admin.control_panel.clinics.edit_clinic',$clinic )->with(compact('clinic', 'title') );
@@ -102,16 +102,14 @@ class ClinicController extends Controller
     function formValidation()
     {
         return array(
-            'name'     => 'required|max:99|unique:clinics,name,NULL,id,deleted_at,NULL|regex:/^[\pL\s\d\-]+$/u',
-            'description' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
+       
             'img'=> 'image',
         );
     }
     function EditformValidation($id)
     {
         return array(
-            'name'     => "required|max:99|regex:/^[\pL\s\d\-]+$/u|unique:clinics,name,$id,id,deleted_at,NULL",
-            'description' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
+            
              'img'=> 'image',
         );
     }

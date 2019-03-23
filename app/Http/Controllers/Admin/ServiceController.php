@@ -37,13 +37,14 @@ class ServiceController extends Controller
         $service->user_id = session('id');
         $service->save();
         $request->session()->flash('status', 'تم الاضافه بنجاح');
+    
       return redirect()->route('service.index');
     }
     public function edit($id)
     {
         
         $service = Service::find($id);
-        $title = 'عرض الخدمه';
+        $title = 'عرض خدمة ' . $service->ar_title;
 
         if(!empty($service))
         return view('admin.control_panel.services.edit_service',$service )->with(compact('service', 'title') );
@@ -69,11 +70,14 @@ class ServiceController extends Controller
     }
     public function destroy(Request $request, $id)
     {
+        return "Test";
         $service = Service::find($id);
         if(!empty($service))
             { 
                 $service->delete();
                 $request->session()->flash('delete', 'تم الحذف بنجاح');
+             
+                return session()->get('delete') ; 
             }
 
         return redirect()->route('service.index');

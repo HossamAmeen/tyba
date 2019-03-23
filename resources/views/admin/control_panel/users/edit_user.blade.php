@@ -97,11 +97,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                    <label class="col-lg-3 control-label">صورة</label>
-                                    <div class="col-lg-6">
-                                        <input type="file" name="img" >
+                            <div class="row ls_divider last">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" >إضافة صورة</label>
+
+                                        <div class="col-md-10 ls-group-input">
+                                            <input id="file-3" type="file"  name="img">
+                                           
+                                        </div>
+                                      
+                                        
                                     </div>
+                            </div>
+                            <div class="form-group">
+                                    <label class="col-lg-3 control-label">الصورة</label>
+                                    
                                     <div class="goal-user-image">
                                     <img class="rounded" src="{{asset($img)}}" alt="user image" height="15%" width="15%" />
                                     </div>    

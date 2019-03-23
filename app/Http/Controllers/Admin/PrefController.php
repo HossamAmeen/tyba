@@ -11,7 +11,7 @@ class PrefController extends Controller
 {
     public function login(Request $request){
        
-        if(session('login')){
+        if(session('id')){
             return redirect()->route('prefs.index');
         }
         if($request->isMethod('post')){
@@ -96,15 +96,7 @@ class PrefController extends Controller
     {
 
        return array(
-        'arAddress'     => 'required|regex:/^[\pL\s\d\-]+$/u',
-
-
-        'arDescription' => 'required',
-        'phone'         => 'required|numeric',
-        'mainEmail'     => 'required|email',
-        'descriptionPoint'   => 'required',
-           'video'   => 'required',
-
+       
        );
     }
     function messageValidation(){
@@ -126,8 +118,7 @@ class PrefController extends Controller
             'mainEmail.*'     => 'هذا الحقل (بريد) يجيب ان يكون بريد صحيح  ',
 
             'descriptionPoint.required'     => 'هذا الحقل (العنوان الرئيسي بالعربيه) مطلوب ',
-            'descriptionPoint.*'     => 'هذا الحقل (العنوان الرئيسي بالعربيه) يجيب ان يكون حروف او ارقام  ',
-
+           
             'video.required'     => 'هذا الحقل ( youtube link) مطلوب ',
 
 

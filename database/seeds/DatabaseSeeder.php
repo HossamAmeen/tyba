@@ -13,10 +13,10 @@ class DatabaseSeeder extends Seeder
     {
         factory('App\User',1)->create();
         factory('App\Pref',1)->create();
-        factory('App\Clinic',2)->create();
-        factory('App\Service',2)->create();
+        factory('App\Clinic',8)->create();
+        factory('App\Service',8)->create();
         factory('App\Event',2)->create();
-        factory('App\Doctor',2)->create();
+        factory('App\Doctor',8)->create();
        
         
         

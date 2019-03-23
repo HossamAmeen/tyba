@@ -74,12 +74,7 @@
                         <h3>log In</h3>
                         <div class="social-btn-login">
                             <ul>
-                                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-bitbucket"></i></a></li>
+                               
                             </ul>
                             <!--<button class="btn ls-dark-btn rounded"><i class="fa fa-facebook"></i></button>
                             <button class="btn ls-dark-btn rounded"><i class="fa fa-twitter"></i></button>
@@ -138,7 +133,7 @@
 <!--Nano Scroll Script End -->
 
 <!--switchery Script Start -->
-<script src="{{asset('resources/assets/admin/js/switchery.min.js')}}"></script>
+<script src="{{asset('resources/assets/js/switchery.min.js')}}"></script>
 <!--switchery Script End -->
 
 <!--bootstrap switch Button Script Start-->
@@ -146,7 +141,7 @@
 <!--bootstrap switch Button Script End-->
 
 <!--easypie Library Script Start -->
-<script src="assets/admin/js/jquery.easypiechart.min.js"></script>
+<script src="assets/js/jquery.easypiechart.min.js"></script>
 <!--easypie Library Script Start -->
 
 <!--bootstrap-progressbar Library script Start-->
@@ -154,9 +149,9 @@
 <!--bootstrap-progressbar Library script End-->
 
 <!--FLoat library Script Start -->
-<script type="text/javascript" src="{{asset('resources/assets/admin/js/chart/flot/jquery.flot.js')}}"></script>
-<script type="text/javascript" src="{{asset('resources/assets/admin/js/chart/flot/jquery.flot.pie.js')}}"></script>
-<script type="text/javascript" src="{{asset('resources/assets/admin/js/chart/flot/jquery.flot.resize.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/js/chart/flot/jquery.flot.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/js/chart/flot/jquery.flot.pie.js')}}"></script>
+<script type="text/javascript" src="{{asset('resources/assets/js/chart/flot/jquery.flot.resize.js')}}"></script>
 <!--FLoat library Script End -->
 
 <script type="text/javascript" src="{{asset('resources/assets/admin/js/pages/layout.js')}}"></script>

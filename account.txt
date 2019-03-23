@@ -1,6 +1,9 @@
 git clone https://github.com/HossamAmeen/tyba.git
 
-
+database
+zedy_tibaroyal_db
+tibaroyal_user
+%fNp,Cssc0qq
 
 
 git remote add origin https://github.com/HossamAmeen/tyba.git
