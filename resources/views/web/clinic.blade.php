@@ -32,10 +32,7 @@
 						<img src="{{asset($clinic->img)}}" class="img-responsive" alt="doctor-img">
 					</div>
 					<div class="details text-center">
-						<h2 class="doc-name">ا.د عصام ابوالفضل </h2>
-						<p class="doc-title">  استاذ الروماتيزم وأمراض المناعة <br>
-							ورئيس قسم الروماتيزم بكليه الطب جامعه سوهاج
-						</p>
+						
 						<p class="appoint">{{$clinic->appointments}} </p>
 						<ul class="clinic-desc list-unstyled">
 							{!!html_entity_decode($pref->descriptionPoint)!!}
