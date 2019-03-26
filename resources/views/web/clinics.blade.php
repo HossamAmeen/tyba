@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar">
 	<head>
-		@include('web._master.header')	
+		@include('web._master.header')
 	</head>
 	<body>
 		<header class="header">
@@ -36,7 +36,7 @@
 								
 								<p class="app">{{$clinic->appointments}}</p>
 								<p class="button">
-									 <a href="clinic.html" class="btn"> تفاصيل العيادة </a>   
+									 <a href="{{url('clinic/'.$clinic->id)}}" class="btn"> تفاصيل العيادة </a>
 								 </p>
 									</div>
 							</div>

@@ -6,6 +6,7 @@
     Route::get('/', 'HomeController@index');
     Route::get('/services', 'HomeController@services');
     Route::get('/clinics', 'HomeController@clinics');
+    Route::get('/clinic/{id}', 'HomeController@clinic');
     Route::get('/events', 'HomeController@events');
     Route::get('/doctors', 'HomeController@doctors');
     Route::get('/about', 'HomeController@about');

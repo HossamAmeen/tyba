@@ -44,6 +44,14 @@ class HomeController extends Controller
         return view('web.clinics' , $data)->with(compact( 'title'));
 
     }
+    public function clinic($id)
+    {
+        //return "test";
+        $data['clinic'] = Clinic::find($id);
+        $title =   "مستشفى طيبه رويال- " . $data['clinic']->name ;
+        return view('web.clinic' , $data)->with(compact( 'title'));
+
+    }
     public function doctors()
     {
 
