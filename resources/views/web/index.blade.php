@@ -67,9 +67,7 @@
 								<span><i class="fas {{$service->icon}} fa-5x" ></i></span>
 								<p> {{$service->ar_title}} </p>
 							</div>
-							<a href="service-detail.html" class="title" title="">
-								تفاصيل الخدمات
-								<i class="fa fa-caret-right"></i></a>
+							
 						</div>
 					</div>
 					@endforeach
@@ -97,7 +95,7 @@
 								
 								<p class="app">{{$clinic->appointments}}</p>
 								<p class="button">
-									 <a href="clinic.html" class="btn"> تفاصيل العيادة </a>   
+									<a href="{{url('clinic/'.$clinic->id)}}" class="btn">تفاصيل العيادة </a>   
 								 </p>
 									</div>
 							</div>
