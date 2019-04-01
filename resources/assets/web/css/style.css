@@ -221,7 +221,7 @@ span, table, ul, li, td, tr, a, footer {
   -moz-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-.services .service:hover:before {
+/* .services .service:hover:before {
   height: 0; }
 .services .service:hover:after {
   height: 100%; }
@@ -229,7 +229,7 @@ span, table, ul, li, td, tr, a, footer {
   top: -150%; }
 .services .service:hover .title {
   top: 50%;
-  opacity: 1; }
+  opacity: 1; } */
 
 /* ------------------------------------- clinics style ----------------------------------------------------*/
 .clinics {
