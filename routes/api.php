@@ -16,3 +16,16 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('Mobile')->group(function () {
+  
+        Route::get('/services', 'MobileController@services');
+        Route::get('/clinics', 'MobileController@clinics');
+        Route::get('/clinic/{id}', 'MobileController@clinic');
+        Route::get('/events', 'MobileController@events');
+        Route::get('/doctors', 'MobileController@doctors');
+        Route::get('/about', 'MobileController@about');
+        Route::any('/contacts', 'MobileController@contact');
+        Route::any('/book', 'MobileController@book');
+    
+});
