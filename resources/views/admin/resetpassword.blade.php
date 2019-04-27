@@ -25,7 +25,7 @@
     <!-- TODO: Add a favicon -->
     <link rel="shortcut icon" href="{{ asset('resources/assets/admin//images/ico/fab.ico')}}">
 
-    <title>Login</title>
+    <title>reset password</title>
 
     <!--Page loading plugin Start -->
     <link rel="stylesheet" href="{{ asset('resources/assets/admin//css/plugins/pace.css')}}">
@@ -70,7 +70,7 @@
                             <i class="glyphicon glyphicon-user"></i>
 
                         </div>
-                        <h3>Identify Yourself</h3>
+                        <h3>reset password</h3>
                         <div class="social-btn-login">
                             <ul>
                                 <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
@@ -90,57 +90,42 @@
                     </div>
 
                     <div class="login-form">
-                        <form id="form-login" action="{{ url('admin/login') }}" class="form-horizontal ls_form" method="POST">
-                            @if (session()->get('status') )
-                            <div class="alert alert-success">
-                                <strong>{{session()->get('status')}}</strong>
-                            </div>
-                        @endif
+                        <form id="form-login" action="{{ url('admin/paswordreset/'.$id.'/'.$token) }}" class="form-horizontal ls_form" method="POST">
                             {{ csrf_field() }}
-                            <div class="input-group ls-group-input">
-                                <input class="form-control" type="text" placeholder="Username" name="name">
-                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                           
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
-
+                        @endif  
 
                             <div class="input-group ls-group-input">
 
                                 <input type="password" placeholder="Password" name="password"
-                                       class="form-control" value="">
+                                       class="form-control" value="" minlength="6">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                             </div>
+                            <div class="input-group ls-group-input">
 
-                            <div class="remember-me">
-                                <input class="switchCheckBox" type="checkbox" checked data-size="mini"
-                                       data-on-text="<i class='fa fa-check'><i>"
-                                       data-off-text="<i class='fa fa-times'><i>">
-                                <span>Remember me</span>
+                                <input type="password" placeholder="Password" name="password_confirmation"
+                                       class="form-control" value="" minlength="6">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                             </div>
+                            
                             <div class="input-group ls-group-input login-btn-box">
                                 <button class="btn ls-dark-btn ladda-button col-md-12 col-sm-12 col-xs-12" data-style="slide-down">
                                     <span class="ladda-label"><i class="fa fa-key"></i></span>
                                 </button>
 
-                                <a class="forgot-password" href="javascript:void(0)">Forgot password</a>
+                                
                             </div>
                         </form>
                     </div>
-                    <div class="forgot-pass-box">
-                        <form action="{{ url('admin/sendToken') }}" class="form-horizontal ls_form" method="POST">
-                            <div class="input-group ls-group-input">
-                                <input class="form-control" type="email" placeholder="someone@mail.com" name="email" required>
-                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            </div>
-                            <div class="input-group ls-group-input login-btn-box">
-                                <button class="btn ls-dark-btn col-md-12 col-sm-12 col-xs-12">
-                                    <i class="fa fa-rocket"></i> Send
-                                </button>
-
-                                <a class="login-view" href="javascript:void(0)">Login</a>
-
-                            </div>
-                        </form>
-                    </div>
+                   
 
                 </div>
             </div>

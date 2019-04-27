@@ -99,7 +99,7 @@ class EventController extends Controller
         return array( 
             'name'     => 'required|max:99|unique:events,name,NULL,id,deleted_at,NULL|regex:/^[\pL\s\d\-]+$/u',
             'description' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
-            'date' => 'required',
+            
             'img'=> 'image',
         );
     }

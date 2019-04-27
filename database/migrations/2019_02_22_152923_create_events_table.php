@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
-            $table->string('date');
+            $table->string('date')->nullable();
             $table->string('img')->default('resources/assets/admin/images/avatar-80.png');
 
             $table->unsignedInteger('user_id')->nullable();

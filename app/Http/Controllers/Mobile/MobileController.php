@@ -33,6 +33,7 @@ class MobileController extends Controller
     {
         
         $data['clinic'] = Clinic::find($id);
+        $data['clinic']->descriptionPoint =  strip_tags ( $data['clinic']->descriptionPoint );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
      
 
@@ -58,8 +59,9 @@ class MobileController extends Controller
     
     public function about()
     {
-        $data['about'] = Pref::find(1)->value('arDescription');
-        return json_encode($data , JSON_UNESCAPED_UNICODE) ;
+        $data['about'] = Pref::find(1)->value('descriptionPoint');
+        $data['about'] = strip_tags( $data['about']);      
+        return json_encode(  $data['about'], JSON_UNESCAPED_UNICODE) ;
     }
 
     

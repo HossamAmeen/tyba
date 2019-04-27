@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Pref;
 use App\User;
 use DB;
+use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -37,10 +38,67 @@ class PrefController extends Controller
     }
     public  function logout(Request $request){
         $request->session()->forget(['id', 'role']);
-        $request->session()->flush();
+      
         $title='تسجيل الدخول';
         return view('admin.login')->with(compact('title'));
     }
+    public function sendToken(Request $request)
+    {  
+        
+        if($request->isMethod('post')){
+         
+        $user = User::where('email', $request->email)->first();
+           
+       
+        if(!empty($user))
+        {
+            $rules = $this->formValidation();
+            $message = $this->messageValidation();
+            $this->validate($request, $rules, $message);
+
+            $user->remember_token =  md5(rand(1, 10) . microtime());
+            $user->save();
+
+            $data=[
+                'email' =>  $request->email,
+                'token' =>  $user->remember_token ,
+                'id' => $user->id,
+                
+            ];
+            Mail::send('admin.mail_send_token',$data,function($message) use ($data){
+              
+                $message->from( 'info@tibaroyal.com');
+                $message->to($data['email']);
+                $message->subject('reset password');
+            });
+            $request->session()->flash('status', 'check your email to reset password , please!');
+            return redirect()->route('login');
+         }
+        
+        }
+       
+      }
+    public function paswordreset( Request $request , $id , $token  )
+      {
+        if($request->isMethod('post')){
+            $user =  User::find($id);
+            if($user->remember_token == $token ){
+
+                $rules = $this->passwordValidation();
+                $message = $this->passwordMessageValidation();
+                $this->validate($request, $rules, $message);
+                
+                $user->password = Hash::make($request->password);
+                $user->save();
+                return redirect()->route('login');
+            }
+        }
+       $user =  User::find($id);
+         if($user->remember_token == $token ){
+             return view('admin.resetpassword' , compact('id' , 'token'));
+         }
+         return redirect()->route('login');
+      }
     public function index()
     {
        $mPref = Pref::find(1);
@@ -96,35 +154,31 @@ class PrefController extends Controller
     {
 
        return array(
+         
        
        );
     }
     function messageValidation(){
         return array(
-
-
-            'arAddress.required'     => 'هذا الحقل (العنوان بالعربيه) مطلوب ',
-            'arAddress.*'     => 'هذا الحقل (العنوان بالعربيه) يجيب ان يكون حروف او ارقام  ',
-
-
-            'arDescription.required'     => 'هذا الحقل (الوصف بالعربيه) مطلوب ',
-            'arDescription.*'     => 'هذا الحقل (الوصف بالعربيه) يجيب ان يكون حروف او ارقام  ',
-
-
-            'phone.required'     => 'هذا الحقل (تلفون ) مطلوب ',
-            'phone.*'     => 'هذا الحقل (تلفون) يجيب ان يكون  ارقام  ',
-
-            'mainEmail.required'     => 'هذا الحقل (البريد) مطلوب ',
-            'mainEmail.*'     => 'هذا الحقل (بريد) يجيب ان يكون بريد صحيح  ',
-
-            'descriptionPoint.required'     => 'هذا الحقل (العنوان الرئيسي بالعربيه) مطلوب ',
            
-            'video.required'     => 'هذا الحقل ( youtube link) مطلوب ',
-
-
-
-
-
+            );
+    }
+    function passwordValidation()
+    {
+        return array(
+           
+            'password'              => 'required | confirmed ',
+            'password_confirmation' => 'required ',
+            
+        );
+    }
+    function passwordMessageValidation()
+    {
+        return array(
+           
+            'password.required'     => 'هذا الحقل (كلمه المرور) مطلوب ',
+            'password.confirmed'     => 'كلمة المرور غير متطابقه ',
+            
         );
     }
 }

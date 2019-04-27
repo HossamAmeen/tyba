@@ -31,38 +31,38 @@ function forgo_password_view(){
 
 
 }
-function login_view_submit(){
-    $('#form-login').submit(function () {
-        /*var setUrl = window.location.origin + '/index.html'
-         window.location.assign(setUrl);*/
+// function login_view_submit(){
+//     $('#form-login').submit(function () {
+//         /*var setUrl = window.location.origin + '/index.html'
+//          window.location.assign(setUrl);*/
 
-        return false;
-    });
-}
+//         return false;
+//     });
+// }
 
-function ladda_button_call(){
-    Ladda.bind('button.ladda-button', {
-        callback: function (instance) {
-            var progress = 0;
-            var interval = setInterval(function () {
-                progress = Math.min(progress + Math.random() * 0.1, 1);
-                instance.setProgress(progress);
+// function ladda_button_call(){
+//     Ladda.bind('button.ladda-button', {
+//         callback: function (instance) {
+//             var progress = 0;
+//             var interval = setInterval(function () {
+//                 progress = Math.min(progress + Math.random() * 0.1, 1);
+//                 instance.setProgress(progress);
 
-                if (progress === 1) {
-                    instance.stop();
-                    clearInterval(interval);
-                    //Checking Login in here
+//                 if (progress === 1) {
+//                     instance.stop();
+//                     clearInterval(interval);
+//                     //Checking Login in here
 
 
-                    var jacked = humane.create({baseCls: 'humane-jackedup', addnCls: 'humane-jackedup-success'});
-                    jacked.log("<i class='fa fa-smile-o'></i> Successfully logedin ");
+//                     var jacked = humane.create({baseCls: 'humane-jackedup', addnCls: 'humane-jackedup-success'});
+//                     jacked.log("<i class='fa fa-smile-o'></i> Successfully logedin ");
 
-                    setInterval(function () {
-                        var setUrl = '/index.html';
-                        window.location.assign(setUrl);
-                    }, 500);
-                }
-            }, 200);
-        }
-    });
-}
+//                     setInterval(function () {
+//                         var setUrl = '/index.html';
+//                         window.location.assign(setUrl);
+//                     }, 500);
+//                 }
+//             }, 200);
+//         }
+//     });
+// }

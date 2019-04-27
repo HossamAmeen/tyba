@@ -17,9 +17,9 @@ class CreateClinicsTable extends Migration
             Schema::create('clinics', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name');
-                $table->string('description');
-                $table->string('appointments');
-                $table->text('descriptionPoint');
+                $table->string('description')->nullable();
+                $table->string('appointments')->nullable();
+                $table->text('descriptionPoint')->nullable();
                 $table->string('img')->default('resources/assets/admin/images/default.jpg');
                 $table->unsignedInteger('user_id')->nullable();
 

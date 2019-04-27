@@ -13,7 +13,7 @@
                     </div>
                 @endif
                 @if (session()->get('delete') )
-                <div class="alert alert-danger">
+                <div class="alert alert-success">
                     <strong>{{session()->get('delete')}}</strong>
                 </div>
                 @endif

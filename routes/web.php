@@ -29,6 +29,8 @@ Route::prefix('admin')->group(function () {
 
         Route::any('/login','PrefController@login')->name('login');
         Route::get('logout' , 'PrefController@logout');
+        Route::any('sendToken' , 'PrefController@sendToken');
+        Route::any('paswordreset/{id}/{token}' , 'PrefController@paswordreset');
 
         Route::middleware(['middleware' => 'manager'])->group(function () {
 

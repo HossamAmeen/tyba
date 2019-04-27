@@ -28,6 +28,7 @@ class UserController extends Controller
         $message = $this->messageValidation();
         $this->validate($request, $rules,$message);
         $user = User::create($request->all());
+        
         $user->password = Hash::make($request->password);
         if($request->hasFile('img'))
         {

@@ -16,7 +16,7 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('job');
+            $table->string('job')->nullable();
             $table->string('img')->default('resources/assets/admin/images/avatar-80.png');
 
             $table->unsignedInteger('user_id')->nullable();
