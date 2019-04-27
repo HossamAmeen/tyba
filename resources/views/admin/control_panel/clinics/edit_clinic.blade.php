@@ -54,7 +54,7 @@
                                                 <div class="col-lg-6">
                                                     <input class="form-control" name="description" type="text"
                                                     data-bv-emailaddress-message="The input is not a valid email address"
-                                                    value="{{ $description}}"
+                                                    value="{{ $description}}" required
                                                     />
                                                 </div>
                                         </div>
@@ -63,13 +63,13 @@
                                                     <div class="col-lg-6">
                                                         <input class="form-control" name="appointments" type="text"
                                                         data-bv-emailaddress-message="The input is not a valid email address"
-                                                        value="{{ $appointments}}"
+                                                        value="{{ $appointments}}" required
                                                         />
                                                     </div>
                                         </div>
                                         <label class="col-lg-3 control-label">الوصف بالنقاط</label><br><br>
                                         <div class="panel-body no-padding" >
-                                            <textarea class="summernote" name="descriptionPoint"  >
+                                            <textarea class="summernote" name="descriptionPoint"  required>
                                                     {{$descriptionPoint}}
                                             </textarea>
                                         </div><br>

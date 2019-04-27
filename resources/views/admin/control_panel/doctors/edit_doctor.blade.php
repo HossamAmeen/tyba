@@ -49,7 +49,7 @@
                                     <div class="col-lg-6">
                                         <input class="form-control" name="job" type="text"
                                                data-bv-emailaddress-message="The input is not a valid email address"
-                                               value="{{ $job}}"
+                                               value="{{ $job}}" required
                                         />
                                     </div>
                                 </div>

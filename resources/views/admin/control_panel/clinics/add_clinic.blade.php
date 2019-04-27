@@ -55,7 +55,7 @@
                                                 <div class="col-lg-6">
                                                     <input class="form-control" name="description" type="text"
                                                     data-bv-emailaddress-message="The input is not a valid email address"
-                                                    value="{{ old('description')}}"
+                                                    value="{{ old('description')}}" required
                                                     />
                                                 </div>
                                         </div>
@@ -64,14 +64,14 @@
                                                     <div class="col-lg-6">
                                                         <input class="form-control" name="appointments" type="text"
                                                         data-bv-emailaddress-message="The input is not a valid email address"
-                                                        value="{{ old('appointments')}}"
+                                                        value="{{ old('appointments')}}" required
                                                         />
                                                     </div>
                                         </div>
                                         <label class="col-lg-3 control-label">الوصف بالنقاط</label><br><br>
                                         <div class="panel-body no-padding" >
-                                            <textarea class="summernote" name="descriptionPoint"  >
-                                            
+                                            <textarea class="summernote" name="descriptionPoint" required >
+                                                {{ old('descriptionPoint')}}"
                                             </textarea>
                                         </div><br>
                                         <div class="row ls_divider last">
@@ -79,7 +79,7 @@
                                                 <label class="col-md-2 control-label" >إضافة صورة</label>
 
                                                 <div class="col-md-10 ls-group-input">
-                                                    <input id="file-3" type="file" multiple="true" name="img">
+                                                    <input id="file-3" type="file" multiple="true" name="img" >
                                                 </div>
                                                 
                                             </div>

@@ -110,7 +110,7 @@ class EventController extends Controller
                                                                   
             'description' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
             'date' => 'required',
-             'img'=> 'image',
+             'img'=> 'required|image',
         );
     }
     function messageValidation(){
@@ -123,7 +123,9 @@ class EventController extends Controller
             'description.required'     => 'هذا الحقل (الوصف) مطلوب ',
             'description.*'            =>  'هذا الحقل (الوصف) يجب يحتوي ع حروف وارقام فقط',
 
+            'date.required'     => 'هذا الحقل (المعاد) مطلوب ',
               'image'            =>  'هذا الحقل (اضافه الصورة) يجب ان يكون صورة',
+              'image'            =>  'هذا الحقل ( الصورة) مطلوب',
         );
     }
 }

@@ -48,7 +48,7 @@
                                     <div class="col-lg-6">
                                         <input class="form-control" name="description" type="text"
                                                data-bv-emailaddress-message="The input is not a valid email address"
-                                               value="{{ old('description')}}"
+                                               value="{{ old('description')}}" required
                                         />
                                     </div>
                                 </div>
@@ -57,8 +57,8 @@
                                     <div class="col-lg-6">
                                         <input class="form-control" name="date" type="text"
                                                data-bv-emailaddress-message="The input is not a valid email address"
-                                               value="{{ old('date')}}"
-                                        />
+                                               value="{{ old('date')}}" required
+                                        /> 
                                     </div>
                                 </div>
 

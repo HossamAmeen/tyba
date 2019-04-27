@@ -102,15 +102,21 @@ class ClinicController extends Controller
     function formValidation()
     {
         return array(
-       
-            'img'=> 'image',
+            'name' => 'required',
+            'description' => 'required',
+            'appointments' => 'required',
+            'descriptionPoint' => 'required',
+            'img'=> 'required|image',
         );
     }
     function EditformValidation($id)
     {
         return array(
-            
-             'img'=> 'image',
+            'name' => 'required',
+            'description' => 'required',
+            'appointments' => 'required',
+            'descriptionPoint' => 'required',
+            'img'=> 'required|image',
         );
     }
     function messageValidation(){
@@ -120,8 +126,11 @@ class ClinicController extends Controller
             'name.unique'     => 'هذا الحقل (اسم العياده) يوجد بالفعل ',
             'name.*'            =>  'هذا الحقل (اسم العياده) يجب يحتوي ع حروف وارقام فقط',
 
-            'ar_title.required'     => 'هذا الحقل (الوصف) مطلوب ',
-            'ar_title.*'            =>  'هذا الحقل (الوصف) يجب يحتوي ع حروف وارقام فقط',
+            'description.required'     => 'هذا الحقل (الوصف) مطلوب ',
+            'appointments.required'     => 'هذا الحقل (المعاد) مطلوب ',
+            'descriptionPoint.required'     => 'هذا الحقل (وصف بالنقاط) مطلوب ',
+            'img.required'     => 'هذا الحقل (الصوره) مطلوب ',
+           
 
               'image'            =>  'هذا الحقل (اضافه الصورة) يجب ان يكون صورة',
         );

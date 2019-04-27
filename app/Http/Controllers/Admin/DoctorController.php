@@ -99,7 +99,7 @@ class DoctorController extends Controller
         return array(
             'name'     => 'required|max:99|unique:doctors,name,NULL,id,deleted_at,NULL|regex:/^[\pL\s\d\-]+$/u',
             'job' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
-            'img'=> 'image',
+            'img'=> 'required|image',
         );
     }
     function EditformValidation($id)
@@ -107,7 +107,7 @@ class DoctorController extends Controller
         return array(
             'name'     => "required|max:99|regex:/^[\pL\s\d\-]+$/u|unique:doctors,name,$id,id,deleted_at,NULL",
             'job' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
-             'img'=> 'image',
+             'img'=> 'required|image',
         );
     }
     function messageValidation(){
@@ -121,6 +121,7 @@ class DoctorController extends Controller
             'job.*'            =>  'هذا الحقل (الوظيفه) يجب يحتوي ع حروف وارقام فقط',
 
               'image'            =>  'هذا الحقل (اضافه الصورة) يجب ان يكون صورة',
+              'image'            =>  'هذا الحقل ( الصورة) مطلوب',
         );
     }
 }
