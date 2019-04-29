@@ -15,7 +15,7 @@ class MobileController extends Controller
 
     public function services()
     {
-        $data['services'] = Service::all();
+        $data['services'] = Service::all( 'ar_title', 'icon' );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
       
     }
@@ -25,7 +25,8 @@ class MobileController extends Controller
 
 
       
-        $data['clinics'] = Clinic::all();
+        $data['clinics'] = Clinic::all(  'name' , 'img' ,'description' , 'appointments' );
+
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }
@@ -43,7 +44,7 @@ class MobileController extends Controller
 
 
        
-        $data['doctors'] = Doctor::all();
+        $data['doctors'] = Doctor::all( 'name' , 'img' ,'job' );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }
@@ -52,15 +53,16 @@ class MobileController extends Controller
 
 
       
-        $data['events'] = Event::all();
+        $data['events'] = Event::all('name' , 'img' ,'description' , 'date' );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }
     
     public function about()
     {
-        $data['about'] = Pref::find(1)->value('descriptionPoint');
-        $data['about'] = strip_tags( $data['about']);      
+        $data['about'] = Pref::find(1 , ['arAddress' , 'arDescription' , 'phone'
+        , 'mainEmail' ,'descriptionPoint', 'facebook' , 'twitter', 'video']);
+         $data['about']->descriptionPoint = strip_tags( $data['about']->descriptionPoint);      
         return json_encode(  $data['about'], JSON_UNESCAPED_UNICODE) ;
     }
 
