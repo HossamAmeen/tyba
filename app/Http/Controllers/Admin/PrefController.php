@@ -67,7 +67,7 @@ class PrefController extends Controller
             ];
             Mail::send('admin.mail_send_token',$data,function($message) use ($data){
               
-                $message->from( 'info@tibaroyal.com');
+                $message->from('info@tibaroyal.com');
                 $message->to($data['email']);
                 $message->subject('reset password');
             });

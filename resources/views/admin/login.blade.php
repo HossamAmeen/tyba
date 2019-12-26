@@ -127,6 +127,7 @@
                     </div>
                     <div class="forgot-pass-box">
                         <form action="{{ url('admin/sendToken') }}" class="form-horizontal ls_form" method="POST">
+                      
                             <div class="input-group ls-group-input">
                                 <input class="form-control" type="email" placeholder="someone@mail.com" name="email" required>
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
@@ -152,15 +153,15 @@
 </section>
 
 </body>
-<script src="{{ asset('resources/assets/admin//js/lib/jquery-2.1.1.min.js')}}"></script>
-<script src="{{ asset('resources/assets/admin//js/lib/jquery.easing.js')}}"></script>
-<script src="{{ asset('resources/assets/admin//js/bootstrap-switch.min.js')}}"></script>
+<script src="{{ asset('resources/assets/admin/js/lib/jquery-2.1.1.min.js')}}"></script>
+<script src="{{ asset('resources/assets/admin/js/lib/jquery.easing.js')}}"></script>
+<script src="{{ asset('resources/assets/admin/js/bootstrap-switch.min.js')}}"></script>
 <!--Script for notification start-->
-<script src="{{ asset('resources/assets/admin//js/loader/spin.js')}}"></script>
-<script src="{{ asset('resources/assets/admin//js/loader/ladda.js')}}"></script>
-<script src="{{ asset('resources/assets/admin//js/humane.min.js')}}"></script>
+<script src="{{ asset('resources/assets/admin/js/loader/spin.js')}}"></script>
+<script src="{{ asset('resources/assets/admin/js/loader/ladda.js')}}"></script>
+<script src="{{ asset('resources/assets/admin/js/humane.min.js')}}"></script>
 <!--Script for notification end-->
 
-<script src="{{ asset('resources/assets/admin//js/pages/login.js')}}"></script>
+<script src="{{ asset('resources/assets/admin/js/pages/login.js')}}"></script>
 </html>
 
