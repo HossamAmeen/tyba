@@ -12,7 +12,7 @@
         </header>
 		
 		<section class="header-page ">
-			<img src="images/services-head.jpg" alt="about-hospital" class="img-responsive">
+			<img src="{{asset('resources/assets/web/images/services-head.jpg')}}" alt="about-hospital" class="img-responsive">
 			<div class="details container">
 				<h1>خدماتنا</h1>
 				<ul class="list-unstyled list-inline">

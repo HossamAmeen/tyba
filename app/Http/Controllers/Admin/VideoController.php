@@ -3,60 +3,61 @@
 namespace App\Http\Controllers\Admin;
 use App\Helpers\FileHelper;
 use App\Http\Controllers\Controller;
-use App\Service;
+use App\Video;
 use App\User;
 use DB;
 use Image;
 
 use Illuminate\Http\Request;
 
-class ServiceController extends Controller
+class VideoController  extends Controller
 {
    
     public function index()
     {
-        $data['services'] =Service::all();
+        $data['services'] =Video::all();
             
-        $data['title'] = 'عرض الخدمات';
-        return view('admin.control_panel.services.show_services',$data);
+        $data['title'] = 'عرض الفديوهات';
+        return view('admin.control_panel.videos.show_services',$data);
     }
     public function create()
     {
 
-        $data['title'] = 'اضافه خدمه';
-        return view('admin.control_panel.services.add_service',$data);
+        $data['title'] = 'اضافه فديو';
+        return view('admin.control_panel.videos.add_service',$data);
     }
     public function store(Request $request)
     {
+        // return $request->all();
         $rules = $this->formValidation();
         $message = $this->messageValidation();
         $this->validate($request, $rules,$message);
-        $service = Service::create($request->all());
+        $service = Video::create($request->all());
     
 
         $service->user_id = session('id');
         $service->save();
         $request->session()->flash('status', 'تم الاضافه بنجاح');
     
-      return redirect()->route('service.index');
+      return redirect()->route('video.index');
     }
     public function edit($id)
     {
         
-        $service = Service::find($id);
-        $title = 'عرض خدمة ' . $service->ar_title;
+        $service = Video::find($id);
+        $title = 'عرض الفديو ' . $service->ar_title;
 
         if(!empty($service))
-        return view('admin.control_panel.services.edit_service',$service )->with(compact('service', 'title') );
+        return view('admin.control_panel.videos.edit_service',$service )->with(compact('service', 'title') );
         else
-        return redirect()->route('service.index');
+        return redirect()->route('video.index');
     }
     public function update(Request $request, $id)
     {
         $rules = $this->EditformValidation($id);
         $message = $this->messageValidation();
         $this->validate($request, $rules,$message);
-        $service = Service::find($id);
+        $service = Video::find($id);
        // $path =  $service->img ;
        // $hasFile=false;
         if(!empty($service)){
@@ -66,12 +67,12 @@ class ServiceController extends Controller
         }
        
         $request->session()->flash('status', 'تم التعديل بنجاح');
-        return redirect()->route('service.index');
+        return redirect()->route('video.index');
     }
     public function destroy(Request $request, $id)
     {
-        
-        $service = Service::find($id);
+      
+        $service = Video::find($id);
         if(!empty($service))
             { 
                 $service->delete();
@@ -80,20 +81,21 @@ class ServiceController extends Controller
                 return session()->get('delete') ; 
             }
 
-        return redirect()->route('service.index');
+        return redirect()->route('video.index');
     }
     function formValidation()
     {
        return array(
-        'ar_title'     => 'required|max:99|unique:services,ar_title,deleted_at|regex:/^[\pL\s\d\-]+$/u',
+        'name'     => 'required',
+        'path'     => 'required',
     
        );
     }
     function EditformValidation($id)
     {
         return array(
-            'ar_title'     => "required|max:99|regex:/^[\pL\s\d\-]+$/u|unique:services,ar_title,$id,id,deleted_at,NULL",
-          //  'img'=> 'image',
+            'name'     => 'required',
+            'path'     => 'required',
            );
     }
     function messageValidation(){

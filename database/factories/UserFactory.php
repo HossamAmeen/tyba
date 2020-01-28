@@ -71,7 +71,7 @@ $factory->define(App\Event::class , function (Faker $faker){
         'name' => "events",
         'description'  => " تتشرف مستشفى طيبة باستضافة نخبة من افضل الاطباء فى مصر بشكل دورى لاجراء العمليات المتخصصة والاشراف على الحالات الان يمكنك معرفة تخصصات وموعد الزياراة من خلال الموقع ",
         'date' => 'يوم الخميس 02/03/2018',
-        "img" => "resources/assets/admin/images/services-img2.jpg",
+        "img" => "resources/assets/admin/images/visits.png",
         'user_id' => 1 ,
      
     ];
@@ -84,5 +84,24 @@ $factory->define(App\Doctor::class , function (Faker $faker){
         "img" => "resources/assets/admin/images/doctor.png",
         'user_id' => 1 ,
 
+    ];
+});
+$factory->define(App\News::class, function (Faker $faker) {
+
+    return [
+        'title' => "عنوان الخبر",
+        'en_title' => $faker->name,
+        'description' => " بدء حملة حملة الرواد من أجل صحة أفضل اعلنت مستشفى الرواد التخصصى عن بدء حملة حملة الرواد اعلنت مستشفى الرواد التخصصى عن بدء حملة حملة الرواد اعلنت مستشفى الرواد التخصصى عن بدء حملة حملة الرواد من أجل صحة أفضل بهدف رفع الوعى الطبى وتقديم ايسر طرق العلاج للمرضى فى التخصصات التالية : - المخ و الأعصاب - أمراض القلب - أمراض الجهاز الهضمي - أمراض الكلي - أمراض المسالك البولية - الجراحة العامة - جراحة العظام - الأورام تابعونا عبر صفحة مستشفي الرواد عب مواقع التواصل الاجتماعى للحصول على معلومات قيمة ورفع الوعى الطبى فى الامراض والاقسام سالفة الذكر مع توفير خدمات الرعاية الصحية الشاملة من خلال المستشفى وتقديم الاستشارات المطلوبة لكل حالة عند الحاجة",
+        'vision_mission' => $faker->text ,
+       'is_slider'=> rand(0,1),
+        'user_id' =>1 ,
+    ];
+});
+
+$factory->define(App\Video::class, function (Faker $faker) {
+    return [
+        'name'=>$faker->name,
+        "is_master"=> rand(0,1),
+        'user_id' =>1 ,
     ];
 });

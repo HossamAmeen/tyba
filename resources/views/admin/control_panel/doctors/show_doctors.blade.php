@@ -24,7 +24,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <span class="panel-title">الأطباء</span>
-                                <a href="{{url('admin/user/create')}}">  <button class="alert-success"> <i class="fa fa-plus"></i> </button> </a>
+                                <a href="{{url('admin/news/create')}}">  <button class="alert-success"> <i class="fa fa-plus"></i> </button> </a>
 
                             </div>
                             <div class="panel-body">

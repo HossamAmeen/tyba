@@ -19,6 +19,8 @@
             <li  @if($title == 'مستشفى طيبه رويال - خدماتنا' ) class="active"  @endif><a class="page-scroll" href="{{url('/services')}}">خدماتنا </a></li>
             <li  @if($title == 'مستشفى طيبه رويال - العيادات' ) class="active"  @endif><a class="page-scroll" href="{{url('/clinics')}}">العيادات الخارجية </a></li>
             <li  @if($title == 'مستشفى طيبه رويال - الاطباء' ) class="active"  @endif><a class="page-scroll" href="{{url('/doctors')}}">الاطباء </a></li>
+            <li  @if($title == 'مستشفى طيبه رويال - الأخبار' ) class="active"  @endif><a class="page-scroll" href="{{url('/news')}}">الأخبار </a></li>
+            <li  @if($title == 'مستشفى طيبه رويال - الفديوهات' ) class="active"  @endif><a class="page-scroll" href="{{url('/videos')}}">الفديوهات </a></li>
             <li  @if($title == 'مستشفى طيبه رويال - الزيارات' ) class="active"  @endif><a class="page-scroll" href="{{url('/events')}}">الزيارات  </a></li>
             <li  @if($title == 'مستشفى طيبه رويال - تواصل معانا' ) class="active"  @endif><a class="page-scroll" href="{{url('/contacts')}}">اتصل بنا </a></li>
             <li  @if($title == 'مستشفى طيبه رويال -احجز' ) class="active"  @endif><a class="page-scroll" href="{{ url('/book') }}">احجز </a></li>

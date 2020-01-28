@@ -9,10 +9,10 @@
                 <div class="row">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">تعديل الدكتور</h3>
+                            <h3 class="panel-title">تعديل الخبر</h3>
                         </div>
                         <div class="panel-body">
-                            <form id="defaultForm" method="post" class="form-horizontal ls_form" action="{{url('admin/doctor/'.$id)}}"
+                            <form id="defaultForm" method="post" class="form-horizontal ls_form" action="{{url('admin/news/'.$id)}}"
                                   data-bv-message="This value is not valid"
                                   data-bv-feedbackicons-valid="fa fa-check"
                                   data-bv-feedbackicons-invalid="fa fa-bug"
@@ -31,12 +31,12 @@
                                     </div>
                                 @endif
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">اسم الطبيب</label>
+                                    <label class="col-lg-3 control-label">عنوان</label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" name="name"
+                                        <input type="text" class="form-control" name="title"
                                                data-bv-message="The username is not valid"
                                                required data-bv-notempty-message="The username is required and cannot be empty"
-                                               value="{{ $name}}"
+                                               value="{{ $title}}"
                                                data-bv-stringlength="true" data-bv-stringlength-min="6" data-bv-stringlength-max="30" data-bv-stringlength-message="The username must be more than 6 and less than 30 characters long"
                                                data-bv-different="true" data-bv-different-field="password" data-bv-different-message="The username and password cannot be the same as each other"
 
@@ -44,21 +44,29 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">الوظيفه</label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" name="job" type="text"
-                                               data-bv-emailaddress-message="The input is not a valid email address"
-                                               value="{{ $job}}" required
-                                        />
-                                    </div>
+                                <label class="col-lg-3 control-label">الوصف </label><br>
+                                <div class="panel-heading">
+    
+                                    <ul class="panel-control">
+                                        <li><a class="minus" href="javascript:void(0)"><i class="fa fa-minus"></i></a></li>
+                                        <li><a class="refresh" href="javascript:void(0)"><i class="fa fa-refresh"></i></a>
+                                        </li>
+                                        <li><a class="close-panel" href="javascript:void(0)"><i class="fa fa-times"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
+    
+                                <div class="panel-body no-padding">
+                                    <textarea class="summernote" name="description" id="demo">
+                                                {{$description}}
+                                            </textarea>
+                                </div><br>
                                 <div class="row ls_divider last">
                                     <div class="form-group">
                                         <label class="col-md-2 control-label" >إضافة صورة</label>
 
                                         <div class="col-md-10 ls-group-input">
-                                            <input id="file-3" type="file"  name="img">
+                                            <input id="file-3" type="file"  name="image">
 
                                         </div>
 
@@ -69,7 +77,7 @@
                                     <label class="col-lg-3 control-label">الصورة</label>
 
                                     <div class="goal-user-image">
-                                        <img class="rounded" src="{{asset($img)}}" alt="user image" height="15%" width="15%" />
+                                        <img class="rounded" src="{{asset($image)}}" alt="user image" height="15%" width="15%" />
                                     </div>
                                 </div>
 

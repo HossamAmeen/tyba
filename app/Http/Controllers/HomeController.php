@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Service;
 use App\Event;
 use App\Doctor;
+use App\Video;
+use App\News;
 use App\Clinic;
 
 
@@ -20,10 +22,12 @@ class HomeController extends Controller
     public function index()
     {
 
-        $data['services'] = Service::all();
+        $data['services'] = Service::all()->take(8);
         $data['event']    = Event::all()->first();
         $data['clinics']  = Clinic::all();
-        $data['doctors']  = Doctor::all();
+        $data['doctors']  = Doctor::all()->take(8);
+        $data['news']  = News::all()->take(4);
+        $data['videos']  = Video::all()->take(3);
         $data['title']    = "مستشفى طيبه رويال";
         return view('web.index', $data);
     }
@@ -51,6 +55,39 @@ class HomeController extends Controller
         $title =   "مستشفى طيبه رويال- " . $data['clinic']->name ;
         return view('web.clinic' , $data)->with(compact( 'title'));
 
+    }
+    public function news()
+    {
+        $title = "مستشفى طيبه رويال - الأخبار";
+        $data['news'] = News::paginate(8);
+        return view('web.news' , $data)->with(compact( 'title'));
+    }
+    public function showNews($id)
+    {
+        
+        $data['news'] = News::find($id);
+        $data["news2"] = News::all()->sortByDesc("id")->where('id','!=',$id)->take(4);
+        if(isset($data['news']))
+        {
+            if( strlen($data['news']->title)< 50 )
+            $title = "مستشفى طيبه رويال - " .$data['news']->title;
+           
+            else
+            {
+                $data['news']->title = substr($data['news']->title , 0 , 50 );  
+                $title = "مستشفى طيبه رويال - " .$data['news']->title;
+            }
+           
+        }
+        
+        return view('web.show_news' , $data)->with(compact( 'title'));
+    } 
+
+    public function videos()
+    {
+        $title = "مستشفى طيبه رويال - الفديوهات";
+        $data['videos'] = Video::paginate(8);
+        return view('web.videos' , $data)->with(compact( 'title'));
     }
     public function doctors()
     {

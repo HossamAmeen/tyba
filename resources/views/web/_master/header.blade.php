@@ -24,3 +24,4 @@
 		
 <!--		main style.css-->
 		<link rel="stylesheet" href="{{asset('resources/assets/web/css/style.css')}}">
+		<link rel="stylesheet" href="{{asset('resources/assets/web/css/video.popup.css')}}">

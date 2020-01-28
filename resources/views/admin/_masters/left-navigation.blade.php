@@ -54,6 +54,34 @@
             </ul>
         </li>
         <li >
+            <a  href="#" @if($title == 'اضافه خبر' || $title == 'عرض الأخبار') class="active"  @endif >
+                <i class="fa fa-bar-chart-o"></i> <span>الأخبار</span>
+            </a>
+            <ul>
+                <li>
+                    <a  @if($title == 'اضافه خبر') class="active"  @endif href="{{url('admin/news/create')}}">اضافه خبر</a>
+                </li>
+                <li>
+                    <a @if($title == 'عرض الأخبار') class="active"  @endif  href="{{url('admin/news')}}">عرض الأخبار</a>
+                </li>
+
+            </ul>
+        </li>
+        <li >
+            <a  href="#" @if($title == 'اضافه فديو' || $title == 'عرض الفديوهات') class="active"  @endif >
+                <i class="fa fa-bar-chart-o"></i> <span>الفديوهات</span>
+            </a>
+            <ul>
+                <li>
+                    <a  @if($title == 'اضافه فديو') class="active"  @endif href="{{url('admin/video/create')}}">اضافه فديو</a>
+                </li>
+                <li>
+                    <a @if($title == 'عرض الفديوهات') class="active"  @endif  href="{{url('admin/video')}}">عرض الفديوهات</a>
+                </li>
+
+            </ul>
+        </li>
+        <li >
             <a  href="#" @if($title == 'اضافه عياده' || $title == 'عرض العيادات') class="active"  @endif >
                 <i class="fa fa-bar-chart-o"></i> <span>العيادات</span>
             </a>

@@ -23,6 +23,7 @@ class CreatePrefsTable extends Migration
             $table->string('mainEmail')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
             $table->string('video')->nullable();
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')

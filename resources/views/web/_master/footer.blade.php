@@ -41,16 +41,24 @@
   
   <div class="copywrite" style="direction: ltr;">
     <p class="text-center">created by 
-      <a href="#">
+      <a href="http://www.z-edy.com/" target="_blank">
         <img src="{{asset('resources/assets/web/images/zedy_logo.png')}}" width="70px" alt="zedy company">
       </a>
     </p>
   </div>
 </footer>
-	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156465957-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-156465957-1');
+</script>
 <script src="{{asset('resources/assets/web/js/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('resources/assets/web/js/bootstrap.min.js')}}"></script>
-
+<script src="{{asset('resources/assets/web/js/video.popup.js')}}"></script>
 <!--        our revolution slider-->
 <script src="{{asset('resources/assets/web/js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{asset('resources/assets/web/js/jquery.themepunch.revolution.min.js')}}"></script>

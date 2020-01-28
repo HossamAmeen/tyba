@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
         factory('App\Service',28)->create();
         factory('App\Event',2)->create();
         factory('App\Doctor',8)->create();
-       
+        factory('App\Video',8)->create();
+        factory('App\News',20)->create();
         
         
        
