@@ -33,12 +33,12 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6 content">
-						<p>{{$pref->arDescription}}</p>
-						{!!html_entity_decode($pref->descriptionPoint)!!}
+						
+						{!!html_entity_decode($pref->serviceDescription)!!}
 
 					</div>
 					<div class="col-md-6 img text-center">
-						<img src="{{asset('resources/assets/web/images/about.png')}}" class="img-responsive" alt="about-hospital">
+						<img src="{{asset('resources/assets/web/images/services.png')}}" class="img-responsive" alt="about-hospital">
 					</div>
 				</div>
 			</div>
@@ -57,12 +57,12 @@
 				@foreach ($services as $service)
 				<div class="col-md-3 col-sm-6">
 					<div class="service text-center">
-						<img src="{{asset($service->img)}}" class="img-responsive">
+						<img src="{{asset($service->image)}}" class="img-responsive">
 						<div class="content">
 							<span><i class="fas {{$service->icon}} fa-5x"></i></span>
 							<p> {{$service->ar_title}} </p>
 						</div>
-						<a href="service-detail.html" class="title" title="">
+						<a href="{{url('services/'.$service->id)}}" class="title" title="">
 							تفاصيل الخدمات
 							<i class="fa fa-caret-right"></i></a>
 					</div>

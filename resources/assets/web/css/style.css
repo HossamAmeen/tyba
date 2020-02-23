@@ -65,7 +65,7 @@ span, table, ul, li, td, tr, a, footer {
     .header #mainNav .navbar-brand {
       padding: 5px 15px; }
       .header #mainNav .navbar-brand img {
-        height: 145px; }
+        height: 70px; }
     .header #mainNav .navbar-nav {
       padding-top: 5px;
       margin-top: 20px; }
@@ -91,11 +91,11 @@ span, table, ul, li, td, tr, a, footer {
     .header #mainNav.affix .navbar-brand {
       padding: 5px 15px; }
       .header #mainNav.affix .navbar-brand img {
-        height: 70px !important; }
+        height: 50px !important; }
 
 @media (max-width: 992px) {
   header #mainNav .navbar-brand img {
-    height: 70px !important; }
+    height: 50px !important; }
   header #mainNav li a {
     font-size: 14px;
     padding: 12px 9px !important; } }
@@ -106,6 +106,13 @@ span, table, ul, li, td, tr, a, footer {
   button.navbar-toggle.collapsed,
   button.navbar-toggle {
     float: left; } }
+
+
+.header .hot-line{
+	margin-top: 10px;
+	color: #02adc6;
+	background-color: #f0fff0;
+}
 /* ------------------------------------------- our revolution slider styles ---------------------------*/
 .bannercontainer {
   direction: rtl;
@@ -188,7 +195,7 @@ span, table, ul, li, td, tr, a, footer {
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%); }
 .services .service:before {
-  background-color: #fafafa;
+  
   content: "";
   opacity: 0.96;
   width: 100%;
@@ -232,6 +239,11 @@ span, table, ul, li, td, tr, a, footer {
   top: 50%;
   opacity: 1; }
 
+.services .service-tit{
+	background-color: #02adc6;
+	color: #fff !important;
+	padding: 7px 10px;
+}
 /* ------------------------------------- clinics style ----------------------------------------------------*/
 .clinics {
   background-color: #fafafa; }
@@ -319,7 +331,9 @@ span, table, ul, li, td, tr, a, footer {
   .doctors .doctor .content .doc-name {
     color: #02adc6;
     font-size: 18px;
-    font-weight: 700; }
+    font-weight: 700; 
+	  
+}
 
 /*------------------------------------ News Home------------------------------------------*/
 .news{
@@ -448,6 +462,21 @@ footer {
     background-color: #373e4c;
     margin-top: 25px; }
 
+footer .scial-medai{
+	padding: 10px 0; 
+	text-align: right;
+}
+footer .scial-medai ul li{
+	display: inline-block;
+	padding: 15px;
+}
+footer .scial-medai ul li i {
+	font-size: 25px;
+	transition: all .5s ease-in-out;
+}
+footer .scial-medai ul li i:hover{
+	color:#02adc6;
+}
 /* --------------------------------------------- aboutUs page --------------------------------------- */
 .header-page {
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.32);
@@ -606,6 +635,13 @@ footer {
     padding: 10px;
     font-size: 18px; }
 
+  .visitss{
+	background-color: #fff;
+    box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
 /* ---------------------------------------------- videos page --------------------------------------------*/
 .videos-page .row {
   margin-bottom: 30px; }
@@ -651,7 +687,9 @@ footer {
     margin-bottom: 20px; } }
 
 
-
+.videos-page iframe{
+	height: 200px;
+}
 /* ---------------------------------------------- news page --------------------------------------------------*/
 .news-page .popular {
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.08);

@@ -18,13 +18,16 @@ class CreatePrefsTable extends Migration
             $table->increments('id');
             $table->string('arAddress')->nullable();
             $table->text('arDescription')->nullable();
-            $table->text('descriptionPoint')->nullable();
+            $table->text('description')->nullable();
+            $table->text('about_us')->nullable();
+            $table->text('serviceDescription')->nullable();
             $table->string('phone')->nullable();
             $table->string('mainEmail')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('youtube')->nullable();
             $table->string('video')->nullable();
+            $table->string('andriod_app')->nullable();
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')
             ->onDelete('cascade');

@@ -8,10 +8,14 @@ class Clinic extends Model
 {
     protected $dates = ['deleted_at'];
     protected $fillable = [
-        'name' , 'img' ,'description' , 'appointments'  , 'descriptionPoint'
+        'name' ,'postion', 'img' ,'doctor' , 'appointments'  , 'descriptionPoint'
     ];
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+    public function events()
+    {
+        return $this->hasMany('App\Event');
     }
 }

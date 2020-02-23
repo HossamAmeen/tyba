@@ -24,6 +24,7 @@
             <li  @if($title == 'مستشفى طيبه رويال - الزيارات' ) class="active"  @endif><a class="page-scroll" href="{{url('/events')}}">الزيارات  </a></li>
             <li  @if($title == 'مستشفى طيبه رويال - تواصل معانا' ) class="active"  @endif><a class="page-scroll" href="{{url('/contacts')}}">اتصل بنا </a></li>
             <li  @if($title == 'مستشفى طيبه رويال -احجز' ) class="active"  @endif><a class="page-scroll" href="{{ url('/book') }}">احجز </a></li>
+            <li><img src="{{asset('resources/assets/web/images/Group2.png')}}" class="img-responsive" alt="logo"></li>
             </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

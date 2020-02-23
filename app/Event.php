@@ -8,7 +8,7 @@ class Event extends Model
 {
     protected $dates = ['deleted_at'];
     protected $fillable = [
-        'name' , 'img' ,'description' , 'date' 
+        'name' , 'img' ,'description' ,'appointments','clinic_id' 
     ];
     public function user()
     {

@@ -17,10 +17,11 @@ class CreateClinicsTable extends Migration
             Schema::create('clinics', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name');
-                $table->string('description')->nullable();
+                $table->string('doctor');
+                $table->string('postion')->nullable();
                 $table->string('appointments')->nullable();
                 $table->text('descriptionPoint')->nullable();
-                $table->string('img')->default('resources/assets/admin/images/default.jpg');
+                $table->string('img')->default('resources/assets/web/images/doctor.png');
                 $table->unsignedInteger('user_id')->nullable();
 
 

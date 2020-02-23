@@ -60,6 +60,32 @@
                                     للمزيد زور هذا الموقع 
                                     <a href="https://fontawesome.com/icons?d=gallery">المزيد من الايقونات </a>
                                 </p>
+
+                                <div class="row ls_divider last">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"> 1 إضافة صورة</label>
+    
+                                        <div class="col-md-6 ls-group-input">
+                                            <input id="file-3" type="file" name="image">
+    
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                                <div class="row ls_divider last">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"> 2 إضافة صورة</label>
+    
+                                        <div class="col-md-6 ls-group-input">
+                                            <input id="file-3" type="file" name="image2">
+    
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+
                                 <div class="form-group">
                                     <div class="col-lg-9 col-lg-offset-3">
                                         <button type="submit" class="btn btn-primary">إضافه</button>

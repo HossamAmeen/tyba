@@ -110,6 +110,12 @@
             </ul>
         </li>
         <li >
+            <a  href="{{url('admin/books')}}"  @if($title == 'عرض الحجوزات') class="active"  @endif >
+                <i class="fa fa-bar-chart-o"></i> <span>الحجوزات</span>
+            </a>
+
+        </li>
+        <li >
             <a  href="{{url('admin/logout')}}">
                 <i class="fa fa-power-off"></i> <span>تسجيل خروج</span>
             </a>

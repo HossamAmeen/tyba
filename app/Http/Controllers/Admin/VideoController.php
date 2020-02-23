@@ -78,7 +78,7 @@ class VideoController  extends Controller
                 $service->delete();
                 $request->session()->flash('delete', 'تم الحذف بنجاح');
              
-                return session()->get('delete') ; 
+                  
             }
 
         return redirect()->route('video.index');

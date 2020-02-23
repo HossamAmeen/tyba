@@ -44,7 +44,7 @@
                                         value="{{ $arAddress}} " />
                                 </div>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">الوصف الاساسي بالعربيه</label>
                                 <div class="col-lg-6">
@@ -54,6 +54,15 @@
                                         value="{{$arDescription}}" />
                                 </div>
                             </div>
+                            {{-- <div class="form-group">
+                                <label class="col-lg-3 control-label">وصف الخدمات في صفحة الخدمات</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" name="serviceDescription"
+                                        data-bv-message="The username is not valid"
+                                        data-bv-notempty-message="The username is  and cannot be empty"
+                                        value="{{$serviceDescription}}" />
+                                </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label class="col-lg-3 control-label"> الموبيل</label>
                                 <div class="col-lg-6">
@@ -111,7 +120,7 @@
                                         value="{{$video}}" />
                                 </div>
                             </div>
-                            <label class="col-lg-3 control-label">الوصف بالنقاط</label><br>
+                            <label class="col-lg-3 control-label">وصف ف الصفحه الرئيسية</label><br>
                             <div class="panel-heading">
 
                                 <ul class="panel-control">
@@ -124,8 +133,42 @@
                             </div>
 
                             <div class="panel-body no-padding">
-                                <textarea class="summernote" name="descriptionPoint" id="demo">
-                                            {{$descriptionPoint}}
+                                <textarea class="summernote" name="description" id="demo">
+                                            {{$description}}
+                                        </textarea>
+                            </div><br>
+                            <label class="col-lg-3 control-label">وصف ف الصفحه من نحن</label><br>
+                            <div class="panel-heading">
+
+                                <ul class="panel-control">
+                                    <li><a class="minus" href="javascript:void(0)"><i class="fa fa-minus"></i></a></li>
+                                    <li><a class="refresh" href="javascript:void(0)"><i class="fa fa-refresh"></i></a>
+                                    </li>
+                                    <li><a class="close-panel" href="javascript:void(0)"><i class="fa fa-times"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="panel-body no-padding">
+                                <textarea class="summernote" name="about_us" id="demo">
+                                            {{$about_us}}
+                                        </textarea>
+                            </div><br>
+                            <label class="col-lg-3 control-label">وصف الخدمات في صفحة الخدمات</label><br>
+                            <div class="panel-heading">
+
+                                <ul class="panel-control">
+                                    <li><a class="minus" href="javascript:void(0)"><i class="fa fa-minus"></i></a></li>
+                                    <li><a class="refresh" href="javascript:void(0)"><i class="fa fa-refresh"></i></a>
+                                    </li>
+                                    <li><a class="close-panel" href="javascript:void(0)"><i class="fa fa-times"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="panel-body no-padding">
+                                <textarea class="summernote" name="serviceDescription" id="demo">
+                                            {{$serviceDescription}}
                                         </textarea>
                             </div><br>
                             <div class="form-group">

@@ -61,6 +61,42 @@
 		</div>
 	</div>
 
+	<!--	Start	News  section-->
+
+	<section class="news padding">
+		<div class="container">
+			<div class="section-head text-center">
+				<h1>أخبار المستشفى</h1>
+				<span class="icon"><i class="fas fa-newspaper fa-3x"></i></span>
+			</div>
+			<div class="news-info">
+				<div class="row">
+					@foreach ($news as $item)
+					<div class="col-md-3 col-sm-6 col-12">
+						<div class="new-content">
+							<div class="new-photo">
+								<img src="{{$item->image}}" class="img-responsive">
+							</div>
+							<div class="new-details text-center">
+								<a href="singleNew.html">
+									<h1 class="new-title">{{$item->title}}</h1>
+								</a>
+								<p class="new-description">{{$item->ar_sub_title}}</p>
+							</div>
+						</div>
+					</div>
+
+					@endforeach
+
+				</div>
+			</div>
+
+			<p class="button text-center">
+				<a href="{{url('news')}}" class="btn">المزيد من الأخبار</a>
+			</p>
+		</div>
+	</section>
+	<!--	End	News  section-->
 	<!--		our services section -->
 	<section class="services padding">
 		<div class="container">
@@ -72,17 +108,17 @@
 				@foreach ($services as $service)
 				<div class="col-md-3 col-sm-6">
 					<div class="service text-center">
-						<img src="{{asset($service->img)}}" class="img-responsive">
+						<img src="{{asset($service->image)}}" class="img-responsive">
 						<div class="content">
-							<span><i class="fas {{$service->icon}} fa-5x"></i></span>
-							<p> {{$service->ar_title}} </p>
-						</div>
 
+							<p class="service-tit"> {{$service->ar_title}}</p>
+						</div>
+						<a href="{{url('services/'.$service->id)}}" class="title" title="">
+							تفاصيل الخدمات
+							<i class="fa fa-caret-right"></i></a>
 					</div>
 				</div>
 				@endforeach
-
-
 			</div>
 		</div>
 	</section>
@@ -145,14 +181,41 @@
 			<div class="row text-center">
 				<span class="icon"><i class="fas fa-quote-right fa-5x"></i></span>
 				<p class="content">
-					مستشفى طيبة رويال بسوهاج هى أحدى الموسسات الرائدة في المجال الطبي والصحي تأسست على يد نخبة كبيرة من
-					الأساتذة و المتخصصين لتكون صرحا رائدا ومتميزا فى سوهاج خاصة في صعيد مصر عامة
+					@if($pref->descriptionPoint != null)
+					{!! $pref->descriptionPoint !!}
+					@endif
 				</p>
 				<span class="icon"><i class="fas fa-quote-left fa-5x"></i></span>
 			</div>
 		</div>
 	</section>
+	<!--	Start Videos section-->
+	<section class="videos-page padding home-videos">
+		<div class="container">
+			<div class="row">
+				@foreach ($videos as $item)
+				<div class="col-md-4 col-sm-6 col-xs-offset-1 col-sm-offset-0 col-xs-10">
+					<div class="item">
+						<iframe width="100%" src="{{$item->path}}" frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+						<div class="content">
+							<p class="title">{{$item->name}}</p>
+						</div>
+					</div>
+				</div>
+				@endforeach
 
+
+
+			</div>
+
+			<p class="button text-center">
+				<a href="{{url('videos')}}" class="btn">المزيد من الفيديوهات</a>
+			</p>
+		</div>
+	</section>
+	<!--	End Videos section-->
 	<!--		doctors section-->
 	<section class="doctors padding">
 		<div class="container">
@@ -176,70 +239,8 @@
 		</div>
 	</section>
 
-	<!--	Start	News  section-->
-
-	<section class="news padding">
-		<div class="container">
-			<div class="section-head text-center">
-				<h1>أخبار المستشفى</h1>
-				<span class="icon"><i class="fas fa-newspaper fa-3x"></i></span>
-			</div>
-			<div class="news-info">
-				<div class="row">
-					@foreach ($news as $item)
-					<div class="col-md-3 col-sm-6 col-12">
-						<div class="new-content">
-							<div class="new-photo">
-								<img src="{{$item->image}}" class="img-responsive">
-							</div>
-							<div class="new-details text-center">
-								<a href="singleNew.html">
-									<h1 class="new-title">{{$item->title}}</h1>
-								</a>
-								<p class="new-description">{{$item->ar_sub_title}}</p>
-							</div>
-						</div>
-					</div>
-
-					@endforeach
-
-				</div>
-			</div>
-
-			<p class="button text-center">
-				<a href="{{url('news')}}" class="btn">المزيد من الأخبار</a>
-			</p>
-		</div>
-	</section>
-	<!--	End	News  section-->
-
-	<!--	Start Videos section-->
-	<section class="videos-page padding home-videos">
-		<div class="container">
-			<div class="row">
-				@foreach ($videos as $item)
-				<div class="col-md-4 col-sm-6 col-xs-offset-1 col-sm-offset-0 col-xs-10">
-					<div class="item">
-					<iframe width="100%" src="{{$item->path}}" frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-						<div class="content">
-							<p class="title">{{$item->name}}</p>
-						</div>
-					</div>
-				</div>
-				@endforeach
 
 
-
-			</div>
-
-			<p class="button text-center">
-			<a href="{{url('videos')}}" class="btn">المزيد من الفيديوهات</a>
-			</p>
-		</div>
-	</section>
-	<!--	End Videos section-->
 	<!--		footer section-->
 
 	@include('web._master.footer')

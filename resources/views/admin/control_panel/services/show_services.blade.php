@@ -13,11 +13,7 @@
                         <strong>{{session()->get('status')}}</strong>
                     </div>
                 @endif
-                @if (session()->get('delete') )
-                <div class="alert alert-danger">
-                    <strong>{{session()->get('delete')}}</strong>
-                </div>
-                @endif
+               
 
                     <div class="row">
                         <div class="col-md-12">

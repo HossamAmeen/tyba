@@ -10,6 +10,7 @@ use App\Event;
 use App\Doctor;
 use App\Video;
 use App\News;
+use App\Book;
 use App\Clinic;
 
 
@@ -34,11 +35,19 @@ class HomeController extends Controller
 
     public function services()
     {
-        $data['services'] = Service::all();
+        $data['services'] = Service::all()->take(8);
         $data['title'] = "مستشفى طيبه رويال - خدماتنا";
         return view('web.services', $data);
     }
 
+    public function showService($id)
+    {
+        $data['services'] = Service::where('id' ,'!=', $id)->get()->take(4);
+        $data['service'] = Service::find($id);
+        $data['title'] = "مستشفى طيبه رويال - خدماتنا";
+        return view('web.service-detail', $data);
+    
+    }
     public function clinics()
     {
 
@@ -104,6 +113,7 @@ class HomeController extends Controller
 
         $title = "مستشفى طيبه رويال - الزيارات";
         $data['events'] = Event::all();
+        $data['clinics'] = Clinic::all();
         return view('web.events' , $data)->with(compact( 'title'));
 
     }
@@ -160,16 +170,19 @@ class HomeController extends Controller
             $rules = $this->bookFormValidation();
             $message = $this->bookMessageValidation();
             $this->validate($request, $rules, $message);
+            $book = new Book();
+            $book->name = $request->name;
+            $book->phone = $request->phone;
+            $book->special = $request->special;
+            $book->save();
             $data=[
-                'email' =>  $request->email,
                 'name' => $request->name,
                 'phone' => $request->phone,
-                'subject'=>$request->subject,
                 'special'=>$request->special,
             ];
             Mail::send('web.book_mail',$data,function($message) use ($data){
 
-                $message->from( $data['email'] , $data['name']);
+                // $message->from( $data['email'] , $data['name']);
                 $message->to("book@tibaroyal.com");
                 $message->subject(  " حجز نخصص " . $data['special']  );
             });
@@ -188,11 +201,11 @@ class HomeController extends Controller
 
 
         return array(
-            'name' => 'regex:/^[\pL\s\d\-]+$/u||required|max:99',
+            'name' => 'string|required|max:99',
 
             'email' => 'required|email',
 
-            'text' => 'regex:/^[\pL\s\-]+$/u||required|max:99',
+            'text' => 'required|max:99',
 
         );
     }
@@ -221,10 +234,9 @@ class HomeController extends Controller
 
 
         return array(
-            'name' => 'regex:/^[\pL\s\d\-]+$/u|required|max:99',
-            'email' => 'required|email',
-            'phone' => 'regex:/^[\d]+$/u|required|digits:11',
-            'special' => 'regex:/^[\pL\s\-]+$/u||required|max:99',
+            'name' => 'string|required|max:99',
+            'phone' => ' required',
+            'special' => 'required|max:99',
 
         );
     }

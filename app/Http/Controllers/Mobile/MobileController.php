@@ -121,7 +121,7 @@ class MobileController extends Controller
 
 
         return array(
-            'name' => 'required|regex:/^[\pL\s\d\-]+$/u||max:99',
+            'name' => 'required|string||max:99',
 
             'email' => 'required|email',
 
@@ -155,7 +155,7 @@ class MobileController extends Controller
 
 
         return array(
-            'name' => 'regex:/^[\pL\s\d\-]+$/u|required|max:99',
+            'name' => 'string|required|max:99',
             'email' => 'required|email',
             'phone' => 'regex:/^[\d]+$/u|required|digits:11',
             'special' => 'regex:/^[\pL\s\-]+$/u||required|max:99',

@@ -2,7 +2,7 @@
 
 namespace App\Exports;
 
-use App\Product;
+use App\Book;
 use App\User;
 use DB;
 use Maatwebsite\Excel\Concerns\FromCollection;
@@ -20,8 +20,8 @@ class UsersExport implements FromView
     }*/
     public function view(): View
     {
-       $products = Product::all();
-        return view('admin.control_panel.prices.price_excel') ->with(compact('products' )
+       $books = Book::all();
+        return view('admin.book_excel') ->with(compact('books' )
         );
     }
 }

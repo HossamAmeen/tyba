@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Image;
 use App\Event;
-
+use App\Clinic;
 class EventController extends Controller
 {
     public function index()
@@ -19,10 +19,12 @@ class EventController extends Controller
     {
 
         $data['title'] = 'اضافه زياره';
+        $data['clinics']  = Clinic::all();
         return view('admin.control_panel.events.add_event',$data);
     }
     public function store(Request $request)
     {
+        // return $request->all();
         $rules = $this->formValidation();
         $message = $this->messageValidation();
         $this->validate($request, $rules,$message);
@@ -97,8 +99,8 @@ class EventController extends Controller
     function formValidation()
     {
         return array( 
-            'name'     => 'required|max:99|unique:events,name,NULL,id,deleted_at,NULL|regex:/^[\pL\s\d\-]+$/u',
-            'description' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
+            'name'     => 'required|max:99|string',
+            'description' => 'required',
             
             'img'=> 'image',
         );
@@ -106,11 +108,11 @@ class EventController extends Controller
     function EditformValidation($id)
     {
         return array(
-            'name'     => "required|max:99|regex:/^[\pL\s\d\-]+$/u|unique:events,name,$id,id,deleted_at,NULL",
+            'name'     => "required|max:99|string|unique:events,name,$id,id,deleted_at,NULL",
                                                                   
-            'description' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
-            'date' => 'required',
-             'img'=> 'required|image',
+            'description' => 'required|max:99',
+            
+             'img'=> 'image',
         );
     }
     function messageValidation(){
@@ -123,9 +125,7 @@ class EventController extends Controller
             'description.required'     => 'هذا الحقل (الوصف) مطلوب ',
             'description.*'            =>  'هذا الحقل (الوصف) يجب يحتوي ع حروف وارقام فقط',
 
-            'date.required'     => 'هذا الحقل (المعاد) مطلوب ',
-              'image'            =>  'هذا الحقل (اضافه الصورة) يجب ان يكون صورة',
-              'image'            =>  'هذا الحقل ( الصورة) مطلوب',
+          
         );
     }
 }

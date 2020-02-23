@@ -3,51 +3,67 @@
     <div class="row">
       <div class="col-md-4">
         <h2>مستشفى طيبه رويال</h2>
-          <div class="details row">
-            <div class="col-xs-5">
-              <ul>
-                <li><a href="{{url('/')}}"> الرئيسية </a></li>
-                <li><a href="{{url('/about')}}">من نحن </a></li>
-                <li><a href="{{url('/services')}}">خدماتنا </a></li>
-              </ul>
-            </div>
-            <div class="col-xs-7">
-              <ul>
-                <li><a href="{{url('/clinics')}}">العيادات الخارجيه  </a></li>
-                <li><a href="{{url('/doctors')}}"> الاطباء </a></li>
-                <li><a href="{{url('/contacts')}}">اتصل بنا  </a></li>
-              </ul>
-            </div>
+        <div class="details row">
+          <div class="col-xs-5">
+            <ul>
+              <li><a href="{{url('/')}}"> الرئيسية </a></li>
+              <li><a href="{{url('/about')}}">من نحن </a></li>
+              <li><a href="{{url('/services')}}">خدماتنا </a></li>
+            </ul>
           </div>
-        </div>
-        <div class="col-md-4 text-center">
-          <img src="{{asset('resources/assets/web/images/logo.png')}}" class="img-responsive logo" alt="logo">
-        </div>
-        <div class="col-md-4">
-          @if($pref->arAddress != null)
-          <h2>العنوان </h2>
-          <div class="contacts">
-            <p class="address">
-            {{$pref->arAddress}}
-            </p>
-            @endif
-            @if($pref->phone != null)
-            <p class="phone"><strong>تليفون: </strong>{{$pref->phone}}</p>
-              @endif
+          <div class="col-xs-7">
+            <ul>
+              <li><a href="{{url('/clinics')}}">العيادات الخارجيه </a></li>
+              <li><a href="{{url('/doctors')}}"> الاطباء </a></li>
+              <li><a href="{{url('/contacts')}}">اتصل بنا </a></li>
+            </ul>
           </div>
         </div>
       </div>
+      <div class="col-md-4 text-center">
+        <img src="{{asset('resources/assets/web/images/logo.png')}}" class="img-responsive logo" alt="logo">
+      </div>
+      <div class="col-md-4">
+        @if($pref->arAddress != null)
+        <h2>العنوان </h2>
+        <div class="contacts">
+          <p class="address">
+            {{$pref->arAddress}}
+          </p>
+          @endif
+          @if($pref->phone != null)
+          <p class="phone"><strong>تليفون: </strong>{{$pref->phone}}</p>
+          @endif
+          
+        
+         
+        </div>
+        <div class="scial-medai">
+          <ul class="list-unstyled">
+            @if($pref->facebook != null)
+            <li><a href="{{$pref->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            @endif
+            @if($pref->youtube != null)
+            <li><a href="{{$pref->youtube}}" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            @endif
+            @if($pref->android != null)
+          <li><a href="{{$pref->android}}" target="_blank"><i class="fab fa-android"></i></a></li>
+            @endif
+          </ul>
+        </div>
+      </div>
     </div>
-  
+  </div>
+
   <div class="copywrite" style="direction: ltr;">
-    <p class="text-center">created by 
+    <p class="text-center">created by
       <a href="http://www.z-edy.com/" target="_blank">
         <img src="{{asset('resources/assets/web/images/zedy_logo.png')}}" width="70px" alt="zedy company">
       </a>
     </p>
   </div>
 </footer>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156465957-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -64,7 +80,7 @@
 <script src="{{asset('resources/assets/web/js/jquery.themepunch.revolution.min.js')}}"></script>
 
 <script type="text/javascript">
- jQuery(document).ready(function() {
+  jQuery(document).ready(function() {
     jQuery('.banner').revolution({
      delay:9000,
      startwidth: 1200,
@@ -155,7 +171,7 @@
 <!--		owl carousel-->
 <script src="{{asset('resources/assets/web/js/owl.carousel.min.js')}}"></script>
 <script type="text/javascript">
-    $('.owl-one').owlCarousel({
+  $('.owl-one').owlCarousel({
         rtl:true,
         loop:true,
         margin:20,

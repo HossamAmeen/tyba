@@ -97,16 +97,16 @@ class DoctorController extends Controller
     function formValidation()
     {
         return array(
-            'name'     => 'required|max:99|unique:doctors,name,NULL,id,deleted_at,NULL|regex:/^[\pL\s\d\-]+$/u',
-            'job' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
+            'name'     => 'required|max:99|unique:doctors,name,NULL,id,deleted_at,NULL|string',
+            'job' => 'required|max:99|string',
             'img'=> 'required|image',
         );
     }
     function EditformValidation($id)
     {
         return array(
-            'name'     => "required|max:99|regex:/^[\pL\s\d\-]+$/u|unique:doctors,name,$id,id,deleted_at,NULL",
-            'job' => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
+            'name'     => "required|max:99|string|unique:doctors,name,$id,id,deleted_at,NULL",
+            'job' => 'required|max:99|string',
              'img'=> 'required|image',
         );
     }

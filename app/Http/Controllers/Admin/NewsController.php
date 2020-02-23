@@ -99,7 +99,7 @@ class NewsController extends Controller
     function formValidation()
     {
         return array(
-            'title'     => 'required|max:99|regex:/^[\pL\s\d\-]+$/u',
+            'title'     => 'required|max:99|string',
             'description' => 'required',
             'image'=> 'required|image',
         );
@@ -107,7 +107,7 @@ class NewsController extends Controller
     function EditformValidation($id)
     {
         return array(
-            'title'     => "required|max:99|regex:/^[\pL\s\d\-]+$/u",
+            'title'     => "required|max:99|string",
             'description' => 'required',
              'image'=> 'image',
         );
