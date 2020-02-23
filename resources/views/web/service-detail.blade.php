@@ -28,7 +28,7 @@
 						<div class="col-sm-6 col-12">
 							<div class="service-details-title">
 								<h1>{{$service->ar_title}}</h1>
-							<p>{{$service->descriptionPoint}}</p>
+							<p>{!!$service->description!!}</p>
 								
 							</div>
 						</div>

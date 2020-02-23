@@ -56,10 +56,10 @@
 
                             <div class="row ls_divider last">
                                 <div class="form-group">
-                                    <label class="col-md-2 control-label" >إضافة صورة</label>
+                                    <label class="col-md-2 control-label">إضافة صورة</label>
 
                                     <div class="col-md-10 ls-group-input">
-                                        <input id="file-3" type="file"  name="image">
+                                        <input id="file-3" type="file" name="image">
 
                                     </div>
 
@@ -70,17 +70,18 @@
                                 <label class="col-lg-3 control-label">الصورة</label>
 
                                 <div class="goal-user-image">
-                                    <img class="rounded" src="{{asset($image)}}" alt="user image" height="15%" width="15%" />
+                                    <img class="rounded" src="{{asset($image)}}" alt="user image" height="15%"
+                                        width="15%" />
                                 </div>
                             </div>
 
 
                             <div class="row ls_divider last">
                                 <div class="form-group">
-                                    <label class="col-md-2 control-label" > 2إضافة صورة</label>
+                                    <label class="col-md-2 control-label"> 2إضافة صورة</label>
 
                                     <div class="col-md-10 ls-group-input">
-                                        <input id="file-3" type="file"  name="image2">
+                                        <input id="file-3" type="file" name="image2">
 
                                     </div>
 
@@ -91,10 +92,27 @@
                                 <label class="col-lg-3 control-label">الصورة</label>
 
                                 <div class="goal-user-image">
-                                    <img class="rounded" src="{{asset($image2)}}" alt="user image" height="15%" width="15%" />
+                                    <img class="rounded" src="{{asset($image2)}}" alt="user image" height="15%"
+                                        width="15%" />
                                 </div>
                             </div>
+                            <label class="col-lg-3 control-label">الوصف </label><br>
+                            <div class="panel-heading">
 
+                                <ul class="panel-control">
+                                    <li><a class="minus" href="javascript:void(0)"><i class="fa fa-minus"></i></a></li>
+                                    <li><a class="refresh" href="javascript:void(0)"><i class="fa fa-refresh"></i></a>
+                                    </li>
+                                    <li><a class="close-panel" href="javascript:void(0)"><i class="fa fa-times"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="panel-body no-padding">
+                                <textarea class="summernote" name="description" id="demo">
+                                            {{$description}}
+                                        </textarea>
+                            </div><br>
                             <div class="form-group">
                                 <div class="col-lg-9 col-lg-offset-3">
                                     <button type="submit" class="btn btn-primary">تحديث</button>

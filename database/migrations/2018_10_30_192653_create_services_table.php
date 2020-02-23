@@ -17,7 +17,7 @@ class CreateServicesTable extends Migration
             $table->increments('id');
             $table->string('ar_title');
             $table->string('icon');
-            $table->text('descriptionPoint')->nullable();
+            $table->text('description')->nullable();
             $table->string('image')->default('resources/assets/web/images/service1.jpg');
             $table->string('image2')->default('resources/assets/web/images/dental-clinic.png');
             $table->unsignedInteger('user_id')->nullable();

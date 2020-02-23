@@ -9,7 +9,7 @@ class Service extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
     protected $fillable = [
-        'ar_title', 'descriptionPoint'  ,'icon'  ];
+        'ar_title', 'description'  ,'icon'  ];
         public function user()
     {
         return $this->belongsTo('App\User');
