@@ -17,7 +17,7 @@ class CreateDoctorsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('job')->nullable();
-            $table->string('img')->default('resources/assets/admin/images/avatar-80.png');
+            $table->string('img')->default('resources/assets/web/images/avatar-80.png');
 
             $table->unsignedInteger('user_id')->nullable();
 

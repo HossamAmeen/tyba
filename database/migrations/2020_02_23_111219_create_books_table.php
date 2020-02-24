@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('special');
+            $table->text('message');
             $table->integer('status')->default(0);
             $table->softDeletes();
             $table->timestamps();

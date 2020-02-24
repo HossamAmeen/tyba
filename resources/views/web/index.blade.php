@@ -78,7 +78,7 @@
 								<img src="{{$item->image}}" class="img-responsive">
 							</div>
 							<div class="new-details text-center">
-								<a href="singleNew.html">
+							<a href="{{url('news/'.$item->id)}}">
 									<h1 class="new-title">{{$item->title}}</h1>
 								</a>
 								<p class="new-description">{{$item->ar_sub_title}}</p>

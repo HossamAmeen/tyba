@@ -37,6 +37,7 @@
                                             <th>الاسم</th>
                                             <th>التلفون</th>
                                             <th>التخصص</th>
+                                            <th>الرسالة</th>
                                             <th>action</th>
 
                                         </tr>
@@ -54,6 +55,7 @@
                                                 <td>{{$book->name}}</td>
                                                 <td>{{$book->phone}}</td>
                                                 <td>{{$book->special}}</td>
+                                                <td>{{$book->message}}</td>
                                                 <td >
                                                     @if($book->status == 0 )
                                                     <a href="{{url('/admin/books/change-status/'.$book->id)}}" class="btn btn-info">موافق</a>

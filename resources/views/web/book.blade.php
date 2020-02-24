@@ -109,7 +109,9 @@
 									value="{{ old('special') }}">
 							</div><br><br><br>
 						</div>
-
+						<div class="form-group">
+							<textarea class="form-control" placeholder="الرسالة" rows="10" name="message" > </textarea>
+						</div>
 						
 						<div class="form-submit text-center">
 							<input type="submit" id="submit" class="btn btn-default" value="ارسال">

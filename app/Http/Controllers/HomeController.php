@@ -174,6 +174,7 @@ class HomeController extends Controller
             $book->name = $request->name;
             $book->phone = $request->phone;
             $book->special = $request->special;
+            $book->message = $request->message;
             $book->save();
             $data=[
                 'name' => $request->name,
