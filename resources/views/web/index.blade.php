@@ -13,53 +13,56 @@
 		</div>
 	</header>
 
-	<!--		our revolution slider-->
-	<div class="bannercontainer">
-		<div class="banner">
-			<ul>
-				<!-- THE BOXSLIDE EFFECT EXAMPLES  WITH LINK ON THE MAIN SLIDE EXAMPLE -->
+<!--		our revolution slider-->
+<div class="bannercontainer">
+	<div class="banner">
+		<ul>
+			<!-- THE BOXSLIDE EFFECT EXAMPLES  WITH LINK ON THE MAIN SLIDE EXAMPLE -->
 
-				<li data-transition="boxslide" data-slotamount="7">
-					<img src="{{asset('resources/assets/web/images/slides/img1.jpg')}}" alt="slide-img1">
-					<div class="caption sft big_white" data-x="450" data-y="100" data-speed="700" data-start="1700"
-						data-easing="easeOutBack">
-						<img src="{{asset('resources/assets/web/images/logo.png')}}" width="300px">
-					</div>
-					<div class="caption sfb iso" data-x="450" data-y="450" data-speed="500" data-start="1900"
-						data-easing="easeOutBack">اول مستشفى تحصل على شهادة ال ISO فى صعيد مصر</div>
-				</li>
-				<li data-transition="boxslide" data-slotamount="7">
-					<img src="{{asset('resources/assets/web/images/slides/img3.jpg')}}" alt="slide-img2">
-					<div class="caption sft big_white" data-x="center" data-y="200" data-speed="700" data-start="1700"
-						data-easing="easeOutBack">
-						<h1 class="text-center slide2-serv">مستشفى <span style="color: #02adc6;"> طيبه رويال </span>
-						</h1>
-					</div>
-
-
-					<div class="caption sfl big_orange" data-x="center" data-y="300" data-speed="500" data-start="1900"
-						data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px">
-						قسم العناية المركزة
-					</div>
-
-					<div class="caption sfl big_orange" data-x="center" data-y="350" data-speed="500" data-start="1900"
-						data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px">
-						معامل مجهزة باحدث الاجهزة معامل مجهزة باحدث الاجهزة
-					</div>
-
-					<div class="caption sfl big_orange" data-x="center" data-y="400" data-speed="500" data-start="1900"
-						data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px">
-						عيادات فى جميع التخصصات
-					</div>
-
-					<div class="caption sfl big_orange" data-x="center" data-y="450" data-speed="500" data-start="1900"
-						data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px">
-						قسم الاطفال والحضانات
-					</div>
-				</li>
-			</ul>
-		</div>
+			 <li data-transition="boxslide" data-slotamount="7">
+			   <img src="{{asset('resources/assets/web/images/slides/slide1.png')}}" alt="slide-img1">
+			   
+			   <div class="caption sfb iso iso1"  data-x="300" data-y="450" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color:#2a3d66;font-size:30px;top:305px">اول مستشفى تحصل على شهادة ال ISO فى صعيد مصر</div>
+			 </li>
+			
+			<li data-transition="boxslide" data-slotamount="7">
+			   <img src="{{asset('resources/assets/web/images/slides/slide2.png')}}" alt="slide-img2">
+				<div class="caption sft big_white"  data-x="center" data-y="200" data-speed="700" data-start="1700" data-easing="easeOutBack" style="font-size:36px;">
+					مستشفى <span style="color: #02adc6;"> طيبه رويال </span>
+				</div>
+			   
+				
+			<div class="caption sfl big_orange"  data-x="center" data-y="300" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px 20px; border-radius: 30px;">
+				 وحدة الإستقبال والطوارئ
+			</div>
+				
+			<div class="caption sfl big_orange"  data-x="center" data-y="350" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px 20px; border-radius: 30px;">
+				 وحدة العناية المركزة
+			</div>
+			
+			<div class="caption sfl big_orange"  data-x="center" data-y="400" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6;  padding: 10px 20px; border-radius: 30px;">
+				بنك دم اقليمى
+			</div>
+				
+			<div class="caption sfl big_orange"  data-x="center" data-y="450" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6;  padding: 10px 20px; border-radius: 30px;" >
+				عيادات فى جميع التخصصات
+			</div>
+			</li>
+			
+			<li data-transition="boxslide" data-slotamount="7">
+				<img src="{{asset('resources/assets/web/images/slides//slide3.png')}}" alt="slide-img3">
+				<img src="{{asset('resources/assets/web/images/slides/slide1.png')}}" alt="slide-img1">
+				   <div class="caption sft big_white" data-x="450" data-y="100" 
+					  data-speed="700" data-start="1700" data-easing="easeOutBack">
+						<img src="{{asset('resources/assets/web/images/logo.png')}}" width="300px"> 
+				   </div>
+				<div class="caption sfb iso"  data-x="460" data-y="450" data-speed="500" 
+					  data-start="1900" data-easing="easeOutBack" style="color:#2a3d66;font-size:30px;">رعاية ... شفاء ... دواء
+				</div>
+			</li>
+		</ul>
 	</div>
+</div>
 
 	<!--	Start	News  section-->
 

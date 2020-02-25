@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">تعديل الدكتور</h3>
+                            <h3 class="panel-title">تعديل الدكتور  {{ $name}}</h3> 
                         </div>
                         <div class="panel-body">
                             <form id="defaultForm" method="post" class="form-horizontal ls_form" action="{{url('admin/doctor/'.$id)}}"

@@ -107,7 +107,7 @@ class DoctorController extends Controller
         return array(
             'name'     => "required|max:99|string",
             'job' => 'required|max:99|string',
-             'img'=> 'required|image',
+             'img'=> 'image',
         );
     }
     function messageValidation(){
