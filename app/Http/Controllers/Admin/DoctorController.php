@@ -97,7 +97,7 @@ class DoctorController extends Controller
     function formValidation()
     {
         return array(
-            'name'     => 'required|max:99|unique:doctors,name,NULL,id,deleted_at,NULL|string',
+            'name'     => 'required|max:99|string',
             'job' => 'required|max:99|string',
             'img'=> 'required|image',
         );
@@ -105,7 +105,7 @@ class DoctorController extends Controller
     function EditformValidation($id)
     {
         return array(
-            'name'     => "required|max:99|string|unique:doctors,name,$id,id,deleted_at,NULL",
+            'name'     => "required|max:99|string",
             'job' => 'required|max:99|string',
              'img'=> 'required|image',
         );

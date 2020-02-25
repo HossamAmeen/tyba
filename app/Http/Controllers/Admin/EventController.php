@@ -108,7 +108,7 @@ class EventController extends Controller
     function EditformValidation($id)
     {
         return array(
-            'name'     => "required|max:99|string|unique:events,name,$id,id,deleted_at,NULL",
+            'name'     => "required|max:99|string",
                                                                   
             'description' => 'required|max:99',
             

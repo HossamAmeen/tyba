@@ -181,8 +181,8 @@
 			<div class="row text-center">
 				<span class="icon"><i class="fas fa-quote-right fa-5x"></i></span>
 				<p class="content">
-					@if($pref->descriptionPoint != null)
-					{!! $pref->descriptionPoint !!}
+					@if($pref->description != null)
+					{!! $pref->description !!}
 					@endif
 				</p>
 				<span class="icon"><i class="fas fa-quote-left fa-5x"></i></span>
