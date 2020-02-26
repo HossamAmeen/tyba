@@ -232,8 +232,6 @@ class HomeController extends Controller
     }
     function bookFormValidation()
     {
-
-
         return array(
             'name' => 'string|required|max:99',
             'phone' => ' required',
@@ -255,7 +253,7 @@ class HomeController extends Controller
             'phone.required' => 'هذا الحقل (التلفون) مطلوب ',
             'phone.digits' => 'هذا الحقل (التلفون) يجب الا يقل عن 11 رقم ',
             'phone.*' => 'هذا الحقل (التلفون) يجب يحتوي ع ارقام فقط',
-
+            'message.required' => 'هذا الحقل (الرساله) مطلوب ',
 
         );
     }
