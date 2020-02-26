@@ -206,7 +206,7 @@ class HomeController extends Controller
 
             'email' => 'required|email',
 
-            'text' => 'required|max:99',
+            'text' => 'required',
 
         );
     }
@@ -238,7 +238,7 @@ class HomeController extends Controller
             'name' => 'string|required|max:99',
             'phone' => ' required',
             'special' => 'required|max:99',
-
+            'message' => 'required',
         );
     }
 

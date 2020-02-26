@@ -110,7 +110,7 @@
 							</div><br><br><br>
 						</div>
 						<div class="form-group">
-							<textarea class="form-control" placeholder="الرسالة" rows="10" name="message" > </textarea>
+							<textarea class="form-control" placeholder="الرسالة" rows="10" name="message" required> </textarea>
 						</div>
 						
 						<div class="form-submit text-center">
