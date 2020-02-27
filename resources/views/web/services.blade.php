@@ -59,7 +59,7 @@
 					<div class="service text-center">
 						<img src="{{asset($service->image)}}" class="img-responsive">
 						<div class="content">
-							<span><i class="fas {{$service->icon}} fa-5x"></i></span>
+							{{-- <span><i class="fas {{$service->icon}} fa-5x"></i></span> --}}
 							<p> {{$service->ar_title}} </p>
 						</div>
 						<a href="{{url('services/'.$service->id)}}" class="title" title="">
