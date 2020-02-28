@@ -53,7 +53,7 @@ class MobileController extends Controller
 
 
       
-        $data['events'] = Event::all('name' , 'img' ,'description' , 'date' );
+        $data['events'] = Event::all();
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }

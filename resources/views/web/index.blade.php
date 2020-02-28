@@ -185,7 +185,7 @@
 				<span class="icon"><i class="fas fa-quote-right fa-5x"></i></span>
 				<p class="content">
 					@if($pref->description != null)
-					{!! $pref->description !!}
+					{{ $pref->description }}
 					@endif
 				</p>
 				<span class="icon"><i class="fas fa-quote-left fa-5x"></i></span>

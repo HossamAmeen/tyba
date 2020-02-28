@@ -120,7 +120,7 @@
                                         value="{{$video}}" />
                                 </div>
                             </div>
-                            <label class="col-lg-3 control-label">وصف ف الصفحه الرئيسية</label><br>
+                            {{-- <label class="col-lg-3 control-label">وصف ف الصفحه الرئيسية</label><br>
                             <div class="panel-heading">
 
                                 <ul class="panel-control">
@@ -133,10 +133,17 @@
                             </div>
 
                             <div class="panel-body no-padding">
-                                <textarea class="summernote" name="description" id="demo">
+                                <textarea class="summernote" name="description" >
                                             {{$description}}
                                         </textarea>
-                            </div><br>
+                            </div><br> --}}
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">وصف ف الصفحه الرئيسية </label>
+                                <div class="col-lg-6">
+                                    <textarea class="form-control" name="description"> {{$description}}</textarea>
+                                   
+                                </div>
+                            </div><br><br>
                             <label class="col-lg-3 control-label">وصف ف الصفحه من نحن</label><br>
                             <div class="panel-heading">
 

@@ -110,12 +110,12 @@
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                             </div>
 
-                            <div class="remember-me">
+                            {{-- <div class="remember-me">
                                 <input class="switchCheckBox" type="checkbox" checked data-size="mini"
                                        data-on-text="<i class='fa fa-check'><i>"
                                        data-off-text="<i class='fa fa-times'><i>">
                                 <span>Remember me</span>
-                            </div>
+                            </div> --}}
                             <div class="input-group ls-group-input login-btn-box">
                                 <button class="btn ls-dark-btn ladda-button col-md-12 col-sm-12 col-xs-12" data-style="slide-down">
                                     <span class="ladda-label"><i class="fa fa-key"></i></span>
