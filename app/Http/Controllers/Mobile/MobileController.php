@@ -15,44 +15,34 @@ class MobileController extends Controller
 
     public function services()
     {
-        $data['services'] = Service::all( 'ar_title', 'icon' );
+        $data['services'] = Service::all();
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
       
     }
 
     public function clinics()
     {
-
-
-      
-        $data['clinics'] = Clinic::all( 'id' , 'name' , 'img' ,'description' , 'appointments' );
+        $data['clinics'] = Clinic::all();
 
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }
     public function clinic($id)
     {
-        
         $data['clinic'] = Clinic::find($id);
         $data['clinic']->descriptionPoint =  strip_tags ( $data['clinic']->descriptionPoint );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
-     
 
     }
     public function doctors()
     {
-
-
-       
-        $data['doctors'] = Doctor::all( 'name' , 'img' ,'job' );
+        $data['doctors'] = Doctor::all();
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }
     public function events()
     {
 
-
-      
         $data['events'] = Event::all();
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
@@ -82,11 +72,7 @@ class MobileController extends Controller
                 $message->from( $data['email'] , $data['name']);
                 $message->to("info@tibaroyal.com");
                 $message->subject($data['subject']);
-            });
-     
-        
-
-       
+            });       
     }
 
     public function book(Request $request)
