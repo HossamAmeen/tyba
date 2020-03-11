@@ -27,29 +27,32 @@
 			
 			<li data-transition="boxslide" data-slotamount="7">
 			   <img src="{{asset('resources/assets/web/images/slides/slide2.png')}}" alt="slide-img2">
-				<div class="caption sft big_white"  data-x="center" data-y="200" data-speed="700" data-start="1700" data-easing="easeOutBack" style="font-size:36px;">
+				<div class="caption sft big_white"  data-x="center" data-y="200" data-speed="700" data-start="1700"
+				 data-easing="easeOutBack" style="font-size:36px;">
 					مستشفى <span style="color: #02adc6;"> طيبه رويال </span>
-				</div>
-			   
-				
-			<div class="caption sfl big_orange"  data-x="center" data-y="300" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px 20px; border-radius: 30px;">
+				</div>				
+			<div class="caption sfl big_orange"  data-x="center" data-y="300" data-speed="500" data-start="1900" data-easing="easeOutBack" 
+			style="color: #fff; background-color: #02adc6; padding: 10px 20px; border-radius: 30px;">
 				 وحدة الإستقبال والطوارئ
 			</div>
 				
-			<div class="caption sfl big_orange"  data-x="center" data-y="350" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px 20px; border-radius: 30px;">
+			<div class="caption sfl big_orange"  data-x="center" data-y="350" data-speed="500" data-start="1900" 
+			data-easing="easeOutBack" style="color: #fff; background-color: #02adc6; padding: 10px 20px; border-radius: 30px;">
 				 وحدة العناية المركزة
 			</div>
 			
-			<div class="caption sfl big_orange"  data-x="center" data-y="400" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6;  padding: 10px 20px; border-radius: 30px;">
+			<div class="caption sfl big_orange"  data-x="center" data-y="400" data-speed="500" data-start="1900"
+			 data-easing="easeOutBack" style="color: #fff; background-color: #02adc6;  padding: 10px 20px; border-radius: 30px;">
 				بنك دم اقليمى
 			</div>
 				
-			<div class="caption sfl big_orange"  data-x="center" data-y="450" data-speed="500" data-start="1900" data-easing="easeOutBack" style="color: #fff; background-color: #02adc6;  padding: 10px 20px; border-radius: 30px;" >
+			<div class="caption sfl big_orange"  data-x="center" data-y="450" data-speed="500" data-start="1900" 
+			data-easing="easeOutBack" style="color: #fff; background-color: #02adc6;  padding: 10px 20px; border-radius: 30px;" >
 				عيادات فى جميع التخصصات
 			</div>
 			</li>
 			
-			<li data-transition="boxslide" data-slotamount="7">
+			{{-- <li data-transition="boxslide" data-slotamount="7">
 				<img src="{{asset('resources/assets/web/images/slides//slide3.png')}}" alt="slide-img3">
 				<img src="{{asset('resources/assets/web/images/slides/slide1.png')}}" alt="slide-img1">
 				   <div class="caption sft big_white" data-x="450" data-y="100" 
@@ -59,7 +62,7 @@
 				<div class="caption sfb iso"  data-x="460" data-y="450" data-speed="500" 
 					  data-start="1900" data-easing="easeOutBack" style="color:#2a3d66;font-size:30px;">رعاية ... شفاء ... دواء
 				</div>
-			</li>
+			</li> --}}
 		</ul>
 	</div>
 </div>
