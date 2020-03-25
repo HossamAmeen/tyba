@@ -27,7 +27,7 @@
 					<div class="col-sm-6 col-12">
 						<div class="single-new-title">
 							<h1>{{$news->title}}</h1>
-							<p>{!!news->description!!}
+							<p>{!! $news->description!!}
 							</p>
 						<span><i class="fas fa-calendar-alt"></i>{{$news->date}}</span>
 						</div>
