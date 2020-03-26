@@ -158,7 +158,7 @@
 			</div>
 		</div>
 	</section>
-
+	@if(isset($event))
 	<!--		visits section-->
 	<section class="visits padding">
 		<div class="container">
@@ -167,6 +167,7 @@
 					<div class="desc padding">
 						<h1>الزيارات الخارجية</h1>
 						<p>
+							
 							{{$event->description}}
 						</p>
 						<p class="button">
@@ -180,7 +181,7 @@
 			</div>
 		</div>
 	</section>
-
+	@endif
 	<!--		our testimonials-->
 	<section class="mission padding">
 		<div class="container">
