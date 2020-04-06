@@ -78,7 +78,7 @@
                                     <label class="col-lg-3 control-label">الوصف بالنقاط</label><br><br>
                                     <div class="panel-body no-padding">
                                         <textarea class="summernote" name="descriptionPoint" required>
-                                                {{ old('descriptionPoint')}}"
+                                                {{ old('descriptionPoint')}}
                                             </textarea>
                                     </div><br>
                                     <div class="row ls_divider last">
