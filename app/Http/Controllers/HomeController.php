@@ -26,7 +26,7 @@ class HomeController extends Controller
         $data['services'] = Service::all()->take(8);
         $data['event']    = Event::all()->first();
         $data['clinics']  = Clinic::all();
-        $data['doctors']  = Doctor::all()->take(8);
+        $data['doctors']  = Doctor::all();
         $data['news']  = News::all()->take(4);
         $data['videos']  = Video::all()->take(3);
         $data['title']    = "مستشفى طيبه رويال";
