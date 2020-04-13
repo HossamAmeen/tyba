@@ -15,17 +15,15 @@ class Manager
      */
     public function handle($request, Closure $next)
     {
-      //  return "test";
-        if(session('id')){
+        //  return "test";
+        if (session('id')) {
 
             return $next($request);
+        } else {
+            return redirect()->route('login');
         }
-         
-         else
-         return redirect()->route('login');
-         
-         
-            //return view('control_panel.login');//redirect()->route('calender');
-       
+
+        //return view('control_panel.login');//redirect()->route('calender');
+
     }
 }
