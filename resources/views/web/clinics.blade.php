@@ -55,7 +55,7 @@
 							<p class="doc-title">  {{$clinic->postion}} <br> --}}
 							
 							</p>
-							<p class="appoint">{{$clinic->appointments}} </p>
+							{{-- <p class="appoint">{{$clinic->appointments}} </p> --}}
 							{!!$clinic->descriptionPoint!!}
 							{{-- <ul class="clinic-desc list-unstyled">
 								
