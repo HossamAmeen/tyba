@@ -50,7 +50,7 @@
                                                 data-bv-different-message="The username and password cannot be the same as each other" />
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <label class="col-lg-3 control-label">الدكتور</label>
                                         <div class="col-lg-6">
                                             <input class="form-control" name="doctor" type="text"
@@ -73,7 +73,7 @@
                                                 data-bv-emailaddress-message="The input is not a valid email address"
                                                 value="{{ $appointments}}" required />
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <label class="col-lg-3 control-label">الوصف بالنقاط</label><br><br>
                                     <div class="panel-body no-padding">
                                         <textarea class="summernote" name="descriptionPoint" required>

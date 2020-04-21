@@ -103,9 +103,9 @@ class ClinicController extends Controller
     {
         return array(
             'name' => 'required',
-            'postion' => 'required',
-            'doctor' => 'required',
-            'appointments' => 'required',
+            // 'postion' => 'required',
+            // 'doctor' => 'required',
+            // 'appointments' => 'required',
             'descriptionPoint' => 'required',
             'img'=> 'required|image',
         );
@@ -114,9 +114,9 @@ class ClinicController extends Controller
     {
         return array(
             'name' => 'required',
-            'postion' => 'required',
-            'doctor' => 'required',
-            'appointments' => 'required',
+            // 'postion' => 'required',
+            // 'doctor' => 'required',
+            // 'appointments' => 'required',
             'descriptionPoint' => 'required',
             'img'=> 'image',
         );
