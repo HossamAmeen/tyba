@@ -51,8 +51,8 @@
 							<img src="{{asset($clinic->img)}}" class="img-responsive" alt="doctor-img">
 						</div>
 						<div class="details text-center">
-							<h2 class="doc-name">{{$clinic->doctor}} </h2>
-							<p class="doc-title">  {{$clinic->postion}} <br>
+							{{-- <h2 class="doc-name">{{$clinic->doctor}} </h2>
+							<p class="doc-title">  {{$clinic->postion}} <br> --}}
 							
 							</p>
 							<p class="appoint">{{$clinic->appointments}} </p>
