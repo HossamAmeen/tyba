@@ -118,7 +118,7 @@ class ClinicController extends Controller
             'doctor' => 'required',
             'appointments' => 'required',
             'descriptionPoint' => 'required',
-            'img'=> 'required|image',
+            'img'=> 'image',
         );
     }
     function messageValidation(){
