@@ -23,19 +23,19 @@ class HomeController extends Controller
     public function index()
     {
 
-        $data['services'] = Service::all()->take(8);
+        $data['services'] = Service::all()->sortByDesc("id")->take(8);
         $data['event']    = Event::all()->first();
-        $data['clinics']  = Clinic::all();
-        $data['doctors']  = Doctor::all();
-        $data['news']  = News::all()->take(4);
-        $data['videos']  = Video::all()->take(3);
+        $data['clinics']  = Clinic::all()->sortByDesc("id");
+        $data['doctors']  = Doctor::all()->sortByDesc("id");
+        $data['news']  = News::all()->sortByDesc("id")->take(4);
+        $data['videos']  = Video::all()->sortByDesc("id")->take(3);
         $data['title']    = "مستشفى طيبه رويال";
         return view('web.index', $data);
     }
 
     public function services()
     {
-        $data['services'] = Service::all()->take(8);
+        $data['services'] = Service::all()->sortByDesc("id")->take(8);
         $data['title'] = "مستشفى طيبه رويال - خدماتنا";
         return view('web.services', $data);
     }
@@ -53,7 +53,7 @@ class HomeController extends Controller
 
 
         $title = "مستشفى طيبه رويال - العيادات";
-        $data['clinics'] = Clinic::all();
+        $data['clinics'] = Clinic::all()->sortByDesc("id");
         return view('web.clinics' , $data)->with(compact( 'title'));
 
     }
@@ -103,7 +103,7 @@ class HomeController extends Controller
 
 
         $title = "مستشفى طيبه رويال - الاطباء";
-        $data['doctors'] = Doctor::all();
+        $data['doctors'] = Doctor::all()->sortByDesc("id");
         return view('web.doctors' , $data)->with(compact( 'title'));
 
     }
@@ -112,8 +112,8 @@ class HomeController extends Controller
 
 
         $title = "مستشفى طيبه رويال - الزيارات";
-        $data['events'] = Event::all();
-        $data['clinics'] = Clinic::all();
+        $data['events'] = Event::all()->sortByDesc("id");
+        $data['clinics'] = Clinic::all()->sortByDesc("id");
         return view('web.events' , $data)->with(compact( 'title'));
 
     }
@@ -121,7 +121,7 @@ class HomeController extends Controller
     public function about()
     {
         $title = "مستشفى طيبه رويال - من نحن";
-        $data['doctors']  = Doctor::all();
+        $data['doctors']  = Doctor::all()->sortByDesc("id");
       
         return view('web.about', $data)->with(compact('title'));
 
