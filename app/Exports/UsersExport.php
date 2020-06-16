@@ -20,7 +20,18 @@ class UsersExport implements FromView
     }*/
     public function view(): View
     {
+        if(request('from_date'))
+        {
+            $books = Book::orderBy('id' , 'DESC')->whereDate('created_at' ,'>=', request('from_date'));
+            if(request('to_date'))
+            {
+                $books = $books->whereDate('created_at' ,'<=', request('to_date'));
+            }
+            $books = $books->get();
+        }
+        else
        $books = Book::all();
+      
         return view('admin.book_excel') ->with(compact('books' )
         );
     }
