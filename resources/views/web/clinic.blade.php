@@ -33,10 +33,10 @@
 					</div>
 					<div class="details text-center">
 						
-						<p class="appoint">{{$clinic->appointments}} </p>
-						<ul class="clinic-desc list-unstyled">
+						<p class="appoint">{{$clinic->descriptionPoint}} </p>
+						{{-- <ul class="clinic-desc list-unstyled">
 							{!!html_entity_decode($pref->descriptionPoint)!!}
-						</ul>
+						</ul> --}}
 					</div>
 				</div>
 			</div>
