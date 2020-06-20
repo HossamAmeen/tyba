@@ -22,9 +22,8 @@ class MobileController extends Controller
 
     public function clinics()
     {
-        $data['clinics'] = Clinic::all();
-
-        return json_encode($data , JSON_UNESCAPED_UNICODE) ;
+        $data['clinics'] = Clinic::all();   
+        return json_encode($data , JSON_UNESCAPED_UNICODE) ;    
 
     }
     public function clinic($id)

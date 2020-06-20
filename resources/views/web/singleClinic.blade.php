@@ -47,7 +47,7 @@
 						  <li><a class="page-scroll" href="about.html">من نحن</a></li>
 						  <li><a class="page-scroll" href="services.html">خدماتنا </a></li>
 						    <li><a class="page-scroll" href="clinics.html">العيادات الخارجية </a></li>
-						  <li><a class="page-scroll" href="doctors.html">الاطباء </a></li>
+						  <li><a class="page-scroll" href="doctors.html">الأطباء </a></li>
 						    <li><a class="page-scroll" href="visits.html">الزيارات  </a></li>
 						  <li><a class="page-scroll" href="contact.html">اتصل بنا </a></li>
 					  	</ul>
@@ -60,11 +60,11 @@
 		<section class="header-page ">
 			<img src="images/services-head.jpg" alt="about-hospital" class="img-responsive">
 			<div class="details container">
-				<h1>العيادات الخارجيه</h1>
+				<h1>العيادات الخارجية</h1>
 				<ul class="list-unstyled list-inline">
 					<li><a href="index.html">الرئيسية</a></li>
 					<li><i class="fas fa-arrow-left"></i></li>
-					<li>العيادات الخارجيه</li>
+					<li>العيادات الخارجية</li>
 				</ul>
 				<p></p>
 			</div>
@@ -118,8 +118,8 @@
 								</div>
 								<div class="col-xs-7">
 									<ul>
-										<li><a href="clinics.html">العيادات الخارجيه  </a></li>
-										<li><a href="doctors.html"> الاطباء </a></li>
+										<li><a href="clinics.html">العيادات الخارجية  </a></li>
+										<li><a href="doctors.html"> الأطباء </a></li>
 										<li><a href="contact.html">اتصل بنا  </a></li>
 									</ul>
 								</div>

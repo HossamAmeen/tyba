@@ -17,11 +17,11 @@
 		<img src="{{asset('resources/assets/web/images/about-header.jpg')}}" alt="about-hospital"
 			class="img-responsive">
 		<div class="details container">
-			<h1>الاطباء</h1>
+			<h1>الأطباء</h1>
 			<ul class="list-unstyled list-inline">
 				<li><a href="{{url('/')}}">الرئيسية</a></li>
 				<li><i class="fas fa-arrow-left"></i></li>
-				<li>الاطباء</li>
+				<li>الأطباء</li>
 			</ul>
 			<p></p>
 		</div>
@@ -31,7 +31,7 @@
 	<section class="doctors padding">
 		<div class="container">
 			<div class="section-head text-center">
-				<h1>الاطباء</h1>
+				<h1>الأطباء</h1>
 				<span class="icon"><i class="fas fa-user-md fa-3x"></i></span>
 			</div>
 			<div class="row">

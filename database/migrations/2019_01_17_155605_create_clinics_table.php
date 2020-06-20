@@ -17,7 +17,7 @@ class CreateClinicsTable extends Migration
             Schema::create('clinics', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name');
-                $table->string('doctor');
+                $table->string('doctor')->nullable();
                 $table->string('postion')->nullable();
                 $table->string('appointments')->nullable();
                 $table->text('descriptionPoint')->nullable();

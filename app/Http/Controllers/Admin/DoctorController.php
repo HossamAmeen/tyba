@@ -12,7 +12,7 @@ class DoctorController extends Controller
     public function index()
     {
         $data['doctors'] = Doctor::all();
-        $data['title'] = 'عرض الاطباء';
+        $data['title'] = 'عرض الأطباء';
         return view('admin.control_panel.doctors.show_doctors',$data);
     }
     public function create()

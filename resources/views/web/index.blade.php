@@ -227,7 +227,7 @@
 	<section class="doctors padding">
 		<div class="container">
 			<div class="section-head text-center">
-				<h1>الاطباء</h1>
+				<h1>الأطباء</h1>
 				<span class="icon"><i class="fas fa-user-md fa-3x"></i></span>
 			</div>
 			<div class="row">

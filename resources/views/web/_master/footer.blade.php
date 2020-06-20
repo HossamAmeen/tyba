@@ -38,8 +38,8 @@ logged_out_greeting="أهلا بكم فى الموقع الرسمي لمستشف
           </div>
           <div class="col-xs-7">
             <ul>
-              <li><a href="{{url('/clinics')}}">العيادات الخارجيه </a></li>
-              <li><a href="{{url('/doctors')}}"> الاطباء </a></li>
+              <li><a href="{{url('/clinics')}}">العيادات الخارجية </a></li>
+              <li><a href="{{url('/doctors')}}"> الأطباء </a></li>
               <li><a href="{{url('/contacts')}}">اتصل بنا </a></li>
             </ul>
           </div>
@@ -71,9 +71,9 @@ logged_out_greeting="أهلا بكم فى الموقع الرسمي لمستشف
             @if($pref->youtube != null)
             <li><a href="{{$pref->youtube}}" target="_blank"><i class="fab fa-youtube"></i></a></li>
             @endif
-            @if($pref->android != null)
-          <li><a href="{{$pref->android}}" target="_blank"><i class="fab fa-android"></i></a></li>
-            @endif
+          
+               <li><a href="https://play.google.com/store/apps/details?id=com.zedy.tibaroyel" target="_blank"><i class="fab fa-android"></i></a></li>
+           
           </ul>
         </div>
       </div>

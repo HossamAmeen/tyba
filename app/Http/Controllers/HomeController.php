@@ -102,7 +102,7 @@ class HomeController extends Controller
     {
 
 
-        $title = "مستشفى طيبه رويال - الاطباء";
+        $title = "مستشفى طيبه رويال - الأطباء";
         $data['doctors'] = Doctor::all()->sortByDesc("id");
         return view('web.doctors' , $data)->with(compact( 'title'));
 
