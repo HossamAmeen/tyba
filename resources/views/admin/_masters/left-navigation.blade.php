@@ -5,6 +5,7 @@
 
     <!--Left navigation start-->
     <ul class="mainNav">
+    @if(session('role') !== null && session('role') == 1)
         <li >
             <a @if($title == 'اضافه بيانات الموقع' || $title == 'تعديل بيانات الموقع') class="active" @endif href="{{url('admin/prefs')}}">
                 <i class="fa fa-bullhorn"></i> <span>بيانات الموقع</span>
@@ -24,7 +25,7 @@
 
             </ul>
         </li>
-
+    @endif
         <li >
             <a  href="#" @if($title == 'اضافه خدمه' || $title == 'عرض الخدمات') class="active"  @endif >
                 <i class="fa fa-bar-chart-o"></i> <span>الخدمات</span>

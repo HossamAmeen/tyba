@@ -21,7 +21,7 @@ Route::any('/book', 'HomeController@book');
 Route::prefix('admin')->group(function () {
     /////////// localhost/admin
 
-    Route::namespace ('Admin')->group(function () {
+    Route::namespace('Admin')->group(function () {
 
         Route::any('/login', 'PrefController@login')->name('login');
         Route::get('logout', 'PrefController@logout');
@@ -52,6 +52,5 @@ Route::prefix('admin')->group(function () {
             Route::resource('event', 'EventController');
             Route::get('event/{id}/delete', 'EventController@destroy');
         });
-
     });
 });
