@@ -83,14 +83,20 @@
                                                 data-bv-choice-message="Please choose 2 - 4 programming languages you are good at" 
                                                 @if(old('role') == 1)
                                                 checked
-                                                @endif/> admin
+                                                @endif/> مدير
                                             </label>
                                         </div>
                                         <div class="checkbox">
                                             <label>
                                                 <input type="radio" name="role" value="0" @if(old('role') == 0)
                                                 checked
-                                                @endif/> manager</label>
+                                                @endif/> موظف</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="radio" name="role" value="-1" @if(old('role') == -1)
+                                                checked
+                                                @endif/> مسؤول حجوزات</label>
                                         </div>
                                     </div>
                                 </div>

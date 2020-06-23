@@ -55,9 +55,11 @@
                                                         <td>{{$user->email}}</td>
                                                         <td>
                                                             @if ($user->role == 1 )
-                                                                admin
-                                                            @else
-                                                                manager
+                                                                مدير
+                                                            @elseif($user->role == 0)
+                                                                موظف
+                                                            @elseif($user->role == -1)
+                                                            مسؤول حجوزات
                                                             @endif
                                                         </td>
                                                         <td >

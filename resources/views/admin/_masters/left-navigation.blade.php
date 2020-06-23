@@ -26,6 +26,7 @@
             </ul>
         </li>
     @endif
+    @if(session('role') !== null && session('role') >= 0)
         <li >
             <a  href="#" @if($title == 'اضافه خدمه' || $title == 'عرض الخدمات') class="active"  @endif >
                 <i class="fa fa-bar-chart-o"></i> <span>الخدمات</span>
@@ -110,12 +111,15 @@
 
             </ul>
         </li>
+        @endif
+        @if(session('role') !== null && session('role') >=-1)
         <li >
             <a  href="{{url('admin/books')}}"  @if($title == 'عرض الحجوزات') class="active"  @endif >
                 <i class="fa fa-bar-chart-o"></i> <span>الحجوزات</span>
             </a>
 
         </li>
+        @endif
         <li >
             <a  href="{{url('admin/logout')}}">
                 <i class="fa fa-power-off"></i> <span>تسجيل خروج</span>

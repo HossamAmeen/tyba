@@ -24,7 +24,12 @@ class PrefController extends Controller
                 if (User::where('name', $request->name)->exists() && Hash::check($request->password, $user->password)) {
                     session(['id' => $user->id]);
                     session(['role' => $user->role]);
+                    if($user->role == 1)
                     return redirect()->route('prefs.index');
+                    elseif($user->role == 0)
+                    return redirect()->route('service.index');
+                    else 
+                    return redirect()->route('books.index');
                 } else {
                     $request->session()->flash('status', 'password is wrong!! try again please!');
                 }
