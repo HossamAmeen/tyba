@@ -83,7 +83,7 @@
                                             @if($role == 1) 
                                                  checked
                                             @endif
-                                            /> admin
+                                            /> مدير
                                         </label>
                                     </div>
                                     <div class="checkbox">
@@ -92,7 +92,16 @@
                                             @if($role == 0) 
                                                  checked
                                             @endif
-                                            /> manager                                       
+                                            /> موظف                                       
+                                         </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="radio" name="role" value="-1" 
+                                            @if($role == -1) 
+                                                 checked
+                                            @endif
+                                            /> مسؤول حجوزات                                       
                                          </label>
                                     </div>
                                 </div>
