@@ -69,16 +69,22 @@ class UserController extends Controller
        $newPassword = true ; 
        if(!empty($user))
        {
-            if($request->password  == $user->password){
-                $newPassword = false ;
+            $requestArray = $request->all();
+            if(isset($requestArray['password']) && $requestArray['password'] != ""){
+                $requestArray['password'] =  Hash::make($requestArray['password']);
+            }else{
+                unset($requestArray['password']);
             }
+            // if($request->password  == $user->password){
+            //     $newPassword = false ;
+            // }
                 $rules = $this->EditformValidation($id);
                 $this->validate($request, $rules);
-                $user->fill($request->all());
+                $user->fill($requestArray);
 
-            if($newPassword){
-                $user->password =  Hash::make($request->password); 
-            }
+            // if($newPassword){
+            //     $user->password =  Hash::make($request->password); 
+            // }
            if($request->hasFile('img'))
            {
                $photo = $request->file('img');

@@ -57,10 +57,8 @@
                                     <label class="col-lg-3 control-label">كلمة السر</label>
                                     <div class="col-lg-6">
                                         <input type="password" class="form-control" name="password"
-                                            value="{{ $password}}"
-                                            required data-bv-notempty-message="The password is required and cannot be empty"
-                                            data-bv-identical="true" data-bv-identical-field="confirmPassword" data-bv-identical-message="The password and its confirm are not the same"
-                                            data-bv-different="true" data-bv-different-field="username" data-bv-different-message="The password cannot be the same as username"/>
+                                           
+                                          >
                                     </div>
                                 </div>
             
@@ -68,10 +66,8 @@
                                     <label class="col-lg-3 control-label">إعاده كلمة السر</label>
                                     <div class="col-lg-6">
                                         <input type="password" class="form-control" name="password_confirmation"
-                                        value="{{ $password}}"
-                                            required data-bv-notempty-message="The confirm password is required and cannot be empty"
-                                            data-bv-identical="true" data-bv-identical-field="password" data-bv-identical-message="The password and its confirm are not the same"
-                                            data-bv-different="true" data-bv-different-field="username" data-bv-different-message="The password cannot be the same as username"/>
+                                     
+                                        />
                                     </div>
                                 </div>
                             <div class="form-group">
