@@ -28,7 +28,7 @@
                             @endif
 
 
-                            @php $input = "delivery_id"; @endphp
+                            @php $input = "clinic_id"; @endphp
 
 
                             <div class="form-group">
@@ -72,6 +72,8 @@
                                         value="{{ old('appointments')}}" required />
                                 </div>
                             </div>
+
+                            
 
                             <div class="row ls_divider last">
                                 <div class="form-group">

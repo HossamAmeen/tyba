@@ -13,10 +13,7 @@
                         </div>
                         <div class="panel-body">
                             <form id="defaultForm" method="post" class="form-horizontal ls_form" action="{{url('admin/event/'.$id)}}"
-                                  data-bv-message="This value is not valid"
-                                  data-bv-feedbackicons-valid="fa fa-check"
-                                  data-bv-feedbackicons-invalid="fa fa-bug"
-                                  data-bv-feedbackicons-validating="fa fa-refresh"
+                                
                                   enctype="multipart/form-data"
                             >
                                 {{csrf_field()}}
@@ -53,15 +50,19 @@
                                         />
                                     </div>
                                 </div>
+
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">المعاد</label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" name="date" type="text"
-                                               data-bv-emailaddress-message="The input is not a valid email address"
-                                               value="{{ $date}}" required
-                                        />
+                                    <label class="col-md-3 control-label">العيادة </label>
+                                    <div class="col-md-6">
+                                        <select name="clinic_id" class="form-control" required>
+                                            @foreach ($clinics as $clinic)
+                                            <option value="{{$clinic->id}}">{{$clinic->name}} </option>
+                                            @endforeach
+                                        </select>
                                     </div>
+    
                                 </div>
+
                                 <div class="row ls_divider last">
                                     <div class="form-group">
                                         <label class="col-md-2 control-label" >إضافة صورة</label>
@@ -73,6 +74,7 @@
 
 
                                     </div>
+                                    
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">الصورة</label>

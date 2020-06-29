@@ -28,6 +28,7 @@ class EventController extends Controller
         $rules = $this->formValidation();
         $message = $this->messageValidation();
         $this->validate($request, $rules,$message);
+        // return $request->all() ; 
         $event = Event::create($request->all());
           if($request->hasFile('img'))
           {
@@ -50,9 +51,9 @@ class EventController extends Controller
 
         $event = Event::find($id);
         $title = 'عرض العياده';
-
+        $clinics = Clinic::all();
         if(!empty($event))
-            return view('admin.control_panel.events.edit_event',$event )->with(compact('event', 'title') );
+            return view('admin.control_panel.events.edit_event',$event )->with(compact('clinics', 'title') );
         else
             return redirect()->route('event.index');
     }
@@ -110,7 +111,7 @@ class EventController extends Controller
         return array(
             'name'     => "required|max:99|string",
                                                                   
-            'description' => 'required|max:99',
+            'description' => 'required',
             
              'img'=> 'image',
         );
@@ -123,7 +124,7 @@ class EventController extends Controller
             'name.*'            =>  'هذا الحقل (عنوان الزياره) يجب يحتوي ع حروف وارقام فقط',
 
             'description.required'     => 'هذا الحقل (الوصف) مطلوب ',
-            'description.*'            =>  'هذا الحقل (الوصف) يجب يحتوي ع حروف وارقام فقط',
+            // 'description.*'            =>  'هذا الحقل (الوصف) يجب يحتوي ع حروف وارقام فقط',
 
           
         );
