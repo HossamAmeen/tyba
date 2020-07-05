@@ -57,7 +57,7 @@
                                             @if($clinic->user !=null)
                                             <td>{{$clinic->user->name}}</td>
                                             @else
-                                            <td> </td>
+                                            <td>لا يوجد </td>
                                             @endif
                                             <td>
                                                 <a href="{{url('/admin/visit-categories/'.$clinic->id.'/edit')}}"
