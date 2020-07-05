@@ -12,6 +12,7 @@ use App\Video;
 use App\News;
 use App\Book;
 use App\Clinic;
+use App\VisitCategory;
 
 
 use DB;
@@ -113,7 +114,8 @@ class HomeController extends Controller
 
         $title = "مستشفى طيبه رويال - الزيارات";
         $data['events'] = Event::all()->sortByDesc("id");
-        $data['clinics'] = Clinic::all()->sortByDesc("id");
+        $data['clinics'] = VisitCategory::all()->sortByDesc("id");
+        //return $data['clinics'];
         return view('web.events' , $data)->with(compact( 'title'));
 
     }

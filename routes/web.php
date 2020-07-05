@@ -45,6 +45,10 @@ Route::prefix('admin')->group(function () {
             Route::get('video/{id}/delete', 'VideoController@destroy');
             Route::resource('clinic', 'ClinicController');
             Route::get('clinic/{id}/delete', 'ClinicController@destroy');
+
+            Route::resource('visit-categories', 'VisitCategoryController');
+            Route::get('visit-categories/{id}/delete', 'VisitCategoryController@destroy');
+            
             Route::resource('doctor', 'DoctorController');
             Route::get('doctor/{id}/delete', 'DoctorController@destroy');
             Route::resource('news', 'NewsController');

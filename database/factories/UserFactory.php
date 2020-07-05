@@ -70,6 +70,15 @@ $factory->define(App\Clinic::class , function (Faker $faker){
     ];
 });
 
+$factory->define(App\VisitCategory::class , function (Faker $faker){
+
+    return[
+        'name'  =>'عيادة الاطفال',
+
+        'user_id' => 1 ,
+
+    ];
+});
 
 
 $factory->define(App\Service::class , function (Faker $faker){
@@ -94,7 +103,7 @@ $factory->define(App\Event::class , function (Faker $faker){
        
         "img" => "resources/assets/admin/images/visits.png",
         'appointments'  => 'يوم الخميس 27 / 9 / 2018' ,
-        'clinic_id' => rand(1,5),
+        'category_id' => rand(1,5),
         'user_id' => 1 ,
      
     ];

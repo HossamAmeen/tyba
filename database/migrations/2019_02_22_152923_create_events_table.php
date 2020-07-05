@@ -20,8 +20,8 @@ class CreateEventsTable extends Migration
             $table->text('appointments')->nullable();
             $table->string('img')->default('resources/assets/admin/images/avatar-80.png');
 
-            $table->unsignedInteger('clinic_id')->nullable();
-            $table->foreign('clinic_id')->references('id')->on('clinics')->onUpdate('cascade')
+            $table->unsignedInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('visit_categories')->onUpdate('cascade')
                 ->onDelete('cascade');
 
             $table->unsignedInteger('user_id')->nullable();

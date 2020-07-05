@@ -19,7 +19,7 @@ class EventController extends Controller
     {
 
         $data['title'] = 'اضافه زياره';
-        $data['clinics']  = Clinic::all();
+        $data['clinics']  = VisitCategory::all();
         return view('admin.control_panel.events.add_event',$data);
     }
     public function store(Request $request)
@@ -51,7 +51,7 @@ class EventController extends Controller
 
         $event = Event::find($id);
         $title = 'عرض العياده';
-        $clinics = Clinic::all();
+        $clinics = VisitCategory::all();
         if(!empty($event))
             return view('admin.control_panel.events.edit_event',$event )->with(compact('clinics', 'title') );
         else

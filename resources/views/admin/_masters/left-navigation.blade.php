@@ -98,6 +98,22 @@
             </ul>
         </li>
         <li >
+            <a  href="#" @if($title == 'اضافه تصنيف الزياره' || $title == 'عرض تصنيف الزيارات') class="active"  @endif >
+                <i class="fa fa-bar-chart-o"></i> <span>تصنيف الزيارات</span>
+            </a>
+            <ul>
+                <li>
+                    <a  @if($title == 'اضافه تصنيف الزياره') class="active"  @endif href="{{url('admin/visit-categories/create')}}">اضافه تصنيف الزياره</a>
+                </li>
+                <li>
+                    <a @if($title == 'عرض تصنيف الزيارات') class="active"  @endif  href="{{url('admin/visit-categories')}}">عرض تصنيف الزيارات</a>
+                </li>
+
+            </ul>
+        </li>
+        
+       
+        <li >
             <a  href="#" @if($title == 'اضافه زياره' || $title == 'عرض الزيارات') class="active"  @endif >
                 <i class="fa fa-bar-chart-o"></i> <span>الزيارات</span>
             </a>
