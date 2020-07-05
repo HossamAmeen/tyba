@@ -5,6 +5,7 @@ use App\Clinic;
 use App\Helpers\FileHelper;
 use App\Http\Controllers\Controller;
 use App\Service;
+use App\VisitCategory;
 use App\User;
 use DB;
 use Image;
