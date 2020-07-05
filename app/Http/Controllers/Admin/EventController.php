@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use App\VisitCategory;
 use Illuminate\Http\Request;
 use DB;
 use Image;
