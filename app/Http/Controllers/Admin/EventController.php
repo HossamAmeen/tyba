@@ -51,7 +51,7 @@ class EventController extends Controller
     {
 
         $event = Event::find($id);
-        $title = 'عرض العياده';
+        $title = 'تعديل الزيارة';
         $clinics = VisitCategory::all();
         if(!empty($event))
             return view('admin.control_panel.events.edit_event',$event )->with(compact('clinics', 'title') );

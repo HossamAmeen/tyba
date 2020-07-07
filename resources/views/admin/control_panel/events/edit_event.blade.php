@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">تعديل العياده</h3>
+                            <h3 class="panel-title">تعديل زيارة</h3>
                         </div>
                         <div class="panel-body">
                             <form id="defaultForm" method="post" class="form-horizontal ls_form" action="{{url('admin/event/'.$id)}}"
@@ -52,9 +52,9 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label">العيادة </label>
+                                    <label class="col-md-3 control-label">تصنيف الزيارات </label>
                                     <div class="col-md-6">
-                                        <select name="clinic_id" class="form-control" required>
+                                        <select name="category_id" class="form-control" required>
                                             @foreach ($clinics as $clinic)
                                             <option value="{{$clinic->id}}">{{$clinic->name}} </option>
                                             @endforeach

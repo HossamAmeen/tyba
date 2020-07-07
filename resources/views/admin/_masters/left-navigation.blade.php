@@ -122,7 +122,7 @@
                     <a  @if($title == 'اضافه زياره') class="active"  @endif href="{{url('admin/event/create')}}">اضافه زياره</a>
                 </li>
                 <li>
-                    <a @if($title == 'عرض الزيارات') class="active"  @endif  href="{{url('admin/event')}}">عرض الزيراتا</a>
+                    <a @if($title == 'عرض الزيارات') class="active"  @endif  href="{{url('admin/event')}}">عرض الزيارات</a>
                 </li>
 
             </ul>

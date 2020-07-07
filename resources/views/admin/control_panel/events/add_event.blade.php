@@ -28,11 +28,11 @@
                             @endif
 
 
-                            @php $input = "clinic_id"; @endphp
+                            @php $input = "category_id"; @endphp
 
 
                             <div class="form-group">
-                                <label class="col-md-3 control-label">العيادة </label>
+                                <label class="col-md-3 control-label">تصنيف الزيارات </label>
                                 <div class="col-md-6">
                                     <select name="{{ $input }}" class="form-control" required>
                                         @foreach ($clinics as $clinic)

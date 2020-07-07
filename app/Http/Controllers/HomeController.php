@@ -114,7 +114,7 @@ class HomeController extends Controller
 
         $title = "مستشفى طيبه رويال - الزيارات";
         $data['events'] = Event::all()->sortByDesc("id");
-        $data['clinics'] = VisitCategory::all()->sortByDesc("id");
+        $data['categories'] = VisitCategory::all()->sortByDesc("id");
         //return $data['clinics'];
         return view('web.events' , $data)->with(compact( 'title'));
 

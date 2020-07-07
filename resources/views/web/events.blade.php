@@ -33,19 +33,19 @@
 				<div class="col-sm-3">
 					<ul class="nav nav-pills nav-stacked">
 					
-						@foreach ($clinics as $clinic)
+						@foreach ($categories as $category)
 					
-						<li @if($loop->first) class="active" @endif><a data-toggle="pill" href="#{{$clinic->id}}">{{$clinic->name}} </a></li>
+						<li @if($loop->first) class="active" @endif><a data-toggle="pill" href="#{{$category->id}}">{{$category->name}} </a></li>
 						@endforeach
 					</ul>
 				</div>
 				<div class="col-sm-9">
 					<div class="tab-content">
-						@foreach ($clinics as $clinic)
-						<div id="{{$clinic->id}}"  class=" clinic-details tab-pane fade @if ($loop->first) in active @endif">
+						@foreach ($categories as $category)
+						<div id="{{$category->id}}"  class=" clinic-details tab-pane fade @if ($loop->first) in active @endif">
 							
 							<div class="row">
-								@foreach ($clinic->events as $event)
+								@foreach ($category->events as $event)
 								<div class="col-md-6 col-sm-6">
 									<div class="row visitss">
 										<div class="col-md-4" style="padding: 0;">
