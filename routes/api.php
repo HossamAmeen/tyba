@@ -25,6 +25,7 @@ Route::namespace('Mobile')->group(function () {
         Route::get('/events', 'MobileController@events');
         Route::get('/doctors', 'MobileController@doctors');
         Route::get('/news', 'MobileController@news');
+        Route::get('/news/{id}', 'MobileController@show_news');
         Route::get('/about', 'MobileController@about');
         Route::post('/contact', 'MobileController@contact');
         Route::any('/book', 'MobileController@book');
