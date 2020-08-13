@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Mobile;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Service;
+use App\{Service,News};
 use App\Event;
 use App\Doctor;
 use App\Clinic;
@@ -25,6 +25,11 @@ class MobileController extends Controller
         $data['clinics'] = Clinic::all();   
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;    
 
+    }
+    public function news()
+    {
+        $data['news'] = News::all();   
+        return json_encode($data , JSON_UNESCAPED_UNICODE) ;
     }
     public function clinic($id)
     {
