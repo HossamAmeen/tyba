@@ -24,4 +24,10 @@ class News extends Model
         // return strip_tags($this->description);
         return  substr( strip_tags(html_entity_decode($this->description)  ) , 0 ,  190 );
     }
+    public function getAescriptionAttribute()
+    {
+        // return $this->description;
+        // return strip_tags($this->description);
+        return  substr( strip_tags(html_entity_decode($this->description)  ) , 0 ,  190 );
+    }
 }
