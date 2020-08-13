@@ -13,12 +13,12 @@ class News extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
-    public function getDescriptionAttribute()
-    {
-        // return $this->description;
-        // return strip_tags($this->description);
-        // return  substr( strip_tags(html_entity_decode($this->description)  ) , 0 ,  190 );
-    }
+    // public function getDescriptionAttribute()
+    // {
+    //     // return $this->description;
+    //     // return strip_tags($this->description);
+    //     // return  substr( strip_tags(html_entity_decode($this->description)  ) , 0 ,  190 );
+    // }
     public function getEnSubDesAttribute()
     {
         return  substr(  strip_tags(html_entity_decode($this->vision_mission)) , 0 ,  150 );
