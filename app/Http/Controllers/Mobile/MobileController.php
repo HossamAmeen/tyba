@@ -28,9 +28,12 @@ class MobileController extends Controller
     }
     public function news()
     {
-        $data['news'] = News::all(); 
-        $news = News::get(['id', 'title' ,'description' , 'image'] );
+        // $data['news'] = News::all(); 
+        // $news = News::get(['id', 'title' ,'description' , 'image'] );
         $data['news'] =News::get(['id', 'title' ,'description' , 'image'] );
+        foreach($data['news'] as $item){
+            $item->description =  strip_tags (  $item->description );
+        }
         return json_encode($data , JSON_UNESCAPED_UNICODE ) ;
     }
     public function clinic($id)
