@@ -23,6 +23,11 @@ class MobileController extends Controller
     public function clinics()
     {
         $data['clinics'] = Clinic::all();   
+        foreach($data['clinics'] as $clinic){
+            // substr(strip_tags($this->description), 0 ,  150 );
+
+            $data['clinics']->descriptionPoint =  strip_tags(html_entity_decode($clinic->descriptionPoint) )  ;
+        }
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;    
 
     }
@@ -44,6 +49,7 @@ class MobileController extends Controller
     public function clinic($id)
     {
         $data['clinic'] = Clinic::find($id);
+        if($data['clinic'])
         $data['clinic']->descriptionPoint =  strip_tags ( $data['clinic']->descriptionPoint );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
