@@ -35,7 +35,7 @@ class MobileController extends Controller
     {
         $data['news'] =News::get(['id', 'title' ,'description' , 'image'] );
         foreach($data['news'] as $item){
-            $item->description =  strip_tags (  $item->description );
+            $item->description = strip_tags(html_entity_decode($item->description) )  ; 
         }
         return json_encode($data , JSON_UNESCAPED_UNICODE ) ;
     }
