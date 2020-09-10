@@ -26,7 +26,8 @@ class MobileController extends Controller
         foreach($data['clinics'] as $clinic){
             // substr(strip_tags($this->description), 0 ,  150 );
 
-            $clinic->descriptionPoint =  strip_tags(html_entity_decode($clinic->descriptionPoint) )  ;
+            // $clinic->descriptionPoint =  strip_tags(html_entity_decode($clinic->descriptionPoint) )  ;
+            $clinic->descriptionPoint =  strip_tags(($clinic->descriptionPoint) )  ;
         }
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;    
 
