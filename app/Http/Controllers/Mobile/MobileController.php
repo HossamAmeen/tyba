@@ -23,35 +23,35 @@ class MobileController extends Controller
     public function clinics()
     {
         $data['clinics'] = Clinic::all();   
-        foreach($data['clinics'] as $clinic){
-            // substr(strip_tags($this->description), 0 ,  150 );
+        // foreach($data['clinics'] as $clinic){
+        //     // substr(strip_tags($this->description), 0 ,  150 );
 
-            // $clinic->descriptionPoint =  strip_tags(html_entity_decode($clinic->descriptionPoint) )  ;
-            $clinic->descriptionPoint =  strip_tags(($clinic->descriptionPoint) )  ;
-        }
+        //     // $clinic->descriptionPoint =  strip_tags(html_entity_decode($clinic->descriptionPoint) )  ;
+        //     // $clinic->descriptionPoint =  strip_tags(($clinic->descriptionPoint) )  ;
+        // }
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;    
 
     }
     public function news()
     {
         $data['news'] =News::get(['id', 'title' ,'description' , 'image'] );
-        foreach($data['news'] as $item){
-            $item->description = strip_tags(html_entity_decode($item->description) )  ; 
-        }
+        // foreach($data['news'] as $item){
+        //     $item->description = strip_tags(html_entity_decode($item->description) )  ; 
+        // }
         return json_encode($data , JSON_UNESCAPED_UNICODE ) ;
     }
     public function show_news($id)
     {
-        $data['clinic'] = News::find($id);
-        $data['clinic']->description =  strip_tags ( $data['clinic']->description );
+        $data['news'] = News::find($id);
+        // $data['clinic']->description =  strip_tags ( $data['clinic']->description );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }
     public function clinic($id)
     {
         $data['clinic'] = Clinic::find($id);
-        if($data['clinic'])
-        $data['clinic']->descriptionPoint =  strip_tags ( $data['clinic']->descriptionPoint );
+        // if($data['clinic'])
+        // $data['clinic']->descriptionPoint =  strip_tags ( $data['clinic']->descriptionPoint );
         return json_encode($data , JSON_UNESCAPED_UNICODE) ;
 
     }
