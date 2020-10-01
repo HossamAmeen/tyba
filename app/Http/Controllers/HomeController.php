@@ -96,7 +96,7 @@ class HomeController extends Controller
     public function videos()
     {
         $title = "مستشفى طيبه رويال - الفديوهات";
-        $data['videos'] = Video::paginate(8);
+        $data['videos'] = Video::all()->sortByDesc("id");
         return view('web.videos' , $data)->with(compact( 'title'));
     }
     public function doctors()
