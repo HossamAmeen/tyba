@@ -75,7 +75,7 @@ class MobileController extends Controller
         $data['about'] = Pref::find(1 , ['arAddress' , 'arDescription' , 'phone'
         , 'mainEmail', 'facebook' , 'twitter', 'video']);
          $data['about']->descriptionPoint = strip_tags( $data['about']->descriptionPoint);      
-        return json_encode(  $data['about'], JSON_UNESCAPED_UNICODE) ;
+        return json_encode(  $data, JSON_UNESCAPED_UNICODE) ;
     }
     public function contact(Request $request)
     {
