@@ -9,6 +9,7 @@ use App\Event;
 use App\Doctor;
 use App\Clinic;
 use App\Pref;
+use Mail;
 class MobileController extends Controller
 {
  
@@ -72,7 +73,7 @@ class MobileController extends Controller
     public function about()
     {
         $data['about'] = Pref::find(1 , ['arAddress' , 'arDescription' , 'phone'
-        , 'mainEmail' ,'descriptionPoint', 'facebook' , 'twitter', 'video']);
+        , 'mainEmail', 'facebook' , 'twitter', 'video']);
          $data['about']->descriptionPoint = strip_tags( $data['about']->descriptionPoint);      
         return json_encode(  $data['about'], JSON_UNESCAPED_UNICODE) ;
     }
@@ -98,14 +99,9 @@ class MobileController extends Controller
 
     public function book(Request $request)
     {
-
-      
-
-        
-            // return $request->all();
-            $rules = $this->bookFormValidation();
-            $message = $this->bookMessageValidation();
-            $this->validate($request, $rules, $message);
+            // $rules = $this->bookFormValidation();
+            // $message = $this->bookMessageValidation();
+            // $this->validate($request, $rules, $message);
             $data=[
                 'email' =>  $request->email,
                 'name' => $request->name,
