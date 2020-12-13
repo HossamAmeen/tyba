@@ -70,15 +70,15 @@
             </ul>
         </li>
         <li >
-            <a  href="#" @if($title == 'اضافه فديو' || $title == 'عرض الفديوهات') class="active"  @endif >
-                <i class="fa fa-bar-chart-o"></i> <span>الفديوهات</span>
+            <a  href="#" @if($title == 'اضافه فديو' || $title == 'عرض الفيديوهات') class="active"  @endif >
+                <i class="fa fa-bar-chart-o"></i> <span>الفيديوهات</span>
             </a>
             <ul>
                 <li>
                     <a  @if($title == 'اضافه فديو') class="active"  @endif href="{{url('admin/video/create')}}">اضافه فديو</a>
                 </li>
                 <li>
-                    <a @if($title == 'عرض الفديوهات') class="active"  @endif  href="{{url('admin/video')}}">عرض الفديوهات</a>
+                    <a @if($title == 'عرض الفيديوهات') class="active"  @endif  href="{{url('admin/video')}}">عرض الفيديوهات</a>
                 </li>
 
             </ul>

@@ -17,7 +17,7 @@ class VideoController  extends Controller
     {
         $data['services'] =Video::all();
             
-        $data['title'] = 'عرض الفديوهات';
+        $data['title'] = 'عرض الفيديوهات';
         return view('admin.control_panel.videos.show_services',$data);
     }
     public function create()

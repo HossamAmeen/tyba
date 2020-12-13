@@ -23,7 +23,7 @@
                         <div class="col-md-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <span class="panel-title">الفديوهات</span>
+                                    <span class="panel-title">الفيديوهات</span>
                                     <a href="{{url('admin/video/create')}}">  <button class="alert-success"> <i class="fa fa-plus"></i> </button> </a>
                           
                                 </div>
