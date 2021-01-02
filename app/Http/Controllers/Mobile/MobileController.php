@@ -10,6 +10,8 @@ use App\Doctor;
 use App\Clinic;
 use App\Pref;
 use Mail;
+use Illuminate\Support\Facades\Log;
+
 class MobileController extends Controller
 {
  
@@ -99,9 +101,21 @@ class MobileController extends Controller
 
     public function book(Request $request)
     {
-            // $rules = $this->bookFormValidation();
-            // $message = $this->bookMessageValidation();
-            // $this->validate($request, $rules, $message);
+        Log::info(var_dump());
+        Log::info('send booking');
+
+             $rules = $this->bookFormValidation();
+             $message = $this->bookMessageValidation();
+             $this->validate($request, $rules, $message);
+
+        $book = new Book();
+        $book->name = $request->name;
+        $book->phone = $request->phone;
+        $book->special = $request->special;
+        $book->message = $request->message;
+        $book->save();
+
+        Log::info('booking done successfully');
             $data=[
                 'email' =>  $request->email,
                 'name' => $request->name,
