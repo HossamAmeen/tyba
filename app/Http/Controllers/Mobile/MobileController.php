@@ -102,8 +102,8 @@ class MobileController extends Controller
 
     public function book(Request $request)
     {
-        Log::info($_POST);
-        Log::info('send booking');
+//        Log::info($_POST);
+//        Log::info('send booking');
 
              $rules = $this->bookFormValidation();
              $message = $this->bookMessageValidation();
@@ -117,7 +117,7 @@ class MobileController extends Controller
         $book->message = $request->special;
         $book->save();
 
-        Log::info('booking done successfully');
+//        Log::info('booking done successfully');
         /*    $data=[
                 'email' =>  $request->email,
                 'name' => $request->name,
