@@ -118,7 +118,7 @@ class MobileController extends Controller
         $book->save();
 
         Log::info('booking done successfully');
-            $data=[
+        /*    $data=[
                 'email' =>  $request->email,
                 'name' => $request->name,
                 'phone' => $request->phone,
@@ -130,7 +130,7 @@ class MobileController extends Controller
                 $message->from( $data['email'] , $data['name']);
                 $message->to("book@tibaroyal.com");
                 $message->subject(  " حجز نخصص " . $data['special']  );
-            });
+            });*/
      
     }
 
