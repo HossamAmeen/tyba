@@ -102,7 +102,7 @@ class MobileController extends Controller
 
     public function book(Request $request)
     {
-        Log::info(var_dump($_POST));
+        Log::info($_POST);
         Log::info('send booking');
 
              $rules = $this->bookFormValidation();
