@@ -9,6 +9,7 @@ use App\Event;
 use App\Doctor;
 use App\Clinic;
 use App\Pref;
+use App\Book;
 use Mail;
 use Illuminate\Support\Facades\Log;
 
