@@ -112,8 +112,9 @@ class MobileController extends Controller
         $book = new Book();
         $book->name = $request->name;
         $book->phone = $request->phone;
-        $book->special = $request->special;
-        $book->message = $request->message;
+        $book->email = $request->email;
+        $book->special = $request->subject;
+        $book->message = $request->special;
         $book->save();
 
         Log::info('booking done successfully');
