@@ -131,6 +131,11 @@ class MobileController extends Controller
                 $message->to("book@tibaroyal.com");
                 $message->subject(  " حجز نخصص " . $data['special']  );
             });*/
+
+        $return = [];
+        $return['success'] = true;
+        echo json_encode($return);
+
      
     }
 
