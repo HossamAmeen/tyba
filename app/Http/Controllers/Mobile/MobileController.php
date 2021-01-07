@@ -117,6 +117,7 @@ class MobileController extends Controller
         $book->message = $request->special;
         $book->save();
 
+        Log::info($book);
         Log::info('booking done successfully');
         /*    $data=[
                 'email' =>  $request->email,
