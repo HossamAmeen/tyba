@@ -151,7 +151,7 @@ class MobileController extends Controller
 
             'email' => 'required|email',
 
-            'special' => 'required',
+            'text' => 'required|regex:/^[\pL\s\-]+$/u||max:99',
 
         );
     }
@@ -184,7 +184,7 @@ class MobileController extends Controller
             'name' => 'string|required|max:99',
             'email' => 'required|email',
             'phone' => 'regex:/^[\d]+$/u|required|digits:11',
-            'special' => 'regex:/^[\pL\s\-]+$/u||required|max:99',
+            'special' => 'required|max:99',
 
         );
     }
