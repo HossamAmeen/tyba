@@ -104,10 +104,10 @@ class MobileController extends Controller
     {
         Log::info($_POST);
         Log::info('send booking');
-
+/*
              $rules = $this->bookFormValidation();
              $message = $this->bookMessageValidation();
-            $results =  $this->validate($request, $rules, $message);
+            $results =  $this->validate($request, $rules, $message);*/
 
         $book = new Book();
         $book->name = $request->name;
