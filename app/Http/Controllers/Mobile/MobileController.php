@@ -102,12 +102,12 @@ class MobileController extends Controller
 
     public function book(Request $request)
     {
-//        Log::info($_POST);
+        Log::info($_POST);
         Log::info('send booking');
 
              $rules = $this->bookFormValidation();
              $message = $this->bookMessageValidation();
-             $this->validate($request, $rules, $message);
+            $results =  $this->validate($request, $rules, $message);
 
         $book = new Book();
         $book->name = $request->name;
@@ -117,6 +117,7 @@ class MobileController extends Controller
         $book->message = $request->special;
         $book->save();
 
+        Log::info($results);
         Log::info($book);
         Log::info('booking done successfully');
         /*    $data=[
